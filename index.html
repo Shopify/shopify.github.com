@@ -1,0 +1,53 @@
+---
+layout: default
+title: Shopify Open Source
+description:
+---
+
+<header class="hero">
+  <div class="pagewidth hero-inner">
+    <p>Shopify Members: <span id="countMembers"></span></p>
+    <p>Public Repos: <span id="countRepos"></span></p>
+    <h2 class="hero-text">As a team who greatly benefits from open-source software, these are the projects that we have contributed back to the community.</h2>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <div class="pagewidth text-center">
+    <div class="button-group js-radio-button-group" id="filters">
+      <span class="filter-label">Show</span>
+      <button class="btn is-active" data-filter="*">All</button>
+      <button class="btn" data-filter=".go">Go</button>
+      <button class="btn" data-filter=".css">CSS</button>
+      <button class="btn" data-filter=".javascript">JavaScript</button>
+      <button class="btn" data-filter=".objective-c">Objective-C</button>
+      <button class="btn" data-filter=".ruby">Ruby</button>
+      <button class="btn" data-filter=":not(.go, .css, .javascript, .objective-c, .ruby)">Other</button>
+
+    </div>
+  </div>
+</div>
+
+<div class="repoWrap">
+  <div class="pagewidth">
+    <div class="grid" id="repos"></div>
+  </div>
+</div>
+
+<script id="repoTemplate" type="text/template">
+{% raw %}
+  {{#items}}
+  <div class="grid-item large--one-quarter repo {{languageClass}}">
+    <div class="repo-inner">
+      <h2>{{name}}</h2>
+      <h3>{{url}}</h3>
+      <p>{{language}}</p>
+    </div>
+    <footer class="repo-footer">
+      Stars: {{stars}}
+      Forks: {{forks}}
+    </footer>
+  </div>
+  {{/items}}
+{% endraw %}
+</script>

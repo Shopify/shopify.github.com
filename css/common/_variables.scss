@@ -1,0 +1,60 @@
+// ==============================================================================
+// Grid Breakpoints
+// ==============================================================================
+$viewportIncrement: 1px;
+
+$small: 480px;
+$medium: 768px;
+$large: 769px;
+
+$postSmall: $small + $viewportIncrement;
+$preMedium: $medium - $viewportIncrement;
+$preLarge: $large - $viewportIncrement;
+
+/* The following are dependencies of csswizardry grid */
+$breakpoints: (
+  'small' '(max-width: #{$small})',
+  'medium' '(min-width: #{$postSmall}) and (max-width: #{$medium})',
+  'medium-down' '(max-width: #{$medium})',
+  'large' '(min-width: #{$large})'
+);
+$breakpoint-has-widths: ('small', 'medium', 'medium-down', 'large');
+$breakpoint-has-push:  ('small', 'medium', 'medium-down', 'large');
+$breakpoint-has-pull:  ('small', 'medium', 'medium-down', 'large');
+
+$small_down: unquote( "max-width: #{$small}" );
+$small_up: unquote( "min-width: #{$small + 1}" );
+$medium_down: unquote( "max-width: #{$medium}" );
+$medium_up: unquote( "min-width: #{$medium + 1}" );
+$large_down: unquote( "max-width: #{$large}" );
+$large_up: unquote( "min-width: #{$large + 1}" );
+
+
+// ==============================================================================
+// Misc. Global Values
+// ==============================================================================
+$margin: 30px;
+$layout_max_width: 1200px;
+$border_radius: 3px;
+
+
+// ==============================================================================
+// Typography
+// ==============================================================================
+$bodyFontStack: 'Helvetica', sans-serif;
+
+// ==============================================================================
+// Colours
+// ==============================================================================
+$textColor: #273b41;
+
+$heroBg: #389fba;
+$orangeDark: #e36f10;
+$textOnOrange: #ffefb7;
+
+$filterActive: #7863ac;
+
+$footerLinks: #2e9dcf;
+
+$cardFooterBg: #1c5f7d;
+$cardFooterText: #8ed5df;

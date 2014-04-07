@@ -1,0 +1,84 @@
+// ==============================================================================
+// #Generic Home Styles
+// ==============================================================================
+.hero {
+  background-color: $heroBg;
+  background-position: center top;
+  background-repeat: repeat-x;
+  color: #fff;
+}
+
+// ==============================================================================
+// #Hero area
+//  - Could use JS to vertically center the cta, but it's not really necessary
+// ==============================================================================
+.hero-inner {
+  text-align: center;
+  padding: $margin;
+
+  @include transition(padding 0.2s ease-in-out);
+
+  @include responsify( $medium_up, true ) {
+    padding-top: 130px;
+    padding-bottom: 115px;
+  }
+
+  @include responsify ( $small_up, true ) {
+    padding-top: 180px;
+    padding-bottom: 170px;
+  }
+
+  @include responsify ( $large_up, true ) {
+    padding-top: 200px;
+  }
+}
+
+.hero-text {
+  font-size: 3.429em;
+  line-height: 1.125;
+  margin-bottom: 0.9em;
+  font-weight: normal;
+
+  @include responsify( $small_down ) {
+    font-size: 2.5em;
+  }
+
+  @include responsify( $large_down ) {
+    font-size: 1.714em;
+    line-height: 1.325;
+  }
+}
+
+// ==============================================================================
+// #Repo Cards
+// ==============================================================================
+.repoWrap {
+  background-color: #e8f0f5;
+  min-height: 300px;
+  padding: $margin 0;
+}
+
+.repo {
+  margin-bottom: $margin;
+}
+
+.repo-inner {
+  background-color: #fff;
+  padding: $margin $margin 0 $margin;
+}
+
+.repo-footer {
+  background-color: $cardFooterBg;
+  color: $cardFooterText;
+  padding: $margin/2 $margin;
+}
+
+
+// ==============================================================================
+// #API Limit Error
+// ==============================================================================
+.limit-error {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 30px;
+}

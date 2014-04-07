@@ -1,0 +1,50 @@
+// ==============================================================================
+// #Typography
+// ==============================================================================
+body,
+input,
+textarea,
+button,
+select {
+  font-size: 87.5%; // Henseforth known as 1em (assumed at 14px)
+  line-height: 1.6;
+  font-family: $bodyFontStack;
+  color: $textColor;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a { font-weight: inherit; }
+
+// Pixel to EM conversion tool http://pxtoem.com/
+h1, .h1 { font-size: 3em; }       // 42px
+h2, .h2 { font-size: 2.429em; }   // 34px
+h3, .h3 { font-size: 2em; }       // 28px
+h4, .h4 { font-size: 1.429em; }   // 20px
+h5, .h5 { font-size: 1.143em; }   // 16px
+h6, .h6 { font-size: 1em; }       // 14px
+
+p { margin: 0 0 0.75em 0; }
+p img { margin: 0; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+small { font-size: 80%; }
