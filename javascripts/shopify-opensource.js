@@ -74,12 +74,7 @@ jQuery(function($){
 
         $('#countRepos').text(repos.length);
 
-        // Sort by highest # of watchers.
-        repos.sort(function (a, b) {
-          if (a.hotness < b.hotness) return 1;
-          if (b.hotness < a.hotness) return -1;
-          return 0;
-        });
+        // Sort by highest # of watchers (view twitter repo?)
 
         var items = [],
             item = {},
@@ -88,11 +83,20 @@ jQuery(function($){
             template = Handlebars.compile(source);
 
         $.each(repos, function (i, repo) {
+
+          // Update repo language if manually defined
+          if ( repo.name in customRepoLanguage ) {
+            repo.language = customRepoLanguage[repo.name]
+            repo.languageClass = (customRepoLanguage[repo.name] || '').toLowerCase()
+          } else {
+            repo.languageClass = (repo.language || '').toLowerCase()
+          }
+
           item = {
             url: repo.html_url,
             name: repo.name,
             language: repo.language,
-            languageClass: (repo.language || '').toLowerCase(),
+            languageClass: repo.languageClass,
             description: repo.description,
             stars: repo.stargazers_count,
             forks: repo.forks_count
@@ -101,10 +105,9 @@ jQuery(function($){
           items.push(item);
         });
 
-        data = {
-          items: items,
-          test: 'test'
-        };
+        console.log(items);
+
+        data = { items: items };
 
         o.$repoContainer.append(template(data));
 
