@@ -13,6 +13,7 @@ jQuery(function($){
       $body: $('body'),
       $repoContainer: $('#repos'),
       $preventApiCalls: false,
+      $ignoreForks: true,
 
       init : function() {
 
@@ -72,9 +73,8 @@ jQuery(function($){
       },
 
       addRepos: function(repos) {
-        var o = this;
-
-        $('#countRepos').removeClass('is-loading').text(repos.length);
+        var o = this,
+            repoCount = repos.length;
 
         // Sort by highest # of watchers (view twitter repo?)
 
@@ -86,7 +86,10 @@ jQuery(function($){
 
         $.each(repos, function (i, repo) {
 
-          console.log(repo);
+          if (o.$ignoreForks && repo.fork) {
+            repoCount = repoCount - 1;
+            return;
+          }
 
           // Update repo language if manually defined
           if ( repo.name in customRepoLanguage ) {
@@ -113,7 +116,11 @@ jQuery(function($){
 
         data = { items: items };
 
+        // Append handlebars templates
         o.$repoContainer.addClass('is-loaded').append(template(data));
+
+        // Display public repo count (minus forks)
+        $('#countRepos').removeClass('is-loading').text(repoCount);
 
         // Setup isotope
         o.flowyGrid();
