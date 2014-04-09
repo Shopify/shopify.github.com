@@ -10,14 +10,7 @@
 // ==============================================================================
 .pagewidth {
   max-width: $layout_max_width;
-  padding: 0 $margin;
-}
-
-.pagemargin {
-  padding: {
-    left: $margin;
-    right: $margin;
-  }
+  padding: 0 $gutter;
 }
 
 

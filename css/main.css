@@ -2310,16 +2310,10 @@ pre {
 /* line 11, common/_layout.scss */
 .pagewidth {
   max-width: 1200px;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
-/* line 16, common/_layout.scss */
-.pagemargin {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-/* line 24, common/_layout.scss */
+/* line 17, common/_layout.scss */
 html, body {
   margin: 0;
   font-size: 14px;
@@ -2334,9 +2328,9 @@ button,
 select {
   font-size: 16px;
   line-height: 1.6;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #273b41;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
@@ -2362,109 +2356,111 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 
 /* line 32, common/_typography.scss */
 h1, .h1 {
-  font-size: 3em;
+  font-size: 36px;
+  font-weight: 300;
 }
 
-/* line 33, common/_typography.scss */
+/* line 36, common/_typography.scss */
 h2, .h2 {
   font-size: 24px;
   line-height: 1.1;
+  font-weight: 300;
 }
 
-/* line 37, common/_typography.scss */
+/* line 41, common/_typography.scss */
 h3, .h3 {
   font-size: 2em;
 }
 
-/* line 38, common/_typography.scss */
+/* line 42, common/_typography.scss */
 h4, .h4 {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
-/* line 43, common/_typography.scss */
+/* line 47, common/_typography.scss */
 h5, .h5 {
   font-size: 1.143em;
 }
 
-/* line 44, common/_typography.scss */
+/* line 48, common/_typography.scss */
 h6, .h6 {
   font-size: 1em;
 }
 
-/* line 46, common/_typography.scss */
+/* line 50, common/_typography.scss */
 p {
   margin: 0 0 0.75em 0;
 }
 
-/* line 47, common/_typography.scss */
+/* line 51, common/_typography.scss */
 p img {
   margin: 0;
 }
 
-/* line 49, common/_typography.scss */
+/* line 53, common/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 50, common/_typography.scss */
+/* line 54, common/_typography.scss */
 strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 
-/* line 51, common/_typography.scss */
+/* line 55, common/_typography.scss */
 small {
   font-size: 80%;
 }
 
-/* line 56, common/_typography.scss */
+/* line 60, common/_typography.scss */
 ul, ol {
   margin-bottom: 20px;
 }
 
-/* line 57, common/_typography.scss */
+/* line 61, common/_typography.scss */
 ul {
   list-style: none outside;
 }
 
-/* line 58, common/_typography.scss */
+/* line 62, common/_typography.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 59, common/_typography.scss */
+/* line 63, common/_typography.scss */
 ol, ul.square, ul.disc {
   margin-left: 20px;
 }
 
-/* line 60, common/_typography.scss */
+/* line 64, common/_typography.scss */
 ul.square {
   list-style: square outside;
 }
 
-/* line 61, common/_typography.scss */
+/* line 65, common/_typography.scss */
 ul.disc {
   list-style: disc outside;
 }
 
-/* line 62, common/_typography.scss */
+/* line 66, common/_typography.scss */
 ol.alpha {
   list-style: lower-alpha outside;
 }
 
-/* line 64, common/_typography.scss */
+/* line 68, common/_typography.scss */
 ul ul, ul ol,
 ol ol, ol ul {
   margin: 4px 0 5px 20px;
 }
 
-/* line 65, common/_typography.scss */
+/* line 69, common/_typography.scss */
 li {
   margin-bottom: 10px;
 }
 
-/* line 66, common/_typography.scss */
+/* line 70, common/_typography.scss */
 .inline-list li {
   display: inline-block;
 }
@@ -2534,13 +2530,14 @@ a:hover {
 .footer {
   font-size: 14px;
   text-align: center;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-/* line 9, objects/_footer.scss */
+/* line 10, objects/_footer.scss */
 .footer a {
   color: #2e9dcf;
 }
-/* line 12, objects/_footer.scss */
+/* line 13, objects/_footer.scss */
 .footer a:hover {
   color: #257da5;
 }
@@ -2705,115 +2702,135 @@ a:hover {
   background-color: #389fba;
   background-position: center top;
   background-repeat: repeat-x;
+  background-image: url(/images/hero-bg.jpg);
   color: #fff;
 }
-
-/* line 15, pages/_home.scss */
-.hero-inner {
-  text-align: center;
-  padding: 20px;
-  -webkit-transition: padding 0.2s ease-in-out;
-  -moz-transition: padding 0.2s ease-in-out;
-  transition: padding 0.2s ease-in-out;
+/* line 12, pages/_home.scss */
+.hero .pagewidth {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 428px;
+  padding-top: 120px;
 }
 @media (min-width: 769px) {
-  /* line 15, pages/_home.scss */
-  .hero-inner {
-    padding-top: 130px;
-    padding-bottom: 115px;
-  }
-}
-@media (min-width: 481px) {
-  /* line 15, pages/_home.scss */
-  .hero-inner {
-    padding-top: 180px;
-    padding-bottom: 170px;
-  }
-}
-@media (min-width: 770px) {
-  /* line 15, pages/_home.scss */
-  .hero-inner {
-    padding-top: 200px;
+  /* line 12, pages/_home.scss */
+  .hero .pagewidth {
+    padding-top: 80px;
   }
 }
 
-/* line 36, pages/_home.scss */
-.hero-text {
-  font-size: 3.429em;
-  line-height: 1.125;
-  margin-bottom: 0.9em;
-  font-weight: normal;
-}
-@media (max-width: 480px) {
-  /* line 36, pages/_home.scss */
-  .hero-text {
-    font-size: 2.5em;
-  }
-}
-@media (max-width: 769px) {
-  /* line 36, pages/_home.scss */
-  .hero-text {
-    font-size: 1.714em;
-    line-height: 1.325;
-  }
-}
-
-/* line 52, pages/_home.scss */
+/* line 29, pages/_home.scss */
 .hero-header {
-  padding-top: 30px;
+  position: absolute;
+  left: 15px;
+  right: 30px;
+  top: 30px;
+}
+/* line 48, common/_mixins.scss */
+.hero-header:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* line 56, pages/_home.scss */
+/* line 37, pages/_home.scss */
 .git-stats {
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 13px;
+  margin: 0;
   padding-top: 10px;
   text-align: center;
 }
 @media (min-width: 769px) {
-  /* line 56, pages/_home.scss */
+  /* line 37, pages/_home.scss */
   .git-stats {
     float: right;
     text-align: right;
   }
 }
-/* line 68, pages/_home.scss */
+/* line 50, pages/_home.scss */
 .git-stats li {
   padding: 0 10px;
   white-space: nowrap;
 }
 @media (min-width: 769px) {
-  /* line 68, pages/_home.scss */
+  /* line 50, pages/_home.scss */
   .git-stats li {
     padding: 0 0 0 20px;
   }
 }
-/* line 77, pages/_home.scss */
+/* line 59, pages/_home.scss */
 .git-stats span {
   color: #8ec9ee;
 }
 
-/* line 82, pages/_home.scss */
+/* line 64, pages/_home.scss */
 .icon-logo {
   display: block;
   margin: 0 auto;
 }
 @media (min-width: 769px) {
-  /* line 82, pages/_home.scss */
+  /* line 64, pages/_home.scss */
   .icon-logo {
     float: left;
   }
 }
 
-/* line 93, pages/_home.scss */
+/* line 75, pages/_home.scss */
+.hero-inner {
+  text-align: center;
+  padding: 0 30px;
+  display: table-cell;
+  vertical-align: middle;
+  -webkit-transition: padding 0.2s ease-in-out;
+  -moz-transition: padding 0.2s ease-in-out;
+  transition: padding 0.2s ease-in-out;
+}
+@media (min-width: 769px) {
+  /* line 75, pages/_home.scss */
+  .hero-inner {
+    padding: 0 120px;
+  }
+}
+/* line 87, pages/_home.scss */
+.hero-inner a {
+  color: #8ec9ee;
+}
+/* line 91, pages/_home.scss */
+.hero-inner p {
+  font-size: 14px;
+}
+
+/* line 96, pages/_home.scss */
+.hero-text {
+  font-size: 40px;
+  line-height: 1.125;
+  margin-bottom: 5px;
+}
+@media (max-width: 480px) {
+  /* line 96, pages/_home.scss */
+  .hero-text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 769px) {
+  /* line 96, pages/_home.scss */
+  .hero-text {
+    font-size: 25px;
+    line-height: 1.325;
+  }
+}
+
+/* line 114, pages/_home.scss */
 .repoWrap {
   background-color: #e8f0f5;
   min-height: 300px;
   padding: 20px 0;
 }
 
-/* line 102, pages/_home.scss */
+/* line 123, pages/_home.scss */
 .limit-error {
   text-align: center;
   padding: 100px 0;

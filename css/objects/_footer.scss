@@ -4,7 +4,8 @@
 .footer {
   font-size: 14px;
   text-align: center;
-  padding: $margin/2;
+  padding-top: $margin/2;
+  padding-bottom: $margin/2;
 
   a {
     color: $footerLinks;

@@ -5,58 +5,40 @@
   background-color: $heroBg;
   background-position: center top;
   background-repeat: repeat-x;
+  background-image: url(/images/hero-bg.jpg);
+  // background-size: cover;
   color: #fff;
+
+  .pagewidth {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 428px;
+    padding-top: 120px;
+
+    @include responsify( $medium_up, true ) {
+      padding-top: 80px;
+    }
+  }
 }
+
 
 // ==============================================================================
-// #Hero area
-//  - Could use JS to vertically center the cta, but it's not really necessary
+// #Hero Header
 // ==============================================================================
-.hero-inner {
-  text-align: center;
-  padding: $margin;
-
-  @include transition(padding 0.2s ease-in-out);
-
-  @include responsify( $medium_up, true ) {
-    padding-top: 130px;
-    padding-bottom: 115px;
-  }
-
-  @include responsify ( $small_up, true ) {
-    padding-top: 180px;
-    padding-bottom: 170px;
-  }
-
-  @include responsify ( $large_up, true ) {
-    padding-top: 200px;
-  }
-}
-
-.hero-text {
-  font-size: 3.429em;
-  line-height: 1.125;
-  margin-bottom: 0.9em;
-  font-weight: normal;
-
-  @include responsify( $small_down ) {
-    font-size: 2.5em;
-  }
-
-  @include responsify( $large_down ) {
-    font-size: 1.714em;
-    line-height: 1.325;
-  }
-}
-
 .hero-header {
-  padding-top: 30px;
+  position: absolute;
+  left: $gutter/2;
+  right: $gutter;
+  top: $gutter;
+  @include clearfix;
 }
 
 .git-stats {
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 13px;
+  margin: 0;
   padding-top: 10px;
   text-align: center;
 
@@ -75,7 +57,7 @@
   }
 
   span {
-    color: #8ec9ee;
+    color: $blueLight;
   }
 }
 
@@ -84,6 +66,45 @@
   margin: 0 auto;
   @include responsify( $medium_up, true ) {
     float: left;
+  }
+}
+
+// ==============================================================================
+// #Hero Inner
+// ==============================================================================
+.hero-inner {
+  text-align: center;
+  padding: 0 30px;
+  display: table-cell;
+  vertical-align: middle;
+
+  @include transition(padding 0.2s ease-in-out);
+
+  @include responsify( $medium_up, true ) {
+    padding: 0 120px;
+  }
+
+  a {
+    color: $blueLight;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.hero-text {
+  font-size: 40px;
+  line-height: 1.125;
+  margin-bottom: 5px;
+
+  @include responsify( $small_down ) {
+    font-size: 20px;
+  }
+
+  @include responsify( $large_down ) {
+    font-size: 25px;
+    line-height: 1.325;
   }
 }
 

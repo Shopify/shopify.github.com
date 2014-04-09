@@ -10,7 +10,7 @@ select {
   line-height: 1.6;
   font-family: $bodyFontStack;
   color: $textColor;
-  font-weight: 300;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
@@ -29,15 +29,19 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a { font-weight: inherit; }
 
 // Pixel to EM conversion tool http://pxtoem.com/
-h1, .h1 { font-size: 3em; }       // 42px
+h1, .h1 {
+  font-size: 36px;
+  font-weight: 300;
+}
 h2, .h2 {
   font-size: 24px;
   line-height: 1.1;
+  font-weight: 300;
 }
 h3, .h3 { font-size: 2em; }       // 28px
 h4, .h4 {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
 }
 h5, .h5 { font-size: 1.143em; }   // 16px
@@ -47,7 +51,7 @@ p { margin: 0 0 0.75em 0; }
 p img { margin: 0; }
 
 em { font-style: italic; }
-strong { font-weight: bold; }
+strong { font-weight: 600; }
 small { font-size: 80%; }
 
 // ==============================================================================
