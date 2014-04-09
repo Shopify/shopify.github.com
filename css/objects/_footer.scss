@@ -3,9 +3,10 @@
 // ==============================================================================
 .footer {
   font-size: 14px;
+  font-weight: 600;
   text-align: center;
-  padding-top: $margin/2;
-  padding-bottom: $margin/2;
+  padding-top: $margin/3;
+  padding-bottom: $margin/3;
 
   a {
     color: $footerLinks;

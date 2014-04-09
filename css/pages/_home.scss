@@ -95,8 +95,6 @@
 }
 
 .hero-text {
-  font-size: 40px;
-  line-height: 1.125;
   margin-bottom: 5px;
 
   @include responsify( $small_down ) {
@@ -130,7 +128,7 @@
 
   .spinner:before,
   .spinner:after {
-    background-color: $cardFooterBg;
+    background-color: $blueLight;
   }
 }
 

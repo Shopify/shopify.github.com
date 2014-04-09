@@ -18,7 +18,7 @@ description:
       </ul>
     </header>
     <div class="hero-inner">
-      <h2 class="hero-text">As a team who greatly benefits from open-source software, these are the projects that we have contributed back to the community.</h2>
+      <h1 class="hero-text">As a team who greatly benefits from open-source software, these are the projects that we have contributed back to the community.</h1>
       <p>All repos released under the <a href="#">MIT license</a></p>
     </div>
   </div>
@@ -56,6 +56,15 @@ description:
   {{#items}}
   <div class="grid-item large--one-quarter repo {{languageClass}}">
     <div class="repo-inner">
+      {{#if avatar}}
+        {{#if externalUrl}}
+          <a href="{{externalUrl}}" class="repo-avatar">
+            <img src="{{avatar}}">
+          </a>
+        {{else}}
+          <img src="{{avatar}}" class="repo-avatar">
+        {{/if}}
+      {{/if}}
       <h2>
         <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
       </h2>
@@ -63,8 +72,13 @@ description:
       <p>{{description}}</p>
     </div>
     <footer class="repo-footer">
-      <i class="icon-star"></i> {{stars}}
-      <i class="icon-forks"></i> {{forks}}
+      <div class="repo-footer--left">
+        <i class="icon-star" title="Stars"></i> {{stars}}
+        <i class="icon-forks" title="Forks"></i> {{forks}}
+      </div>
+      <div class="repo-footer--right">
+        <a href="{{url}}" class="icon-github" title="View {{name}} on GitHub">View on GitHub</a>
+      </div>
     </footer>
   </div>
   {{/items}}

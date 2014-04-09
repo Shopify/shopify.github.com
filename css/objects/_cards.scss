@@ -6,6 +6,7 @@
 
   h2, .h2 {
     margin-bottom: 4px;
+    word-wrap: break-word;
   }
 
   h4, .h4 {
@@ -15,15 +16,38 @@
 
 .repo-inner {
   background-color: #fff;
-  padding: $margin $margin $margin/2 $margin;
+  padding: $margin 0 $margin/2 $margin;
 
   p {
     margin-bottom: 0;
+    padding-right: $margin;
+  }
+}
+
+.repo-avatar {
+  display: block;
+  float: right;
+
+  img {
+    display: block;
   }
 }
 
 .repo-footer {
   background-color: $cardFooterBg;
   color: $cardFooterText;
+  font-weight: 600;
+  font-size: 14px;
+  @include clearfix;
+}
+
+.repo-footer--left {
+  float: left;
   padding: $margin/2 $margin;
+}
+
+.repo-footer--right {
+  float: right;
+  padding: $margin/2 $margin;
+  background-color: $linkColor;
 }

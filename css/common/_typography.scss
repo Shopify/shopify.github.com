@@ -17,7 +17,7 @@ select {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: 0.5em;
   line-height: 1.4;
 
@@ -30,13 +30,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 
 // Pixel to EM conversion tool http://pxtoem.com/
 h1, .h1 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 300;
+  line-height: 1.125;
 }
 h2, .h2 {
   font-size: 24px;
   line-height: 1.1;
-  font-weight: 300;
 }
 h3, .h3 { font-size: 16px; }
 h4, .h4 {
@@ -45,8 +45,7 @@ h4, .h4 {
   text-transform: uppercase;
 }
 
-p { margin: 0 0 0.75em 0; }
-p img { margin: 0; }
+p { margin: 0; }
 
 em { font-style: italic; }
 strong { font-weight: 600; }

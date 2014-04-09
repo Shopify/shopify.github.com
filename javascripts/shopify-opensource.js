@@ -12,7 +12,7 @@ jQuery(function($){
       },
       $body: $('body'),
       $repoContainer: $('#repos'),
-      $preventApiCalls: true,
+      $preventApiCalls: false,
 
       init : function() {
 
@@ -62,7 +62,7 @@ jQuery(function($){
             o.getRepos(repos, page+1);
           } else {
             if (result.meta.status == 403) {
-              o.$repoContainer.append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
+              o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
             } else {
               o.addRepos(repos);
             }
@@ -88,10 +88,10 @@ jQuery(function($){
 
           // Update repo language if manually defined
           if ( repo.name in customRepoLanguage ) {
-            repo.language = customRepoLanguage[repo.name]
-            repo.languageClass = (customRepoLanguage[repo.name] || '').toLowerCase()
+            repo.language = customRepoLanguage[repo.name];
+            repo.languageClass = (customRepoLanguage[repo.name] || '').toLowerCase();
           } else {
-            repo.languageClass = (repo.language || '').toLowerCase()
+            repo.languageClass = (repo.language || '').toLowerCase();
           }
 
           item = {
@@ -101,7 +101,9 @@ jQuery(function($){
             languageClass: repo.languageClass,
             description: repo.description,
             stars: repo.stargazers_count,
-            forks: repo.forks_count
+            forks: repo.forks_count,
+            avatar: repo.name in customRepoAvatar ? customRepoAvatar[repo.name] : null,
+            externalUrl: repo.name in customExternalUrl ? customExternalUrl[repo.name] : null,
           };
 
           items.push(item);
