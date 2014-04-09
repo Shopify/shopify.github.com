@@ -2746,19 +2746,21 @@ a:hover {
   white-space: nowrap;
   padding: 0 0 0 20px;
 }
-/* line 59, pages/_home.scss */
-.git-stats span {
+
+/* line 60, pages/_home.scss */
+.git-stat {
   color: #8ec9ee;
+  padding-right: 3px;
 }
 
-/* line 64, pages/_home.scss */
+/* line 65, pages/_home.scss */
 .icon-logo {
   display: block;
   margin: 0 auto;
   float: left;
 }
 
-/* line 75, pages/_home.scss */
+/* line 76, pages/_home.scss */
 .hero-inner {
   text-align: center;
   padding: 0 30px;
@@ -2769,43 +2771,43 @@ a:hover {
   transition: padding 0.2s ease-in-out;
   padding: 0 120px;
 }
-/* line 87, pages/_home.scss */
+/* line 88, pages/_home.scss */
 .hero-inner a {
   color: #8ec9ee;
 }
-/* line 91, pages/_home.scss */
+/* line 92, pages/_home.scss */
 .hero-inner p {
   font-size: 14px;
 }
 
-/* line 96, pages/_home.scss */
+/* line 97, pages/_home.scss */
 .hero-text {
   font-size: 40px;
   line-height: 1.125;
   margin-bottom: 5px;
 }
 @media (max-width: 480px) {
-  /* line 96, pages/_home.scss */
+  /* line 97, pages/_home.scss */
   .hero-text {
     font-size: 20px;
   }
 }
 @media (max-width: 769px) {
-  /* line 96, pages/_home.scss */
+  /* line 97, pages/_home.scss */
   .hero-text {
     font-size: 25px;
     line-height: 1.325;
   }
 }
 
-/* line 114, pages/_home.scss */
+/* line 115, pages/_home.scss */
 .repoWrap {
   background-color: #e8f0f5;
   min-height: 300px;
   padding: 20px 0;
 }
 
-/* line 123, pages/_home.scss */
+/* line 124, pages/_home.scss */
 .limit-error {
   text-align: center;
   padding: 100px 0;

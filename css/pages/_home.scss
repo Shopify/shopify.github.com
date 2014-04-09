@@ -55,10 +55,11 @@
       padding: 0 0 0 20px;
     }
   }
+}
 
-  span {
-    color: $blueLight;
-  }
+.git-stat {
+  color: $blueLight;
+  padding-right: 3px;
 }
 
 .icon-logo {

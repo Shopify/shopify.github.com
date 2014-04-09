@@ -12,6 +12,7 @@ jQuery(function($){
       },
       $body: $('body'),
       $repoContainer: $('#repos'),
+      $preventApiCalls: false,
 
       init : function() {
 
@@ -28,7 +29,7 @@ jQuery(function($){
             members = members || [],
             page = page || 1;
 
-        return false;
+        if (this.$preventApiCalls) return false;
 
         var uri = 'https://api.github.com/orgs/Shopify/members?callback=?'
                 + '&per_page=100'
@@ -53,7 +54,7 @@ jQuery(function($){
                 + '&per_page=100'
                 + '&page='+page;
 
-        return false;
+        if (this.$preventApiCalls) return false;
 
         $.getJSON(uri, function(result) {
           if (result.data && result.data.length > 0) {
