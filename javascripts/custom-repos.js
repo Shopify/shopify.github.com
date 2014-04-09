@@ -12,5 +12,6 @@ var customRepoLanguage = {
 // Custom repo avatars. Dimensions should be 40x40
 var customRepoAvatar = {
   'Timber': '/images/repo-avatars/timber.gif',
-  'dashing': '/images/repo-avatars/dashing.gif'
+  'dashing': '/images/repo-avatars/dashing.gif',
+  'superdb': '/images/repo-avatars/super-debugger.gif'
 }

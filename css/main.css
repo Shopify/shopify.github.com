@@ -2598,13 +2598,13 @@ a:hover {
 }
 
 /* line 27, objects/_cards.scss */
-.repo-avatar {
+.homepage-link {
   display: block;
   float: right;
   margin-right: 20px;
 }
 /* line 32, objects/_cards.scss */
-.repo-avatar img {
+.homepage-link img {
   display: block;
 }
 

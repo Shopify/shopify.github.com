@@ -56,13 +56,17 @@ description:
   {{#items}}
   <div class="grid-item large--one-quarter repo {{languageClass}}">
     <div class="repo-inner">
-      {{#if avatar}}
-        {{#if homepage}}
-          <a href="{{homepage}}" class="repo-avatar">
+      {{#if homepage}}
+        {{#if avatar}}
+          <a href="{{homepage}}" class="homepage-link">
             <img src="{{avatar}}">
           </a>
         {{else}}
-          <img src="{{avatar}}" class="repo-avatar">
+          <div class="homepage-link">Homepage</div>
+        {{/if}}
+      {{else}}
+        {{#if avatar}}
+          <img src="{{avatar}}" class="homepage-link">
         {{/if}}
       {{/if}}
       <h2>
