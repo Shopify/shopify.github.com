@@ -33,7 +33,8 @@ $large_up: unquote( "min-width: #{$large + 1}" );
 // ==============================================================================
 // Misc. Global Values
 // ==============================================================================
-$margin: 30px;
+$margin: 20px;
+$gutter: 30px;
 $layout_max_width: 1200px;
 $border_radius: 3px;
 
@@ -41,12 +42,14 @@ $border_radius: 3px;
 // ==============================================================================
 // Typography
 // ==============================================================================
-$bodyFontStack: 'Helvetica', sans-serif;
+$bodyFontStack: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
 
 // ==============================================================================
 // Colours
 // ==============================================================================
 $textColor: #273b41;
+$linkColor: #297293;
 
 $heroBg: #389fba;
 $orangeDark: #e36f10;

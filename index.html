@@ -4,13 +4,24 @@ title: Shopify Open Source
 description:
 ---
 
-<header class="hero">
-  <div class="pagewidth hero-inner">
-    <p>Shopify Members: <span id="countMembers"></span></p>
-    <p>Public Repos: <span id="countRepos"></span></p>
-    <h2 class="hero-text">As a team who greatly benefits from open-source software, these are the projects that we have contributed back to the community.</h2>
+<div class="hero">
+  <div class="pagewidth">
+    <header class="hero-header">
+      <div class="icon-logo">Shopify Open Source</div>
+      <ul class="inline-list git-stats">
+        <li>
+          <span id="countRepos" class="git-stat is-loading"></span> Repos
+        </li>
+        <li>
+          <span id="countMembers" class="git-stat is-loading"></span> Members
+        </li>
+      </ul>
+    </header>
+    <div class="hero-inner">
+      <h2 class="hero-text">As a team who greatly benefits from open-source software, these are the projects that we have contributed back to the community.</h2>
+    </div>
   </div>
-</header>
+</div>
 
 <div class="filter-bar">
   <div class="pagewidth text-center">
@@ -18,7 +29,6 @@ description:
       <span class="filter-label">Show</span>
       <button class="btn is-active" data-filter="*">All</button>
       <button class="btn" data-filter=".go">Go</button>
-      <button class="btn" data-filter=".css">CSS</button>
       <button class="btn" data-filter=".javascript">JavaScript</button>
       <button class="btn" data-filter=".liquid">Liquid</button>
       <button class="btn" data-filter=".objective-c">Objective-C</button>
@@ -40,13 +50,15 @@ description:
   {{#items}}
   <div class="grid-item large--one-quarter repo {{languageClass}}">
     <div class="repo-inner">
-      <h2>{{name}}</h2>
-      <h3>{{url}}</h3>
-      <p>{{language}}</p>
+      <h2>
+        <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
+      </h2>
+      <h4>{{language}}</h4>
+      <p>{{description}}</p>
     </div>
     <footer class="repo-footer">
-      Stars: {{stars}}
-      Forks: {{forks}}
+      <i class="icon-star"></i> {{stars}}
+      <i class="icon-forks"></i> {{forks}}
     </footer>
   </div>
   {{/items}}

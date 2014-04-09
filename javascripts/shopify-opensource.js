@@ -16,8 +16,8 @@ jQuery(function($){
         this.$body = $('body');
         this.$repoContainer = $('#repos');
 
-        this.addMembers();
         this.getRepos();
+        this.addMembers();
         this.tracking();
 
         $('a[href="#"]').on('click',function(e){e.preventDefault()});
@@ -29,7 +29,7 @@ jQuery(function($){
             members = members || [],
             page = page || 1;
 
-        return;
+        return false;
 
         var uri = 'https://api.github.com/orgs/Shopify/members?callback=?'
                 + '&per_page=100'
@@ -40,7 +40,7 @@ jQuery(function($){
             members = members.concat(result.data);
             o.addMembers(members, page+1);
           } else {
-            $("#countMembers").text(members.length);
+            $("#countMembers").removeClass('is-loading').text(members.length);
           }
         });
       },
@@ -53,6 +53,8 @@ jQuery(function($){
         var uri = 'https://api.github.com/orgs/Shopify/repos?callback=?'
                 + '&per_page=100'
                 + '&page='+page;
+
+        return false;
 
         $.getJSON(uri, function(result) {
           if (result.data && result.data.length > 0) {
@@ -72,7 +74,7 @@ jQuery(function($){
       addRepos: function(repos) {
         var o = this;
 
-        $('#countRepos').text(repos.length);
+        $('#countRepos').removeClass('is-loading').text(repos.length);
 
         // Sort by highest # of watchers (view twitter repo?)
 
@@ -104,8 +106,6 @@ jQuery(function($){
 
           items.push(item);
         });
-
-        console.log(items);
 
         data = { items: items };
 

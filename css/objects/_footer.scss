@@ -2,15 +2,15 @@
 // General Footer Styles
 // ==============================================================================
 .footer {
-	font-weight: bold;
-	text-align: center;
-	padding: $margin/2;
+  font-size: 14px;
+  text-align: center;
+  padding: $margin/2;
 
-	a {
-		color: $footerLinks;
+  a {
+    color: $footerLinks;
 
-		&:hover {
-			color: darken($footerLinks, 10%);
-		}
-	}
+    &:hover {
+      color: darken($footerLinks, 10%);
+    }
+  }
 }

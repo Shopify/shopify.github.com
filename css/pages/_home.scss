@@ -49,30 +49,35 @@
   }
 }
 
+.hero-header {
+  padding-top: 30px;
+}
+
+.git-stats {
+  float: right;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding-top: 10px;
+
+  li {
+    padding-left: 20px;
+    white-space: nowrap;
+  }
+
+  span {
+    color: #8ec9ee;
+  }
+}
+
 // ==============================================================================
-// #Repo Cards
+// #Repo area
 // ==============================================================================
 .repoWrap {
   background-color: #e8f0f5;
   min-height: 300px;
   padding: $margin 0;
 }
-
-.repo {
-  margin-bottom: $margin;
-}
-
-.repo-inner {
-  background-color: #fff;
-  padding: $margin $margin 0 $margin;
-}
-
-.repo-footer {
-  background-color: $cardFooterBg;
-  color: $cardFooterText;
-  padding: $margin/2 $margin;
-}
-
 
 // ==============================================================================
 // #API Limit Error

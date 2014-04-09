@@ -1,0 +1,29 @@
+// ==============================================================================
+// #Repo Cards
+// ==============================================================================
+.repo {
+  margin-bottom: $gutter;
+
+  h2, .h2 {
+    margin-bottom: 4px;
+  }
+
+  h4, .h4 {
+    color: #5d7880;
+  }
+}
+
+.repo-inner {
+  background-color: #fff;
+  padding: $margin $margin $margin/2 $margin;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.repo-footer {
+  background-color: $cardFooterBg;
+  color: $cardFooterText;
+  padding: $margin/2 $margin;
+}

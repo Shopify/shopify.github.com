@@ -10,7 +10,7 @@ $mobile-first:       true;
 $use-silent-classes: false;
 $push:               true;
 $pull:               false;
-$gridGutter:         $margin;
+$gridGutter:         $gutter;
 
 /* Force clearfix on grids */
 .grid,
@@ -22,8 +22,6 @@ $gridGutter:         $margin;
 .grid-item.clear {
   clear: both;
 }
-
-body {background-color: pink;}
 
 $class-type: unquote(".");
 

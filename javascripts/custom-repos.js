@@ -3,5 +3,8 @@
 // Custom repo language, different than that defined by GitHub
 var customRepoLanguage = {
   'liquid': 'Liquid',
-  'Timber': 'Liquid'
+  'Timber': 'Liquid',
+  'shopify_theme': 'Ruby',
+  'Shopify-Developer-Book': 'Ruby',
+  'offsite-gateway-sim': 'Ruby'
 }
