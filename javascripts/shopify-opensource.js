@@ -10,11 +10,10 @@ jQuery(function($){
       browserProperties: {
         touch: Modernizr.touch
       },
+      $body: $('body'),
+      $repoContainer: $('#repos'),
 
       init : function() {
-
-        this.$body = $('body');
-        this.$repoContainer = $('#repos');
 
         this.getRepos();
         this.addMembers();

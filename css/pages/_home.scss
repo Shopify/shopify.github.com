@@ -54,19 +54,36 @@
 }
 
 .git-stats {
-  float: right;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 13px;
   padding-top: 10px;
+  text-align: center;
+
+  @include responsify( $medium_up, true ) {
+    float: right;
+    text-align: right;
+  }
 
   li {
-    padding-left: 20px;
+    padding: 0 10px;
     white-space: nowrap;
+
+    @include responsify( $medium_up, true ) {
+      padding: 0 0 0 20px;
+    }
   }
 
   span {
     color: #8ec9ee;
+  }
+}
+
+.icon-logo {
+  display: block;
+  margin: 0 auto;
+  @include responsify( $medium_up, true ) {
+    float: left;
   }
 }
 
