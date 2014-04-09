@@ -12,7 +12,7 @@ jQuery(function($){
       },
       $body: $('body'),
       $repoContainer: $('#repos'),
-      $preventApiCalls: false,
+      $preventApiCalls: true,
 
       init : function() {
 
@@ -109,7 +109,7 @@ jQuery(function($){
 
         data = { items: items };
 
-        o.$repoContainer.append(template(data));
+        o.$repoContainer.addClass('is-loaded').append(template(data));
 
         // Setup isotope
         o.flowyGrid();

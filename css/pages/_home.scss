@@ -114,8 +114,28 @@
 // ==============================================================================
 .repoWrap {
   background-color: #e8f0f5;
-  min-height: 300px;
   padding: $margin 0;
+}
+
+.repo-loader {
+  display: table;
+  width: 100%;
+  min-height: 300px;
+
+  .repo-loader--inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .spinner:before,
+  .spinner:after {
+    background-color: $cardFooterBg;
+  }
+}
+
+#repos.is-loaded + .repo-loader {
+  display: none;
 }
 
 // ==============================================================================

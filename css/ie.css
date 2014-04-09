@@ -2369,7 +2369,7 @@ h2, .h2 {
 
 /* line 41, common/_typography.scss */
 h3, .h3 {
-  font-size: 2em;
+  font-size: 16px;
 }
 
 /* line 42, common/_typography.scss */
@@ -2379,88 +2379,78 @@ h4, .h4 {
   text-transform: uppercase;
 }
 
-/* line 47, common/_typography.scss */
-h5, .h5 {
-  font-size: 1.143em;
-}
-
 /* line 48, common/_typography.scss */
-h6, .h6 {
-  font-size: 1em;
-}
-
-/* line 50, common/_typography.scss */
 p {
   margin: 0 0 0.75em 0;
 }
 
-/* line 51, common/_typography.scss */
+/* line 49, common/_typography.scss */
 p img {
   margin: 0;
 }
 
-/* line 53, common/_typography.scss */
+/* line 51, common/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 54, common/_typography.scss */
+/* line 52, common/_typography.scss */
 strong {
   font-weight: 600;
 }
 
-/* line 55, common/_typography.scss */
+/* line 53, common/_typography.scss */
 small {
   font-size: 80%;
 }
 
-/* line 60, common/_typography.scss */
+/* line 58, common/_typography.scss */
 ul, ol {
   margin-bottom: 20px;
 }
 
-/* line 61, common/_typography.scss */
+/* line 59, common/_typography.scss */
 ul {
   list-style: none outside;
 }
 
-/* line 62, common/_typography.scss */
+/* line 60, common/_typography.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 63, common/_typography.scss */
+/* line 61, common/_typography.scss */
 ol, ul.square, ul.disc {
   margin-left: 20px;
 }
 
-/* line 64, common/_typography.scss */
+/* line 62, common/_typography.scss */
 ul.square {
   list-style: square outside;
 }
 
-/* line 65, common/_typography.scss */
+/* line 63, common/_typography.scss */
 ul.disc {
   list-style: disc outside;
 }
 
-/* line 66, common/_typography.scss */
+/* line 64, common/_typography.scss */
 ol.alpha {
   list-style: lower-alpha outside;
 }
 
-/* line 68, common/_typography.scss */
+/* line 66, common/_typography.scss */
 ul ul, ul ol,
 ol ol, ol ul {
   margin: 4px 0 5px 20px;
 }
 
-/* line 69, common/_typography.scss */
+/* line 67, common/_typography.scss */
 li {
   margin-bottom: 10px;
 }
 
-/* line 70, common/_typography.scss */
+/* line 68, common/_typography.scss */
 .inline-list li {
   display: inline-block;
 }
@@ -2629,9 +2619,16 @@ a:hover {
   -webkit-animation: rotate 2.0s infinite linear;
   animation: rotate 2.0s infinite linear;
 }
+/* line 15, objects/_loader.scss */
+.git-stat.is-loading.spinner-large,
+.spinner.spinner-large {
+  width: 50px;
+  height: 50px;
+}
 
-/* line 18, objects/_loader.scss */
-.dot1, .dot2,
+/* line 24, objects/_loader.scss */
+.spinner:before,
+.spinner:after,
 .git-stat.is-loading:before,
 .git-stat.is-loading:after {
   content: '';
@@ -2647,8 +2644,8 @@ a:hover {
   animation: bounce 2.0s infinite ease-in-out;
 }
 
-/* line 34, objects/_loader.scss */
-.dot2,
+/* line 40, objects/_loader.scss */
+.spinner:after,
 .git-stat.is-loading:after {
   top: auto;
   bottom: 0px;
@@ -2657,14 +2654,14 @@ a:hover {
 }
 
 @-webkit-keyframes rotate {
-  /* line 41, objects/_loader.scss */
+  /* line 47, objects/_loader.scss */
   100% {
     -webkit-transform: rotate(360deg);
   }
 }
 
 @keyframes rotate {
-  /* line 43, objects/_loader.scss */
+  /* line 49, objects/_loader.scss */
   100% {
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
@@ -2672,25 +2669,25 @@ a:hover {
 }
 
 @-webkit-keyframes bounce {
-  /* line 50, objects/_loader.scss */
+  /* line 56, objects/_loader.scss */
   0%, 100% {
     -webkit-transform: scale(0);
   }
 
-  /* line 51, objects/_loader.scss */
+  /* line 57, objects/_loader.scss */
   50% {
     -webkit-transform: scale(1);
   }
 }
 
 @keyframes bounce {
-  /* line 55, objects/_loader.scss */
+  /* line 61, objects/_loader.scss */
   0%, 100% {
     transform: scale(0);
     -webkit-transform: scale(0);
   }
 
-  /* line 58, objects/_loader.scss */
+  /* line 64, objects/_loader.scss */
   50% {
     transform: scale(1);
     -webkit-transform: scale(1);
@@ -2803,11 +2800,33 @@ a:hover {
 /* line 115, pages/_home.scss */
 .repoWrap {
   background-color: #e8f0f5;
-  min-height: 300px;
   padding: 20px 0;
 }
 
-/* line 124, pages/_home.scss */
+/* line 120, pages/_home.scss */
+.repo-loader {
+  display: table;
+  width: 100%;
+  min-height: 300px;
+}
+/* line 125, pages/_home.scss */
+.repo-loader .repo-loader--inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 132, pages/_home.scss */
+.repo-loader .spinner:before,
+.repo-loader .spinner:after {
+  background-color: #1c5f7d;
+}
+
+/* line 137, pages/_home.scss */
+#repos.is-loaded + .repo-loader {
+  display: none;
+}
+
+/* line 144, pages/_home.scss */
 .limit-error {
   text-align: center;
   padding: 100px 0;
