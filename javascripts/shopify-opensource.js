@@ -86,6 +86,8 @@ jQuery(function($){
 
         $.each(repos, function (i, repo) {
 
+          console.log(repo);
+
           // Update repo language if manually defined
           if ( repo.name in customRepoLanguage ) {
             repo.language = customRepoLanguage[repo.name];
@@ -103,7 +105,7 @@ jQuery(function($){
             stars: repo.stargazers_count,
             forks: repo.forks_count,
             avatar: repo.name in customRepoAvatar ? customRepoAvatar[repo.name] : null,
-            externalUrl: repo.name in customExternalUrl ? customExternalUrl[repo.name] : null,
+            homepage: repo.homepage,
           };
 
           items.push(item);

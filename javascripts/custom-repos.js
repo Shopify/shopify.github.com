@@ -14,7 +14,3 @@ var customRepoAvatar = {
   'Timber': '/images/repo-avatars/timber.gif',
   'dashing': '/images/repo-avatars/dashing.gif'
 }
-
-var customExternalUrl = {
-  'Timber': 'http://www.shopify.com/timber'
-}

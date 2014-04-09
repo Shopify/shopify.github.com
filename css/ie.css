@@ -2601,13 +2601,14 @@ a:hover {
 .repo-avatar {
   display: block;
   float: right;
+  margin-right: 20px;
 }
-/* line 31, objects/_cards.scss */
+/* line 32, objects/_cards.scss */
 .repo-avatar img {
   display: block;
 }
 
-/* line 36, objects/_cards.scss */
+/* line 37, objects/_cards.scss */
 .repo-footer {
   background-color: #1c5f7d;
   color: #8ed5df;
@@ -2621,13 +2622,13 @@ a:hover {
   clear: both;
 }
 
-/* line 44, objects/_cards.scss */
+/* line 45, objects/_cards.scss */
 .repo-footer--left {
   float: left;
   padding: 10px 20px;
 }
 
-/* line 49, objects/_cards.scss */
+/* line 50, objects/_cards.scss */
 .repo-footer--right {
   float: right;
   padding: 10px 20px;
