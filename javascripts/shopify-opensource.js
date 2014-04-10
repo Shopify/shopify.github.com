@@ -10,12 +10,11 @@ jQuery(function($){
       browserProperties: {
         touch: Modernizr.touch
       },
-      $gitId: '1034270cec7555f8e607',
-      $gitSecret: '4d7c0b2b49eb1a7930ae0e0ba4dbff0894bf2b10',
       $body: $('body'),
       $repoContainer: $('#repos'),
       $preventApiCalls: false,
       $ignoreForks: true,
+      $apiCalls: 0,
 
       init : function() {
 
@@ -36,10 +35,11 @@ jQuery(function($){
 
         var uri = 'https://api.github.com/orgs/Shopify/members?callback=?'
                 + '&per_page=100'
-                + '&page='+page
-                + '&client_id='+ this.$gitId +'&client_secret=' + this.$gitSecret;
+                + '&page='+page;
+                // + '&client_id='+ this.$gitId +'&client_secret=' + this.$gitSecret;
 
         $.getJSON(uri, function(result) {
+          o.$apiCalls++;
           if (result.data && result.data.length > 0) {
             members = members.concat(result.data);
             o.addMembers(members, page+1);
@@ -56,12 +56,13 @@ jQuery(function($){
 
         var uri = 'https://api.github.com/orgs/Shopify/repos?callback=?'
                 + '&per_page=100'
-                + '&page='+page
-                + '&client_id='+ this.$gitId +'&client_secret=' + this.$gitSecret;
+                + '&page='+page;
+                // + '&client_id='+ this.$gitId +'&client_secret=' + this.$gitSecret;
 
         if (this.$preventApiCalls) return false;
 
         $.getJSON(uri, function(result) {
+          o.$apiCalls++;
           if (result.data && result.data.length > 0) {
             repos = repos.concat(result.data);
             o.getRepos(repos, page+1);
@@ -89,11 +90,9 @@ jQuery(function($){
             template = Handlebars.compile(source);
 
         // Add custom repos to data
-        for (var i = customRepos.length - 1; i >= 0; i--) {
-          repos.push(customRepos[i]);
-        };
-
-        console.log(repos);
+        // for (var i = customRepos.length - 1; i >= 0; i--) {
+        //   repos.push(customRepos[i]);
+        // };
 
         $.each(repos, function (i, repo) {
 
