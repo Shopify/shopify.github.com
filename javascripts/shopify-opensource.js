@@ -92,17 +92,18 @@ jQuery(function($){
             return;
           }
 
+          // Ignore manually defined repos
+          if ( repo.name in ignoreRepos ) {
+            repoCount = repoCount - 1;
+            return;
+          }
+
           // Update repo language if manually defined
           if ( repo.name in customRepoLanguage ) {
             repo.language = customRepoLanguage[repo.name];
             repo.languageClass = (customRepoLanguage[repo.name] || '').toLowerCase();
           } else {
             repo.languageClass = (repo.language || '').toLowerCase();
-          }
-
-          // Mark repo as featured
-          if ( repo.name in featuredRepos ) {
-            console.log(repo.name);
           }
 
           item = {
@@ -115,14 +116,8 @@ jQuery(function($){
             forks: repo.forks_count,
             avatar: repo.name in customRepoAvatar ? customRepoAvatar[repo.name] : null,
             homepage: repo.homepage,
-            featured: true
+            featured: repo.name in featuredRepos ? true : false // unused right now
           };
-
-          // if (item.featured) {
-          //   items.unshift(item);
-          // } else {
-          //   items.push(item);
-          // }
 
           items.push(item);
         });
