@@ -12,11 +12,11 @@
     position: relative;
     display: table;
     width: 100%;
-    height: 430px;
-    padding-top: 120px;
+    height: 400px;
+    padding-top: 80px;
 
     @include responsify( $medium_up, true ) {
-      padding-top: 80px;
+      height: 430px;
     }
   }
 }
@@ -47,7 +47,6 @@
   text-transform: uppercase;
   font-size: 13px;
   margin: 0;
-  padding-top: 10px;
   text-align: center;
 
   @include responsify( $medium_up, true ) {
@@ -56,12 +55,8 @@
   }
 
   li {
-    padding: 0 10px;
+    padding: 0 0 0 10px;
     white-space: nowrap;
-
-    @include responsify( $medium_up, true ) {
-      padding: 0 0 0 20px;
-    }
   }
 }
 
@@ -85,7 +80,6 @@
 // ==============================================================================
 .hero-inner {
   text-align: center;
-  padding: 0 30px;
   display: table-cell;
   vertical-align: middle;
 
@@ -100,15 +94,15 @@
   }
 
   p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
 .hero-text {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
   @include responsify( $large_down ) {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.325;
   }
 }
@@ -118,7 +112,7 @@
 // ==============================================================================
 .repoWrap {
   background-color: #e8f0f5;
-  padding: $margin 0;
+  padding: $gutter 0 0;
 }
 
 .repo-loader {
