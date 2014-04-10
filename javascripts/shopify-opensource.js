@@ -86,8 +86,7 @@ jQuery(function($){
 
         $.each(repos, function (i, repo) {
 
-          console.log(repo);
-
+          // Ignore forked repos
           if (o.$ignoreForks && repo.fork) {
             repoCount = repoCount - 1;
             return;
@@ -101,6 +100,11 @@ jQuery(function($){
             repo.languageClass = (repo.language || '').toLowerCase();
           }
 
+          // Mark repo as featured
+          if ( repo.name in featuredRepos ) {
+            console.log(repo.name);
+          }
+
           item = {
             url: repo.html_url,
             name: repo.name,
@@ -111,9 +115,22 @@ jQuery(function($){
             forks: repo.forks_count,
             avatar: repo.name in customRepoAvatar ? customRepoAvatar[repo.name] : null,
             homepage: repo.homepage,
+            featured: true
           };
 
+          // if (item.featured) {
+          //   items.unshift(item);
+          // } else {
+          //   items.push(item);
+          // }
+
           items.push(item);
+        });
+
+        items.sort(function(a,b) {
+          if (a.stars < b.stars) return 1;
+          if (b.stars < a.stars) return -1;
+          return 0;
         });
 
         data = { items: items };
@@ -144,6 +161,14 @@ jQuery(function($){
           var filterValue = $(this).attr('data-filter');
           o.$repoContainer.isotope({ filter: filterValue });
         });
+      },
+
+      sortRepos: function(array, from, to) {
+        var element = arr[fromIndex];
+        arr.splice(fromIndex, 1);
+        arr.splice(toIndex, 0, element);
+
+        console.log(array);
       },
 
       tracking: function() {

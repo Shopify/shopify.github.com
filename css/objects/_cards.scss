@@ -3,6 +3,7 @@
 // ==============================================================================
 .repo {
   margin-bottom: $gutter;
+  @include transform(translateZ(0));
 
   h2, .h2 {
     margin-bottom: 4px;

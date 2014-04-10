@@ -4,6 +4,7 @@
 var customRepoLanguage = {
   'liquid': 'Liquid',
   'Timber': 'Liquid',
+  'skeleton-theme': 'Liquid',
   'shopify_theme': 'Ruby',
   'Shopify-Developer-Book': 'Ruby',
   'offsite-gateway-sim': 'Ruby'
@@ -14,4 +15,10 @@ var customRepoAvatar = {
   'Timber': '/images/repo-avatars/timber.gif',
   'dashing': '/images/repo-avatars/dashing.gif',
   'superdb': '/images/repo-avatars/super-debugger.gif'
+}
+
+var featuredRepos = {
+  'Timber': true,
+  'liquid': true,
+  'active_merchant': true
 }

@@ -2452,40 +2452,45 @@ a:hover {
 /* line 4, objects/_cards.scss */
 .repo {
   margin-bottom: 30px;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
-/* line 7, objects/_cards.scss */
+/* line 8, objects/_cards.scss */
 .repo h2, .repo .h2 {
   margin-bottom: 4px;
   word-wrap: break-word;
 }
-/* line 12, objects/_cards.scss */
+/* line 13, objects/_cards.scss */
 .repo h4, .repo .h4 {
   color: #5d7880;
 }
 
-/* line 17, objects/_cards.scss */
+/* line 18, objects/_cards.scss */
 .repo-inner {
   background-color: #fff;
   padding: 20px 0 10px 20px;
 }
-/* line 21, objects/_cards.scss */
+/* line 22, objects/_cards.scss */
 .repo-inner p {
   margin-bottom: 0;
   padding-right: 20px;
 }
 
-/* line 27, objects/_cards.scss */
+/* line 28, objects/_cards.scss */
 .homepage-link {
   display: block;
   float: right;
   margin-right: 20px;
 }
-/* line 32, objects/_cards.scss */
+/* line 33, objects/_cards.scss */
 .homepage-link img {
   display: block;
 }
 
-/* line 37, objects/_cards.scss */
+/* line 38, objects/_cards.scss */
 .repo-footer {
   background-color: #1c5f7d;
   color: #8ed5df;
@@ -2499,13 +2504,13 @@ a:hover {
   clear: both;
 }
 
-/* line 45, objects/_cards.scss */
+/* line 46, objects/_cards.scss */
 .repo-footer--left {
   float: left;
   padding: 10px 20px;
 }
 
-/* line 50, objects/_cards.scss */
+/* line 51, objects/_cards.scss */
 .repo-footer--right {
   float: right;
   padding: 10px 20px;
