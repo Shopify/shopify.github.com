@@ -10,6 +10,8 @@ jQuery(function($){
       browserProperties: {
         touch: Modernizr.touch
       },
+      $gitId: '1034270cec7555f8e607',
+      $gitSecret: '4d7c0b2b49eb1a7930ae0e0ba4dbff0894bf2b10',
       $body: $('body'),
       $repoContainer: $('#repos'),
       $preventApiCalls: false,
@@ -34,7 +36,8 @@ jQuery(function($){
 
         var uri = 'https://api.github.com/orgs/Shopify/members?callback=?'
                 + '&per_page=100'
-                + '&page='+page;
+                + '&page='+page
+                + '&client_id='+ this.$gitId +'&client_secret=' + this.$gitSecret;
 
         $.getJSON(uri, function(result) {
           if (result.data && result.data.length > 0) {
@@ -53,7 +56,8 @@ jQuery(function($){
 
         var uri = 'https://api.github.com/orgs/Shopify/repos?callback=?'
                 + '&per_page=100'
-                + '&page='+page;
+                + '&page='+page
+                + '&client_id='+ this.$gitId +'&client_secret=' + this.$gitSecret;
 
         if (this.$preventApiCalls) return false;
 
@@ -84,6 +88,13 @@ jQuery(function($){
             source   = $('#repoTemplate').html(),
             template = Handlebars.compile(source);
 
+        // Add custom repos to data
+        for (var i = customRepos.length - 1; i >= 0; i--) {
+          repos.push(customRepos[i]);
+        };
+
+        console.log(repos);
+
         $.each(repos, function (i, repo) {
 
           // Ignore forked repos
@@ -112,8 +123,8 @@ jQuery(function($){
             language: repo.language,
             languageClass: repo.languageClass,
             description: repo.description,
-            stars: repo.stargazers_count,
-            forks: repo.forks_count,
+            stars: repo.stargazers_count ? repo.stargazers_count : 0,
+            forks: repo.forks_count ? repo.forks_count : 0,
             avatar: repo.name in customRepoAvatar ? customRepoAvatar[repo.name] : null,
             homepage: repo.homepage,
             featured: repo.name in featuredRepos ? true : false // unused right now
@@ -156,14 +167,6 @@ jQuery(function($){
           var filterValue = $(this).attr('data-filter');
           o.$repoContainer.isotope({ filter: filterValue });
         });
-      },
-
-      sortRepos: function(array, from, to) {
-        var element = arr[fromIndex];
-        arr.splice(fromIndex, 1);
-        arr.splice(toIndex, 0, element);
-
-        console.log(array);
       },
 
       tracking: function() {

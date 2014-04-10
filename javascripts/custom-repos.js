@@ -28,3 +28,24 @@ var featuredRepos = {
 var ignoreRepos = {
 
 }
+
+// Add custom repos. Each requires a separate API request, so use sparingly.
+var customRepos = [
+  {
+    'name': 'batman',
+    'html_url': 'https://github.com/batmanjs/batman',
+    'description': 'The best JavaScript framework for Rails developers.',
+    'homepage': 'http://batmanjs.org'
+  },
+  {
+    'name': 'twitter bootstrap',
+    'html_url': 'https://github.com/twbs/bootstrap',
+    'description': 'A bootstrapped thing by Twitter',
+    'homepage': 'http://getbootstrap.come'
+  },
+  {
+    'name': 'javascript facebook photo selector',
+    'html_url': 'https://github.com/cshold/jQuery-Facebook-Photo-Selector',
+    'description': 'get your facebook photos'
+  }
+]
