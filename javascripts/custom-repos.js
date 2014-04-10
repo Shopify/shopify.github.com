@@ -29,23 +29,19 @@ var ignoreRepos = {
 
 }
 
-// Add custom repos. Each requires a separate API request, so use sparingly.
+// Add custom repos (currently unused)
+// To do this properly, each repo requires a separate API request, and as
+// a non-authenticated app this could potentially hit GitHub's rate too quickly.
+// To enable (without API integration):
+//  - Uncomment lines (approx.) 95-97 in shopify-opensource.js
+//  - Must manually enter data below
 var customRepos = [
   {
     'name': 'batman',
     'html_url': 'https://github.com/batmanjs/batman',
     'description': 'The best JavaScript framework for Rails developers.',
-    'homepage': 'http://batmanjs.org'
-  },
-  {
-    'name': 'twitter bootstrap',
-    'html_url': 'https://github.com/twbs/bootstrap',
-    'description': 'A bootstrapped thing by Twitter',
-    'homepage': 'http://getbootstrap.come'
-  },
-  {
-    'name': 'javascript facebook photo selector',
-    'html_url': 'https://github.com/cshold/jQuery-Facebook-Photo-Selector',
-    'description': 'get your facebook photos'
+    'homepage': 'http://batmanjs.org',
+    'forks_count': 170,
+    'stargazers_count': 1672
   }
 ]
