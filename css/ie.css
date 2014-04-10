@@ -1228,196 +1228,6 @@ pre {
     clear: both;
   }
 }
-@media only screen and (max-width: 768px) {
-  /** Whole */
-  /* line 151, common/_grid.scss */
-  .medium-down--one-whole {
-    width: 100%;
-  }
-
-  /* Halves */
-  /* line 154, common/_grid.scss */
-  .medium-down--one-half, .medium-down--two-quarters, .medium-down--three-sixths, .medium-down--four-eighths, .medium-down--five-tenths, .medium-down--six-twelfths {
-    width: 50%;
-  }
-
-  /* Thirds */
-  /* line 157, common/_grid.scss */
-  .medium-down--one-third, .medium-down--two-sixths, .medium-down--four-twelfths {
-    width: 33.333%;
-  }
-
-  /* line 158, common/_grid.scss */
-  .medium-down--two-thirds, .medium-down--four-sixths, .medium-down--eight-twelfths {
-    width: 66.666%;
-  }
-
-  /* Quarters */
-  /* line 161, common/_grid.scss */
-  .medium-down--one-quarter, .medium-down--two-eighths, .medium-down--three-twelfths {
-    width: 25%;
-  }
-
-  /* line 163, common/_grid.scss */
-  .medium-down--three-quarters, .medium-down--six-eighths, .medium-down--nine-twelfths {
-    width: 75%;
-  }
-
-  /* Fifths */
-  /* line 166, common/_grid.scss */
-  .medium-down--one-fifth, .medium-down--two-tenths {
-    width: 20%;
-  }
-
-  /* line 167, common/_grid.scss */
-  .medium-down--two-fifths, .medium-down--four-tenths {
-    width: 40%;
-  }
-
-  /* line 168, common/_grid.scss */
-  .medium-down--three-fifths, .medium-down--six-tenths {
-    width: 60%;
-  }
-
-  /* line 169, common/_grid.scss */
-  .medium-down--four-fifths, .medium-down--eight-tenths {
-    width: 80%;
-  }
-
-  /* Sixths */
-  /* line 172, common/_grid.scss */
-  .medium-down--one-sixth, .medium-down--two-twelfths {
-    width: 16.666%;
-  }
-
-  /* line 176, common/_grid.scss */
-  .medium-down--five-sixths, .medium-down--ten-twelfths {
-    width: 83.333%;
-  }
-
-  /* Eighths */
-  /* line 179, common/_grid.scss */
-  .medium-down--one-eighth {
-    width: 12.5%;
-  }
-
-  /* line 181, common/_grid.scss */
-  .medium-down--three-eighths {
-    width: 37.5%;
-  }
-
-  /* line 183, common/_grid.scss */
-  .medium-down--five-eighths {
-    width: 62.5%;
-  }
-
-  /* line 185, common/_grid.scss */
-  .medium-down--seven-eighths {
-    width: 87.5%;
-  }
-
-  /* Tenths */
-  /* line 188, common/_grid.scss */
-  .medium-down--one-tenth {
-    width: 10%;
-  }
-
-  /* line 190, common/_grid.scss */
-  .medium-down--three-tenths {
-    width: 30%;
-  }
-
-  /* line 194, common/_grid.scss */
-  .medium-down--seven-tenths {
-    width: 70%;
-  }
-
-  /* line 196, common/_grid.scss */
-  .medium-down--nine-tenths {
-    width: 90%;
-  }
-
-  /* Twelfths */
-  /* line 199, common/_grid.scss */
-  .medium-down--one-twelfth {
-    width: 8.333%;
-  }
-
-  /* line 203, common/_grid.scss */
-  .medium-down--five-twelfths {
-    width: 41.666%;
-  }
-
-  /* line 205, common/_grid.scss */
-  .medium-down--seven-twelfths {
-    width: 58.333%;
-  }
-
-  /* line 209, common/_grid.scss */
-  .medium-down--eleven-twelfths {
-    width: 91.666%;
-  }
-
-  /* line 247, common/_grid.scss */
-  .medium-down--show {
-    display: block !important;
-  }
-
-  /* line 248, common/_grid.scss */
-  .medium-down--hide {
-    display: none !important;
-  }
-
-  /* line 250, common/_grid.scss */
-  .medium-down--text-left {
-    text-align: left !important;
-  }
-
-  /* line 251, common/_grid.scss */
-  .medium-down--text-right {
-    text-align: right !important;
-  }
-
-  /* line 252, common/_grid.scss */
-  .medium-down--text-center {
-    text-align: center !important;
-  }
-
-  /* line 254, common/_grid.scss */
-  .medium-down--left {
-    float: left !important;
-  }
-
-  /* line 255, common/_grid.scss */
-  .medium-down--right {
-    float: right !important;
-  }
-
-  /* line 233, common/_grid.scss */
-  .grid-uniform .medium-down--one-half:nth-child(2n+1), .grid-uniform .medium-down--two-quarters:nth-child(2n+1), .grid-uniform .medium-down--three-sixths:nth-child(2n+1), .grid-uniform .medium-down--four-eighths:nth-child(2n+1), .grid-uniform .medium-down--five-tenths:nth-child(2n+1), .grid-uniform .medium-down--six-twelfths:nth-child(2n+1),
-  .grid-uniform .medium-down--one-third:nth-child(3n+1),
-  .grid-uniform .medium-down--two-sixths:nth-child(3n+1),
-  .grid-uniform .medium-down--four-twelfths:nth-child(3n+1),
-  .grid-uniform .medium-down--one-quarter:nth-child(4n+1),
-  .grid-uniform .medium-down--two-eighths:nth-child(4n+1),
-  .grid-uniform .medium-down--three-twelfths:nth-child(4n+1),
-  .grid-uniform .medium-down--one-fifth:nth-child(5n+1),
-  .grid-uniform .medium-down--two-tenths:nth-child(5n+1),
-  .grid-uniform .medium-down--one-sixth:nth-child(6n+1),
-  .grid-uniform .medium-down--two-twelfths:nth-child(6n+1),
-  .grid-uniform .medium-down--two-sixths:nth-child(3n+1),
-  .grid-uniform .medium-down--three-sixths:nth-child(2n+1),
-  .grid-uniform .medium-down--two-eighths:nth-child(4n+1),
-  .grid-uniform .medium-down--four-eighths:nth-child(2n+1),
-  .grid-uniform .medium-down--five-tenths:nth-child(2n+1),
-  .grid-uniform .medium-down--one-twelfth:nth-child(12n+1),
-  .grid-uniform .medium-down--two-twelfths:nth-child(6n+1),
-  .grid-uniform .medium-down--three-twelfths:nth-child(4n+1),
-  .grid-uniform .medium-down--four-twelfths:nth-child(3n+1),
-  .grid-uniform .medium-down--six-twelfths:nth-child(2n+1) {
-    clear: both;
-  }
-}
 @media only screen and (min-width: 769px) {
   /** Whole */
   /* line 151, common/_grid.scss */
@@ -1605,6 +1415,196 @@ pre {
   .grid-uniform .large--three-twelfths:nth-child(4n+1),
   .grid-uniform .large--four-twelfths:nth-child(3n+1),
   .grid-uniform .large--six-twelfths:nth-child(2n+1) {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 1075px) {
+  /** Whole */
+  /* line 151, common/_grid.scss */
+  .xlarge--one-whole {
+    width: 100%;
+  }
+
+  /* Halves */
+  /* line 154, common/_grid.scss */
+  .xlarge--one-half, .xlarge--two-quarters, .xlarge--three-sixths, .xlarge--four-eighths, .xlarge--five-tenths, .xlarge--six-twelfths {
+    width: 50%;
+  }
+
+  /* Thirds */
+  /* line 157, common/_grid.scss */
+  .xlarge--one-third, .xlarge--two-sixths, .xlarge--four-twelfths {
+    width: 33.333%;
+  }
+
+  /* line 158, common/_grid.scss */
+  .xlarge--two-thirds, .xlarge--four-sixths, .xlarge--eight-twelfths {
+    width: 66.666%;
+  }
+
+  /* Quarters */
+  /* line 161, common/_grid.scss */
+  .xlarge--one-quarter, .xlarge--two-eighths, .xlarge--three-twelfths {
+    width: 25%;
+  }
+
+  /* line 163, common/_grid.scss */
+  .xlarge--three-quarters, .xlarge--six-eighths, .xlarge--nine-twelfths {
+    width: 75%;
+  }
+
+  /* Fifths */
+  /* line 166, common/_grid.scss */
+  .xlarge--one-fifth, .xlarge--two-tenths {
+    width: 20%;
+  }
+
+  /* line 167, common/_grid.scss */
+  .xlarge--two-fifths, .xlarge--four-tenths {
+    width: 40%;
+  }
+
+  /* line 168, common/_grid.scss */
+  .xlarge--three-fifths, .xlarge--six-tenths {
+    width: 60%;
+  }
+
+  /* line 169, common/_grid.scss */
+  .xlarge--four-fifths, .xlarge--eight-tenths {
+    width: 80%;
+  }
+
+  /* Sixths */
+  /* line 172, common/_grid.scss */
+  .xlarge--one-sixth, .xlarge--two-twelfths {
+    width: 16.666%;
+  }
+
+  /* line 176, common/_grid.scss */
+  .xlarge--five-sixths, .xlarge--ten-twelfths {
+    width: 83.333%;
+  }
+
+  /* Eighths */
+  /* line 179, common/_grid.scss */
+  .xlarge--one-eighth {
+    width: 12.5%;
+  }
+
+  /* line 181, common/_grid.scss */
+  .xlarge--three-eighths {
+    width: 37.5%;
+  }
+
+  /* line 183, common/_grid.scss */
+  .xlarge--five-eighths {
+    width: 62.5%;
+  }
+
+  /* line 185, common/_grid.scss */
+  .xlarge--seven-eighths {
+    width: 87.5%;
+  }
+
+  /* Tenths */
+  /* line 188, common/_grid.scss */
+  .xlarge--one-tenth {
+    width: 10%;
+  }
+
+  /* line 190, common/_grid.scss */
+  .xlarge--three-tenths {
+    width: 30%;
+  }
+
+  /* line 194, common/_grid.scss */
+  .xlarge--seven-tenths {
+    width: 70%;
+  }
+
+  /* line 196, common/_grid.scss */
+  .xlarge--nine-tenths {
+    width: 90%;
+  }
+
+  /* Twelfths */
+  /* line 199, common/_grid.scss */
+  .xlarge--one-twelfth {
+    width: 8.333%;
+  }
+
+  /* line 203, common/_grid.scss */
+  .xlarge--five-twelfths {
+    width: 41.666%;
+  }
+
+  /* line 205, common/_grid.scss */
+  .xlarge--seven-twelfths {
+    width: 58.333%;
+  }
+
+  /* line 209, common/_grid.scss */
+  .xlarge--eleven-twelfths {
+    width: 91.666%;
+  }
+
+  /* line 247, common/_grid.scss */
+  .xlarge--show {
+    display: block !important;
+  }
+
+  /* line 248, common/_grid.scss */
+  .xlarge--hide {
+    display: none !important;
+  }
+
+  /* line 250, common/_grid.scss */
+  .xlarge--text-left {
+    text-align: left !important;
+  }
+
+  /* line 251, common/_grid.scss */
+  .xlarge--text-right {
+    text-align: right !important;
+  }
+
+  /* line 252, common/_grid.scss */
+  .xlarge--text-center {
+    text-align: center !important;
+  }
+
+  /* line 254, common/_grid.scss */
+  .xlarge--left {
+    float: left !important;
+  }
+
+  /* line 255, common/_grid.scss */
+  .xlarge--right {
+    float: right !important;
+  }
+
+  /* line 233, common/_grid.scss */
+  .grid-uniform .xlarge--one-half:nth-child(2n+1), .grid-uniform .xlarge--two-quarters:nth-child(2n+1), .grid-uniform .xlarge--three-sixths:nth-child(2n+1), .grid-uniform .xlarge--four-eighths:nth-child(2n+1), .grid-uniform .xlarge--five-tenths:nth-child(2n+1), .grid-uniform .xlarge--six-twelfths:nth-child(2n+1),
+  .grid-uniform .xlarge--one-third:nth-child(3n+1),
+  .grid-uniform .xlarge--two-sixths:nth-child(3n+1),
+  .grid-uniform .xlarge--four-twelfths:nth-child(3n+1),
+  .grid-uniform .xlarge--one-quarter:nth-child(4n+1),
+  .grid-uniform .xlarge--two-eighths:nth-child(4n+1),
+  .grid-uniform .xlarge--three-twelfths:nth-child(4n+1),
+  .grid-uniform .xlarge--one-fifth:nth-child(5n+1),
+  .grid-uniform .xlarge--two-tenths:nth-child(5n+1),
+  .grid-uniform .xlarge--one-sixth:nth-child(6n+1),
+  .grid-uniform .xlarge--two-twelfths:nth-child(6n+1),
+  .grid-uniform .xlarge--two-sixths:nth-child(3n+1),
+  .grid-uniform .xlarge--three-sixths:nth-child(2n+1),
+  .grid-uniform .xlarge--two-eighths:nth-child(4n+1),
+  .grid-uniform .xlarge--four-eighths:nth-child(2n+1),
+  .grid-uniform .xlarge--five-tenths:nth-child(2n+1),
+  .grid-uniform .xlarge--one-twelfth:nth-child(12n+1),
+  .grid-uniform .xlarge--two-twelfths:nth-child(6n+1),
+  .grid-uniform .xlarge--three-twelfths:nth-child(4n+1),
+  .grid-uniform .xlarge--four-twelfths:nth-child(3n+1),
+  .grid-uniform .xlarge--six-twelfths:nth-child(2n+1) {
     clear: both;
   }
 }
@@ -2006,136 +2006,6 @@ pre {
 
   /* line 345, common/_grid.scss */
   .push--medium--eleven-twelfths {
-    left: 91.666%;
-  }
-}
-@media only screen and (max-width: 768px) {
-  /* Whole */
-  /* line 287, common/_grid.scss */
-  .push--medium-down--one-whole {
-    left: 100%;
-  }
-
-  /* Halves */
-  /* line 290, common/_grid.scss */
-  .push--medium-down--one-half, .push--medium-down--two-quarters, .push--medium-down--three-sixths, .push--medium-down--four-eighths, .push--medium-down--five-tenths, .push--medium-down--six-twelfths {
-    left: 50%;
-  }
-
-  /* Thirds */
-  /* line 293, common/_grid.scss */
-  .push--medium-down--one-third, .push--medium-down--two-sixths, .push--medium-down--four-twelfths {
-    left: 33.333%;
-  }
-
-  /* line 294, common/_grid.scss */
-  .push--medium-down--two-thirds, .push--medium-down--four-sixths, .push--medium-down--eight-twelfths {
-    left: 66.666%;
-  }
-
-  /* Quarters */
-  /* line 297, common/_grid.scss */
-  .push--medium-down--one-quarter, .push--medium-down--two-eighths, .push--medium-down--three-twelfths {
-    left: 25%;
-  }
-
-  /* line 299, common/_grid.scss */
-  .push--medium-down--three-quarters, .push--medium-down--six-eighths, .push--medium-down--nine-twelfths {
-    left: 75%;
-  }
-
-  /* Fifths */
-  /* line 302, common/_grid.scss */
-  .push--medium-down--one-fifth, .push--medium-down--two-tenths {
-    left: 20%;
-  }
-
-  /* line 303, common/_grid.scss */
-  .push--medium-down--two-fifths, .push--medium-down--four-tenths {
-    left: 40%;
-  }
-
-  /* line 304, common/_grid.scss */
-  .push--medium-down--three-fifths, .push--medium-down--six-tenths {
-    left: 60%;
-  }
-
-  /* line 305, common/_grid.scss */
-  .push--medium-down--four-fifths, .push--medium-down--eight-tenths {
-    left: 80%;
-  }
-
-  /* Sixths */
-  /* line 308, common/_grid.scss */
-  .push--medium-down--one-sixth, .push--medium-down--two-twelfths {
-    left: 16.666%;
-  }
-
-  /* line 312, common/_grid.scss */
-  .push--medium-down--five-sixths, .push--medium-down--ten-twelfths {
-    left: 83.333%;
-  }
-
-  /* Eighths */
-  /* line 315, common/_grid.scss */
-  .push--medium-down--one-eighth {
-    left: 12.5%;
-  }
-
-  /* line 317, common/_grid.scss */
-  .push--medium-down--three-eighths {
-    left: 37.5%;
-  }
-
-  /* line 319, common/_grid.scss */
-  .push--medium-down--five-eighths {
-    left: 62.5%;
-  }
-
-  /* line 321, common/_grid.scss */
-  .push--medium-down--seven-eighths {
-    left: 87.5%;
-  }
-
-  /* Tenths */
-  /* line 324, common/_grid.scss */
-  .push--medium-down--one-tenth {
-    left: 10%;
-  }
-
-  /* line 326, common/_grid.scss */
-  .push--medium-down--three-tenths {
-    left: 30%;
-  }
-
-  /* line 330, common/_grid.scss */
-  .push--medium-down--seven-tenths {
-    left: 70%;
-  }
-
-  /* line 332, common/_grid.scss */
-  .push--medium-down--nine-tenths {
-    left: 90%;
-  }
-
-  /* Twelfths */
-  /* line 335, common/_grid.scss */
-  .push--medium-down--one-twelfth {
-    left: 8.333%;
-  }
-
-  /* line 339, common/_grid.scss */
-  .push--medium-down--five-twelfths {
-    left: 41.666%;
-  }
-
-  /* line 341, common/_grid.scss */
-  .push--medium-down--seven-twelfths {
-    left: 58.333%;
-  }
-
-  /* line 345, common/_grid.scss */
-  .push--medium-down--eleven-twelfths {
     left: 91.666%;
   }
 }

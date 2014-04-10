@@ -86,6 +86,8 @@ jQuery(function($){
 
         $.each(repos, function (i, repo) {
 
+          console.log(repo);
+
           if (o.$ignoreForks && repo.fork) {
             repoCount = repoCount - 1;
             return;

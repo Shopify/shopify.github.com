@@ -34,7 +34,7 @@ description:
       <button class="btn" data-filter=".liquid">Liquid</button>
       <button class="btn" data-filter=".objective-c">Objective-C</button>
       <button class="btn" data-filter=".ruby">Ruby</button>
-      <button class="btn" data-filter=":not(.go, .css, .javascript, .objective-c, .ruby)">Other</button>
+      <button class="btn" data-filter=":not(.go, .css, .javascript, .objective-c, .ruby, .liquid)">Other</button>
 
     </div>
   </div>
@@ -54,7 +54,7 @@ description:
 <script id="repoTemplate" type="text/template">
 {% raw %}
   {{#items}}
-  <div class="grid-item large--one-quarter repo {{languageClass}}">
+  <div class="grid-item xlarge--one-quarter large--one-third medium--one-half repo {{languageClass}}">
     <div class="repo-inner">
       {{#if homepage}}
         {{#if avatar}}
