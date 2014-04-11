@@ -13,8 +13,9 @@ jQuery(function($){
       $body: $('body'),
       $repoContainer: $('#repos'),
       $preventApiCalls: false,
+      $noApiBuffer: true,
       $ignoreForks: true,
-      $externalAppUrl: 'http://www.carsonshold.com/temp/shopify-os',
+      $externalAppUrl: 'http://www.carsonshold.com/shopify-os',
 
       init : function() {
 
@@ -34,29 +35,49 @@ jQuery(function($){
 
         if (this.$preventApiCalls) return false;
 
-        var jsonUrl = this.$externalAppUrl,
-            uri = 'https://api.github.com/orgs/Shopify/members?callback=foo'
+        var uri = 'https://api.github.com/orgs/Shopify/members?callback=foo'
                 + '&per_page='+perPage
                 + '&page='+page;
 
-        $.ajax({
-          url: jsonUrl,
-          type: 'GET',
-          data: {url: uri},
-        })
-        .success(function(result) {
-          // We get a semi-broken response (no idea why). Fix it up then parse it here.
-          result = o.fixJson(result);
+        if (this.$noApiBuffer) {
+          // Overwrite URI with different callback
+          uri = 'https://api.github.com/orgs/Shopify/members?callback=?'
+              + '&per_page='+perPage
+              + '&page='+page;
+          $.getJSON(uri, function(result) {
+            // Add api data to members array
+            members = members.concat(result.data);
 
-          // Add api data to members array
-          members = members.concat(result.data);
+            if (result.data && result.data.length == perPage) {
+              o.addMembers(members, page+1);
+            } else {
+              if (result.meta.status == 403) {
+                o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
+              } else {
+                $("#countMembers").removeClass('is-loading').text(members.length);
+              }
+            }
+          });
+        } else {
+          $.ajax({
+            url: o.$externalAppUrl,
+            type: 'GET',
+            data: {url: uri},
+          })
+          .success(function(result) {
+            // We get a semi-broken response (no idea why). Fix it up then parse it here.
+            result = o.fixJson(result);
 
-          if (result.data && result.data.length == perPage) {
-            o.addMembers(members, page+1);
-          } else {
-            $("#countMembers").removeClass('is-loading').text(members.length);
-          }
-        });
+            // Add api data to members array
+            members = members.concat(result.data);
+
+            if (result.data && result.data.length == perPage) {
+              o.addMembers(members, page+1);
+            } else {
+              $("#countMembers").removeClass('is-loading').text(members.length);
+            }
+          });
+        }
       },
 
       getRepos: function(repos, page) {
@@ -65,40 +86,58 @@ jQuery(function($){
             page = page || 1,
             perPage = 100;
 
-        var jsonUrl = this.$externalAppUrl,
-            uri = 'https://api.github.com/orgs/Shopify/repos?callback=foo'
+        var uri = 'https://api.github.com/orgs/Shopify/repos?callback=foo'
                 + '&per_page='+perPage
                 + '&page='+page;
 
         if (this.$preventApiCalls) return false;
 
-        $.ajax({
-          url: jsonUrl,
-          type: 'GET',
-          data: {url: uri},
-        })
-        .success(function(result) {
-          // We get a semi-broken response (no idea why). Fix it up then parse it here.
-          result = o.fixJson(result);
+        if (this.$noApiBuffer) {
+          // Overwrite URI with different callback
+          uri = 'https://api.github.com/orgs/Shopify/repos?callback=?'
+              + '&per_page='+perPage
+              + '&page='+page;
 
-          console.warn('page: ' + page);
-          console.log(result);
+          $.getJSON(uri, function(result) {
+            // Add api data to repos array
+            repos = repos.concat(result.data);
 
-          // Add api data to repos array
-          repos = repos.concat(result.data);
-
-          if (result.data && result.data.length == perPage) {
-            o.getRepos(repos, page+1);
-          } else {
-            if (result.meta.status == 403) {
-              o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
+            if (result.data && result.data.length == perPage) {
+              o.getRepos(repos, page+1);
             } else {
-              // We have all of Shopify's repos, now get the custom ones
-              o.getCustomRepos(repos);
-              $("#countRepos").removeClass('is-loading').text(repos.length);
+              if (result.meta.status != 403) {
+                o.getCustomRepos(repos);
+                $("#countRepos").removeClass('is-loading').text(repos.length);
+              }
             }
-          }
-        });
+          });
+
+        } else {
+          $.ajax({
+            url: o.$externalAppUrl,
+            type: 'GET',
+            data: {url: uri},
+          })
+          .success(function(result) {
+            // We get a semi-broken response (no idea why). Fix it up then parse it here.
+            result = o.fixJson(result);
+
+            // Add api data to repos array
+            repos = repos.concat(result.data);
+
+            if (result.data && result.data.length == perPage) {
+              o.getRepos(repos, page+1);
+            } else {
+              if (result.meta.status == 403) {
+                o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
+              } else {
+                // We have all of Shopify's repos, now get the custom ones
+                o.getCustomRepos(repos);
+                $("#countRepos").removeClass('is-loading').text(repos.length);
+              }
+            }
+          });
+        }
 
       },
 
