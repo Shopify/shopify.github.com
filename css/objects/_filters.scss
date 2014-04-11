@@ -1,0 +1,44 @@
+// ==============================================================================
+// #Filter Bar
+// ==============================================================================
+.filter-bar {
+  font-size: 14px;
+  font-weight: 600;
+  padding: $margin/2 0;
+  text-transform: uppercase;
+}
+
+.filter-label {
+  padding: 2px $margin/4;
+}
+
+// ==============================================================================
+// #Filter Buttons
+// ==============================================================================
+.btn,
+.btn:visited {
+  display: inline-block;
+  border: 1px solid transparent;
+  background: none;
+  font: inherit;
+  text-transform: inherit;
+  color: #5d7880;
+  text-align: center;
+  padding: 2px $margin/1.5;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 15px;
+  cursor: pointer;
+  @include transition(all 0.1s ease-in-out);
+
+  &:hover,
+  &.is-active {
+    color: #fff;
+    background-color: $filterActive;
+  }
+
+  &:focus {
+    outline: 0 none;
+    border: 1px solid lighten($filterActive, 10%);
+  }
+}

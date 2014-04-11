@@ -1,0 +1,16 @@
+// ==============================================================================
+// General Footer Styles
+// ==============================================================================
+.footer {
+  font-size: 14px;
+  text-align: center;
+  padding: $margin $margin $margin $margin+$margin/2;
+
+  a {
+    color: $footerLinks;
+
+    &:hover {
+      color: darken($footerLinks, 10%);
+    }
+  }
+}

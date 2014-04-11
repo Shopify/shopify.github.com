@@ -1,0 +1,93 @@
+---
+layout: default
+title: Shopify Open Source
+description:
+---
+
+<div class="hero">
+  <div class="hero-lines"></div>
+  <div class="pagewidth">
+    <header class="hero-header">
+      <img src="/images/shopify-open-source.svg" alt="Shopify Open Source" class="logo">
+      <ul class="inline-list git-stats">
+        <li>
+          <span id="countRepos" class="git-stat is-loading"></span> Repos
+        </li>
+        <li>
+          <span id="countMembers" class="git-stat is-loading"></span> Members
+        </li>
+      </ul>
+    </header>
+    <div class="hero-inner">
+      <h1 class="hero-text">As a team who greatly benefits from open-source software, these are the projects that we have contributed back to the community.</h1>
+      <p>All repos released under the <a href="https://github.com/Shopify/shopify.github.com/blob/master/LICENSE.md">MIT license</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="pagewidth text-center">
+    <div class="button-group js-radio-button-group" id="filters">
+      <span class="filter-label">Show</span>
+      <button class="btn is-active" data-filter="*">All</button>
+      <button class="btn" data-filter=".go">Go</button>
+      <button class="btn" data-filter=".javascript">JavaScript</button>
+      <button class="btn" data-filter=".liquid">Liquid</button>
+      <button class="btn" data-filter=".objective-c">Objective-C</button>
+      <button class="btn" data-filter=".ruby">Ruby</button>
+      <button class="btn" data-filter=":not(.go, .css, .javascript, .objective-c, .ruby, .liquid)">Other</button>
+
+    </div>
+  </div>
+</div>
+
+<div class="repoWrap">
+  <div class="pagewidth">
+    <div class="grid" id="repos"></div>
+    <div class="repo-loader">
+      <div class="repo-loader--inner">
+        <div class="spinner spinner-large"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="repoTemplate" type="text/template">
+{% raw %}
+  {{#items}}
+  <div class="grid-item xlarge--one-quarter large--one-third medium--one-half repo {{languageClass}}">
+    <div class="repo-inner">
+      {{#if homepage}}
+        {{#if avatar}}
+          <a href="{{homepage}}" class="homepage-link">
+            <img src="{{avatar}}">
+          </a>
+        {{else}}
+          <a href="{{homepage}}" class="homepage-link">
+            <i class="icon-world"></i>
+          </a>
+        {{/if}}
+      {{else}}
+        {{#if avatar}}
+          <img src="{{avatar}}" class="homepage-link">
+        {{/if}}
+      {{/if}}
+      <h2>
+        <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
+      </h2>
+      <h4>{{language}}</h4>
+      <p>{{description}}</p>
+    </div>
+    <footer class="repo-footer">
+      <div class="repo-footer--left">
+        <i class="icon-star" title="Stars"></i> {{stars}}
+        <i class="icon-forks" title="Forks"></i> {{forks}}
+      </div>
+      <div class="repo-footer--right">
+        <a href="{{url}}" class="icon-github" title="View {{name}} on GitHub">View on GitHub</a>
+      </div>
+    </footer>
+  </div>
+  {{/items}}
+{% endraw %}
+</script>

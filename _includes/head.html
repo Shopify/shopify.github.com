@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+{% if page.home or page.section_home %}
+  <title>{{ page.title }}</title>
+{% else %}
+  <title>{{ page.title | append:title_suffix }}</title>
+{% endif %}
+
+{% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+{% endif %}
+
+<link rel="canonical" href="http://shopify.github.io">
+
+<meta name="robots" content="index, follow">
+<meta name="st:robots" content="index, follow">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property='st:title' content="{{ page.title }}">
+
+<link rel="shortcut icon" href="//cdn.shopify.com/assets/favicon.ico" type="image/x-icon">
+
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+  <link href="css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>

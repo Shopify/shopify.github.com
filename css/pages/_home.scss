@@ -1,0 +1,146 @@
+// ==============================================================================
+// #Generic Home Styles
+// ==============================================================================
+.hero {
+  position: relative;
+  background-position: center top;
+  background-repeat: repeat-x;
+  @include gradient(#6e69a2, #1d798f, #53729d);
+  color: #fff;
+
+  .pagewidth {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 400px;
+    padding-top: 80px;
+
+    @include responsify( $medium_up, true ) {
+      height: 430px;
+    }
+  }
+}
+
+.hero-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(/images/hero-lines.png);
+}
+
+
+// ==============================================================================
+// #Hero Header
+// ==============================================================================
+.hero-header {
+  position: absolute;
+  left: $gutter/2;
+  right: $gutter;
+  top: $gutter;
+  @include clearfix;
+}
+
+.git-stats {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+
+  @include responsify( $medium_up, true ) {
+    float: right;
+    text-align: right;
+  }
+
+  li {
+    padding: 0 0 0 10px;
+    white-space: nowrap;
+  }
+}
+
+.git-stat {
+  color: $blueLight;
+  padding-right: 3px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 267px;
+  height: 50px;
+  @include responsify( $medium_up, true ) {
+    float: left;
+  }
+}
+
+// ==============================================================================
+// #Hero Inner
+// ==============================================================================
+.hero-inner {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+
+  @include transition(padding 0.2s ease-in-out);
+
+  @include responsify( $medium_up, true ) {
+    padding: 0 120px;
+  }
+
+  a {
+    color: $blueLight;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.hero-text {
+  margin-bottom: 10px;
+
+  @include responsify( $large_down ) {
+    font-size: 24px;
+    line-height: 1.325;
+  }
+}
+
+// ==============================================================================
+// #Repo area
+// ==============================================================================
+.repoWrap {
+  background-color: #e8f0f5;
+  padding: $gutter 0 0;
+}
+
+.repo-loader {
+  display: table;
+  width: 100%;
+  min-height: 300px;
+
+  .repo-loader--inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .spinner:before,
+  .spinner:after {
+    background-color: $blueLight;
+  }
+}
+
+#repos.is-loaded + .repo-loader {
+  display: none;
+}
+
+// ==============================================================================
+// #API Limit Error
+// ==============================================================================
+.limit-error {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 30px;
+}
