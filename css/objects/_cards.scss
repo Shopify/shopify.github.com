@@ -17,7 +17,7 @@
 
 .repo-inner {
   background-color: #fff;
-  padding: $margin 0 $margin/2 $margin;
+  padding: $margin 0 $margin/1.5 $margin;
 
   p {
     margin-bottom: 0;
@@ -46,6 +46,15 @@
 .repo-footer--left {
   float: left;
   padding: $margin/2 $margin;
+
+  i {
+    position: relative;
+    top: -1px;
+  }
+
+  i:last-child {
+    margin-left: $margin/4;
+  }
 }
 
 .repo-footer--right {

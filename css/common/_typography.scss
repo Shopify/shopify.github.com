@@ -6,7 +6,7 @@ input,
 textarea,
 button,
 select {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   font-family: $bodyFontStack;
   color: $textColor;
@@ -30,13 +30,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 
 // Pixel to EM conversion tool http://pxtoem.com/
 h1, .h1 {
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 300;
-  line-height: 1.125;
+  line-height: 1.325;
 }
 h2, .h2 {
-  font-size: 24px;
-  line-height: 1.1;
+  font-size: 22px;
+  line-height: 1.125;
 }
 h3, .h3 { font-size: 16px; }
 h4, .h4 {

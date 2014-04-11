@@ -3,13 +3,19 @@ GEM
   specs:
     RedCloth (4.2.9)
     blankslate (2.1.2.4)
+    chunky_png (1.3.0)
     classifier (1.3.4)
       fast-stemmer (>= 1.0.0)
     colorator (0.1)
     commander (4.1.6)
       highline (~> 1.6.11)
+    compass (0.12.5)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.2.19)
     fast-stemmer (1.0.2)
     ffi (1.9.3)
+    fssm (0.2.10)
     github-pages (15)
       RedCloth (= 4.2.9)
       jekyll (= 1.4.3)
@@ -51,6 +57,7 @@ GEM
     rdiscount (2.1.7)
     redcarpet (2.3.0)
     safe_yaml (0.9.7)
+    sass (3.2.19)
     toml (0.1.1)
       parslet (~> 1.5.0)
     yajl-ruby (1.1.0)
@@ -59,4 +66,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass (= 0.12.5)
   github-pages
