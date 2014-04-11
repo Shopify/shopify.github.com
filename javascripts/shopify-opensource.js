@@ -70,29 +70,35 @@ jQuery(function($){
             if (result.meta.status == 403) {
               o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
             } else {
-              o.addRepos(repos);
+              // We have all of Shopify's repos, now get the custom ones
+              o.getCustomRepos(repos);
             }
           }
         });
 
       },
 
+      getCustomRepos: function(repos) {
+        // Fetching custom repos isn't active yet. But it's coming!
+
+        // Add custom repos to data
+        // for (var i = customRepos.length - 1; i >= 0; i--) {
+        //   repos.push(customRepos[i]);
+        // };
+
+        // Let's just move on to adding the repos to the page.
+        o.addRepos(repos);
+      },
+
       addRepos: function(repos) {
         var o = this,
             repoCount = repos.length;
-
-        // Sort by highest # of watchers (view twitter repo?)
 
         var items = [],
             item = {},
             data = {}
             source   = $('#repoTemplate').html(),
             template = Handlebars.compile(source);
-
-        // Add custom repos to data
-        // for (var i = customRepos.length - 1; i >= 0; i--) {
-        //   repos.push(customRepos[i]);
-        // };
 
         $.each(repos, function (i, repo) {
 
