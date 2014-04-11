@@ -14,7 +14,7 @@ jQuery(function($){
       $repoContainer: $('#repos'),
       $preventApiCalls: false,
       $ignoreForks: true,
-      $apiCalls: 0,
+      $externalAppUrl: 'http://www.carsonshold.com/temp/shopify-os',
 
       init : function() {
 
@@ -29,19 +29,29 @@ jQuery(function($){
       addMembers: function(members, page) {
         var o = this,
             members = members || [],
-            page = page || 1;
+            page = page || 1,
+            perPage = 100;
 
         if (this.$preventApiCalls) return false;
 
-        var uri = 'https://api.github.com/orgs/Shopify/members?callback=?'
-                + '&per_page=100'
+        var jsonUrl = this.$externalAppUrl,
+            uri = 'https://api.github.com/orgs/Shopify/members?callback=foo'
+                + '&per_page='+perPage
                 + '&page='+page;
-                // + '&client_id='+ this.$gitId +'&client_secret=' + this.$gitSecret;
 
-        $.getJSON(uri, function(result) {
-          o.$apiCalls++;
-          if (result.data && result.data.length > 0) {
-            members = members.concat(result.data);
+        $.ajax({
+          url: jsonUrl,
+          type: 'GET',
+          data: {url: uri},
+        })
+        .success(function(result) {
+          // We get a semi-broken response (no idea why). Fix it up then parse it here.
+          result = o.fixJson(result);
+
+          // Add api data to members array
+          members = members.concat(result.data);
+
+          if (result.data && result.data.length == perPage) {
             o.addMembers(members, page+1);
           } else {
             $("#countMembers").removeClass('is-loading').text(members.length);
@@ -52,19 +62,32 @@ jQuery(function($){
       getRepos: function(repos, page) {
         var o = this,
             repos = repos || [],
-            page = page || 1;
+            page = page || 1,
+            perPage = 100;
 
-        var uri = 'https://api.github.com/orgs/Shopify/repos?callback=?'
-                + '&per_page=100'
+        var jsonUrl = this.$externalAppUrl,
+            uri = 'https://api.github.com/orgs/Shopify/repos?callback=foo'
+                + '&per_page='+perPage
                 + '&page='+page;
-                // + '&client_id='+ this.$gitId +'&client_secret=' + this.$gitSecret;
 
         if (this.$preventApiCalls) return false;
 
-        $.getJSON(uri, function(result) {
-          o.$apiCalls++;
-          if (result.data && result.data.length > 0) {
-            repos = repos.concat(result.data);
+        $.ajax({
+          url: jsonUrl,
+          type: 'GET',
+          data: {url: uri},
+        })
+        .success(function(result) {
+          // We get a semi-broken response (no idea why). Fix it up then parse it here.
+          result = o.fixJson(result);
+
+          console.warn('page: ' + page);
+          console.log(result);
+
+          // Add api data to repos array
+          repos = repos.concat(result.data);
+
+          if (result.data && result.data.length == perPage) {
             o.getRepos(repos, page+1);
           } else {
             if (result.meta.status == 403) {
@@ -72,6 +95,7 @@ jQuery(function($){
             } else {
               // We have all of Shopify's repos, now get the custom ones
               o.getCustomRepos(repos);
+              $("#countRepos").removeClass('is-loading').text(repos.length);
             }
           }
         });
@@ -87,7 +111,7 @@ jQuery(function($){
         // };
 
         // Let's just move on to adding the repos to the page.
-        o.addRepos(repos);
+        this.addRepos(repos);
       },
 
       addRepos: function(repos) {
@@ -172,6 +196,14 @@ jQuery(function($){
           var filterValue = $(this).attr('data-filter');
           o.$repoContainer.isotope({ filter: filterValue });
         });
+      },
+
+      fixJson: function(data) {
+        data = data.replace('/**/foo(','');
+        if (data.substring(data.length-1) == ")") {
+          data = data.substring(0, data.length-1);
+        }
+        return JSON.parse(data);
       },
 
       tracking: function() {
