@@ -73,7 +73,11 @@ description:
         {{/if}}
       {{/if}}
       <h2>
-        <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
+        {{#if homepage}}
+          <a href="{{homepage}}" title="View {{name}} on Github">{{name}}</a>
+        {{else}}
+          <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
+        {{/if}}
       </h2>
       <h4>{{language}}</h4>
       <p>{{description}}</p>
