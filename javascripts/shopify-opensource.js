@@ -14,7 +14,7 @@ jQuery(function($){
       $repoContainer: $('#repos'),
       $preventApiCalls: false,
       $ignoreForks: true,
-      $useExternalApi: true,
+      $useExternalApi: false,
       $externalAppUrl: 'http://shopify-opensourceify.herokuapp.com',
 
       init : function() {
