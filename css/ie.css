@@ -2519,6 +2519,7 @@ a:hover {
 /* line 60, objects/_cards.scss */
 .repo-footer--right {
   float: right;
+  display: block;
   padding: 10px 20px;
   background-color: #297293;
 }
