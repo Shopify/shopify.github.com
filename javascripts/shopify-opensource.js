@@ -47,7 +47,7 @@ jQuery(function($){
             if (result.meta.status == 403) {
               // At API rate limit! Rerun this method with o.$useExternalApi=true
               o.$useExternalApi = true;
-              o.addMembers(members, page+1);
+              o.addMembers();
               return;
             }
 
@@ -103,7 +103,7 @@ jQuery(function($){
             // Set $useExternalApi to true and rerun this function if we are at rate limit for IP
             if (result.meta.status == 403) {
               o.$useExternalApi = true;
-              o.addRepos(members, page+1);
+              o.getRepos();
               return;
             }
 
