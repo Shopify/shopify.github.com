@@ -73,7 +73,11 @@ description:
         {{/if}}
       {{/if}}
       <h2>
-        <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
+        {{#if homepage}}
+          <a href="{{homepage}}" title="View {{name}} on Github">{{name}}</a>
+        {{else}}
+          <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
+        {{/if}}
       </h2>
       <h4>{{language}}</h4>
       <p>{{description}}</p>
@@ -83,9 +87,9 @@ description:
         <i class="icon-star" title="Stars"></i> {{stars}}
         <i class="icon-forks" title="Forks"></i> {{forks}}
       </div>
-      <div class="repo-footer--right">
-        <a href="{{url}}" class="icon-github" title="View {{name}} on GitHub">View on GitHub</a>
-      </div>
+      <a href="{{url}}" class="repo-footer--right" title="View {{name}} on GitHub">
+        <i class="icon-github" title="View on GitHub"></i>
+      </a>
     </footer>
   </div>
   {{/items}}

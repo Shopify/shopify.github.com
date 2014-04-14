@@ -14,6 +14,7 @@ jQuery(function($){
       $repoContainer: $('#repos'),
       $preventApiCalls: false,
       $ignoreForks: true,
+      $useExternalApi: false,
       $externalAppUrl: 'http://shopify-opensourceify.herokuapp.com',
 
       init : function() {
@@ -30,70 +31,120 @@ jQuery(function($){
         var o = this,
             members = members || [],
             page = page || 1,
-            perPage = 100;
+            perPage = 100,
+            callback = this.$useExternalApi ? 'foo' : '?';
 
         if (this.$preventApiCalls) return false;
 
-        var uri = 'https://api.github.com/orgs/Shopify/members?callback=foo'
+        var uri = 'https://api.github.com/orgs/Shopify/members?callback='+callback
                 + '&per_page='+perPage
                 + '&page='+page;
 
-        $.ajax({
-          url: o.$externalAppUrl,
-          type: 'GET',
-          data: {url: uri},
-        })
-        .success(function(result) {
-          // We get a semi-broken response (no idea why). Fix it up then parse it here.
-          result = o.fixJson(result);
+        // First use the local IP for the API call. If the rate limit is hit, use our opensourcify app
+        if (!this.$useExternalApi) {
+          $.getJSON(uri, function(result) {
+            // Set $useExternalApi to true and rerun this function if we are at rate limit for IP
+            if (result.meta.status == 403) {
+              // At API rate limit! Rerun this method with o.$useExternalApi=true
+              o.$useExternalApi = true;
+              o.addMembers();
+              return;
+            }
 
-          // Add api data to members array
-          members = members.concat(result.data);
+            // Add new members to local object
+            members = members.concat(result.data);
 
-          if (result.data && result.data.length == perPage) {
-            o.addMembers(members, page+1);
-          } else {
-            $("#countMembers").removeClass('is-loading').text(members.length);
-          }
-        });
+            if (result.data && result.data.length == perPage) {
+              // Pagination wall. Do another call on the next page
+              o.addMembers(members, page+1);
+            } else {
+              $("#countMembers").removeClass('is-loading').text(members.length);
+            }
+          });
+        } else {
+          $.ajax({
+            url: o.$externalAppUrl,
+            type: 'GET',
+            data: {url: uri},
+          })
+          .success(function(result) {
+            // We get a semi-broken response (no idea why). Fix it up then parse it here.
+            result = o.fixJson(result);
+
+            // Add api data to members array
+            members = members.concat(result.data);
+
+            if (result.data && result.data.length == perPage) {
+              // Pagination wall. Do another call on the next page
+              o.addMembers(members, page+1);
+            } else {
+              $("#countMembers").removeClass('is-loading').text(members.length);
+            }
+          });
+        }
       },
 
       getRepos: function(repos, page) {
         var o = this,
             repos = repos || [],
             page = page || 1,
-            perPage = 100;
+            perPage = 100,
+            callback = this.$useExternalApi ? 'foo' : '?';
 
-        var uri = 'https://api.github.com/orgs/Shopify/repos?callback=foo'
+        var uri = 'https://api.github.com/orgs/Shopify/repos?callback='+callback
                 + '&per_page='+perPage
                 + '&page='+page;
 
         if (this.$preventApiCalls) return false;
 
-        $.ajax({
-          url: o.$externalAppUrl,
-          type: 'GET',
-          data: {url: uri},
-        })
-        .success(function(result) {
-          // We get a semi-broken response (no idea why). Fix it up then parse it here.
-          result = o.fixJson(result);
-
-          // Add api data to repos array
-          repos = repos.concat(result.data);
-
-          if (result.data && result.data.length == perPage) {
-            o.getRepos(repos, page+1);
-          } else {
+        // First use the local IP for the API call. If the rate limit is hit, use our opensourcify app
+        if (!this.$useExternalApi) {
+          $.getJSON(uri, function(result) {
+            // Set $useExternalApi to true and rerun this function if we are at rate limit for IP
             if (result.meta.status == 403) {
-              o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
+              o.$useExternalApi = true;
+              o.getRepos();
+              return;
+            }
+
+            // Add api data to repos object
+            repos = repos.concat(result.data);
+
+            if (result.data && result.data.length == perPage) {
+              // Pagination wall. Do another call on the next page
+              o.getRepos(repos, page+1);
             } else {
               // We have all of Shopify's repos, now get the custom ones
               o.getCustomRepos(repos);
               $("#countRepos").removeClass('is-loading').text(repos.length);
             }
-          }
-        });
+          });
+        } else {
+          $.ajax({
+            url: o.$externalAppUrl,
+            type: 'GET',
+            data: {url: uri},
+          })
+          .success(function(result) {
+            // We get a semi-broken response (no idea why). Fix it up then parse it here.
+            result = o.fixJson(result);
+
+            // Add api data to repos array
+            repos = repos.concat(result.data);
+
+            if (result.data && result.data.length == perPage) {
+              o.getRepos(repos, page+1);
+            } else {
+              if (result.meta.status == 403) {
+                o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
+              } else {
+                // We have all of Shopify's repos, now get the custom ones
+                o.getCustomRepos(repos);
+                $("#countRepos").removeClass('is-loading').text(repos.length);
+              }
+            }
+          });
+        }
 
       },
 
