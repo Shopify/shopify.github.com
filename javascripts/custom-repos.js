@@ -5,6 +5,7 @@ var customRepoLanguage = {
   'liquid': 'Liquid',
   'Timber': 'Liquid',
   'skeleton-theme': 'Liquid',
+  'dashing': 'Ruby',
   'shopify_theme': 'Ruby',
   'Shopify-Developer-Book': 'Ruby',
   'offsite-gateway-sim': 'Ruby'
