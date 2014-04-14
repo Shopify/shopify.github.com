@@ -27,7 +27,8 @@ var featuredRepos = {
 
 // Manually ignore repos
 var ignoreRepos = {
-  'dmca': true
+  'dmca': true,
+  'twilio-door': true
 }
 
 // Add custom repos (currently unused)
