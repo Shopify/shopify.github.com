@@ -13,9 +13,8 @@ jQuery(function($){
       $body: $('body'),
       $repoContainer: $('#repos'),
       $preventApiCalls: false,
-      $noApiBuffer: true,
       $ignoreForks: true,
-      $externalAppUrl: 'http://www.carsonshold.com/shopify-os',
+      $externalAppUrl: 'http://shopify-opensourceify.herokuapp.com',
 
       init : function() {
 
@@ -39,45 +38,24 @@ jQuery(function($){
                 + '&per_page='+perPage
                 + '&page='+page;
 
-        if (this.$noApiBuffer) {
-          // Overwrite URI with different callback
-          uri = 'https://api.github.com/orgs/Shopify/members?callback=?'
-              + '&per_page='+perPage
-              + '&page='+page;
-          $.getJSON(uri, function(result) {
-            // Add api data to members array
-            members = members.concat(result.data);
+        $.ajax({
+          url: o.$externalAppUrl,
+          type: 'GET',
+          data: {url: uri},
+        })
+        .success(function(result) {
+          // We get a semi-broken response (no idea why). Fix it up then parse it here.
+          result = o.fixJson(result);
 
-            if (result.data && result.data.length == perPage) {
-              o.addMembers(members, page+1);
-            } else {
-              if (result.meta.status == 403) {
-                o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
-              } else {
-                $("#countMembers").removeClass('is-loading').text(members.length);
-              }
-            }
-          });
-        } else {
-          $.ajax({
-            url: o.$externalAppUrl,
-            type: 'GET',
-            data: {url: uri},
-          })
-          .success(function(result) {
-            // We get a semi-broken response (no idea why). Fix it up then parse it here.
-            result = o.fixJson(result);
+          // Add api data to members array
+          members = members.concat(result.data);
 
-            // Add api data to members array
-            members = members.concat(result.data);
-
-            if (result.data && result.data.length == perPage) {
-              o.addMembers(members, page+1);
-            } else {
-              $("#countMembers").removeClass('is-loading').text(members.length);
-            }
-          });
-        }
+          if (result.data && result.data.length == perPage) {
+            o.addMembers(members, page+1);
+          } else {
+            $("#countMembers").removeClass('is-loading').text(members.length);
+          }
+        });
       },
 
       getRepos: function(repos, page) {
@@ -92,52 +70,30 @@ jQuery(function($){
 
         if (this.$preventApiCalls) return false;
 
-        if (this.$noApiBuffer) {
-          // Overwrite URI with different callback
-          uri = 'https://api.github.com/orgs/Shopify/repos?callback=?'
-              + '&per_page='+perPage
-              + '&page='+page;
+        $.ajax({
+          url: o.$externalAppUrl,
+          type: 'GET',
+          data: {url: uri},
+        })
+        .success(function(result) {
+          // We get a semi-broken response (no idea why). Fix it up then parse it here.
+          result = o.fixJson(result);
 
-          $.getJSON(uri, function(result) {
-            // Add api data to repos array
-            repos = repos.concat(result.data);
+          // Add api data to repos array
+          repos = repos.concat(result.data);
 
-            if (result.data && result.data.length == perPage) {
-              o.getRepos(repos, page+1);
+          if (result.data && result.data.length == perPage) {
+            o.getRepos(repos, page+1);
+          } else {
+            if (result.meta.status == 403) {
+              o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
             } else {
-              if (result.meta.status != 403) {
-                o.getCustomRepos(repos);
-                $("#countRepos").removeClass('is-loading').text(repos.length);
-              }
+              // We have all of Shopify's repos, now get the custom ones
+              o.getCustomRepos(repos);
+              $("#countRepos").removeClass('is-loading').text(repos.length);
             }
-          });
-
-        } else {
-          $.ajax({
-            url: o.$externalAppUrl,
-            type: 'GET',
-            data: {url: uri},
-          })
-          .success(function(result) {
-            // We get a semi-broken response (no idea why). Fix it up then parse it here.
-            result = o.fixJson(result);
-
-            // Add api data to repos array
-            repos = repos.concat(result.data);
-
-            if (result.data && result.data.length == perPage) {
-              o.getRepos(repos, page+1);
-            } else {
-              if (result.meta.status == 403) {
-                o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>')
-              } else {
-                // We have all of Shopify's repos, now get the custom ones
-                o.getCustomRepos(repos);
-                $("#countRepos").removeClass('is-loading').text(repos.length);
-              }
-            }
-          });
-        }
+          }
+        });
 
       },
 
@@ -246,21 +202,21 @@ jQuery(function($){
       },
 
       tracking: function() {
-      	$('a[data-track]').on('click', function(e) {
-      		var data = $(this).data('track');
-      		// switch(data) {
-      		// 	case 'Download':
-      		// 		var version = $(this).data('version');
-	      	// 		_gaq.push(['_trackEvent', 'Open Source', 'Download', 'Version: ' + version]);
-      		// 		break;
-      		// 	case 'Demo':
-      		// 		_gaq.push(['_trackEvent', 'Open Source', 'Click', 'Demo Store']);
-      		// 		break;
-      		// 	case 'Demo Empty':
-      		// 		_gaq.push(['_trackEvent', 'Open Source', 'Click', 'Demo Store Empty']);
-      		// 		break;
-      		// }
-      	});
+        $('a[data-track]').on('click', function(e) {
+          var data = $(this).data('track');
+          // switch(data) {
+          //  case 'Download':
+          //    var version = $(this).data('version');
+          //    _gaq.push(['_trackEvent', 'Open Source', 'Download', 'Version: ' + version]);
+          //    break;
+          //  case 'Demo':
+          //    _gaq.push(['_trackEvent', 'Open Source', 'Click', 'Demo Store']);
+          //    break;
+          //  case 'Demo Empty':
+          //    _gaq.push(['_trackEvent', 'Open Source', 'Click', 'Demo Store Empty']);
+          //    break;
+          // }
+        });
       }
 
     };
