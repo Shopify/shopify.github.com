@@ -2,7 +2,7 @@
 // #Repo Cards
 // ==============================================================================
 .repo {
-  margin-bottom: $gutter;
+  margin-bottom: $gutter/2;
   @include transform(translateZ(0));
 
   h2, .h2 {
@@ -17,7 +17,7 @@
 
 .repo-inner {
   background-color: #fff;
-  padding: $margin 0 $margin/1.5 $margin;
+  padding: $margin $margin $margin/1.5 $margin;
 
   p {
     margin-bottom: 0;
@@ -28,7 +28,6 @@
 .homepage-link {
   display: block;
   float: right;
-  margin-right: $margin;
 
   img {
     display: block;

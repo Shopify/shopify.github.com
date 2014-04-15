@@ -10,7 +10,7 @@ $mobile-first:       true;
 $use-silent-classes: false;
 $push:               true;
 $pull:               false;
-$gridGutter:         $gutter;
+$gridGutter:         $gutter/2;
 
 /* Force clearfix on grids */
 .grid,
