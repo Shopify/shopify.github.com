@@ -112,7 +112,11 @@
 // ==============================================================================
 .repoWrap {
   background-color: #e8f0f5;
-  padding: $gutter 0 0;
+  padding: $gutter/2 0;
+
+  @include responsify( $medium_up, true ) {
+    padding: $gutter 0;
+  }
 }
 
 .repo-loader {

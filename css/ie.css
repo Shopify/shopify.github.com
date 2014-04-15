@@ -604,13 +604,13 @@ pre {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: -30px;
+  margin-left: -15px;
 }
 
 /* line 81, common/_grid.scss */
 .grid-item {
   float: left;
-  padding-left: 30px;
+  padding-left: 15px;
   vertical-align: top;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -2183,10 +2183,11 @@ pre {
 /* line 11, common/_layout.scss */
 .pagewidth {
   max-width: 1200px;
+  padding: 0 15px;
   padding: 0 30px;
 }
 
-/* line 17, common/_layout.scss */
+/* line 21, common/_layout.scss */
 html, body {
   margin: 0;
   font-size: 14px;
@@ -2448,7 +2449,7 @@ a:hover {
 
 /* line 4, objects/_cards.scss */
 .repo {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -2468,7 +2469,7 @@ a:hover {
 /* line 18, objects/_cards.scss */
 .repo-inner {
   background-color: #fff;
-  padding: 20px 0 13.33333px 20px;
+  padding: 20px 20px 13.33333px 20px;
 }
 /* line 22, objects/_cards.scss */
 .repo-inner p {
@@ -2480,14 +2481,13 @@ a:hover {
 .homepage-link {
   display: block;
   float: right;
-  margin-right: 20px;
 }
-/* line 33, objects/_cards.scss */
+/* line 32, objects/_cards.scss */
 .homepage-link img {
   display: block;
 }
 
-/* line 38, objects/_cards.scss */
+/* line 37, objects/_cards.scss */
 .repo-footer {
   background-color: #1c5f7d;
   color: #8ed5df;
@@ -2501,22 +2501,22 @@ a:hover {
   clear: both;
 }
 
-/* line 46, objects/_cards.scss */
+/* line 45, objects/_cards.scss */
 .repo-footer--left {
   float: left;
   padding: 10px 20px;
 }
-/* line 50, objects/_cards.scss */
+/* line 49, objects/_cards.scss */
 .repo-footer--left i {
   position: relative;
   top: -1px;
 }
-/* line 55, objects/_cards.scss */
+/* line 54, objects/_cards.scss */
 .repo-footer--left i:last-child {
   margin-left: 5px;
 }
 
-/* line 60, objects/_cards.scss */
+/* line 59, objects/_cards.scss */
 .repo-footer--right {
   float: right;
   display: block;
@@ -2723,33 +2723,34 @@ a:hover {
 /* line 113, pages/_home.scss */
 .repoWrap {
   background-color: #e8f0f5;
-  padding: 30px 0 0;
+  padding: 15px 0;
+  padding: 30px 0;
 }
 
-/* line 118, pages/_home.scss */
+/* line 122, pages/_home.scss */
 .repo-loader {
   display: table;
   width: 100%;
   min-height: 300px;
 }
-/* line 123, pages/_home.scss */
+/* line 127, pages/_home.scss */
 .repo-loader .repo-loader--inner {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-/* line 130, pages/_home.scss */
+/* line 134, pages/_home.scss */
 .repo-loader .spinner:before,
 .repo-loader .spinner:after {
   background-color: #8ec9ee;
 }
 
-/* line 135, pages/_home.scss */
+/* line 139, pages/_home.scss */
 #repos.is-loaded + .repo-loader {
   display: none;
 }
 
-/* line 142, pages/_home.scss */
+/* line 146, pages/_home.scss */
 .limit-error {
   text-align: center;
   padding: 100px 0;

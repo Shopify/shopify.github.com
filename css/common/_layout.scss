@@ -10,7 +10,11 @@
 // ==============================================================================
 .pagewidth {
   max-width: $layout_max_width;
-  padding: 0 $gutter;
+  padding: 0 $gutter/2;
+
+  @include responsify( $medium_up, true ) {
+    padding: 0 $gutter;
+  }
 }
 
 
