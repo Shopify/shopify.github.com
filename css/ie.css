@@ -2474,20 +2474,19 @@ a:hover {
 /* line 22, objects/_cards.scss */
 .repo-inner p {
   margin-bottom: 0;
-  padding-right: 20px;
 }
 
-/* line 28, objects/_cards.scss */
+/* line 27, objects/_cards.scss */
 .homepage-link {
   display: block;
   float: right;
 }
-/* line 32, objects/_cards.scss */
+/* line 31, objects/_cards.scss */
 .homepage-link img {
   display: block;
 }
 
-/* line 37, objects/_cards.scss */
+/* line 36, objects/_cards.scss */
 .repo-footer {
   background-color: #1c5f7d;
   color: #8ed5df;
@@ -2501,22 +2500,22 @@ a:hover {
   clear: both;
 }
 
-/* line 45, objects/_cards.scss */
+/* line 44, objects/_cards.scss */
 .repo-footer--left {
   float: left;
   padding: 10px 20px;
 }
-/* line 49, objects/_cards.scss */
+/* line 48, objects/_cards.scss */
 .repo-footer--left i {
   position: relative;
   top: -1px;
 }
-/* line 54, objects/_cards.scss */
+/* line 53, objects/_cards.scss */
 .repo-footer--left i:last-child {
   margin-left: 5px;
 }
 
-/* line 59, objects/_cards.scss */
+/* line 58, objects/_cards.scss */
 .repo-footer--right {
   float: right;
   display: block;
