@@ -61,8 +61,10 @@ var customRepoLanguage = {
 }
 
 // Custom repo avatars. Dimensions should be 40x40
+// - Be sure a custom repo doesn't have the same name as a Shopify one, or a one will be overridden
 var customRepoAvatar = {
   'Timber': '/images/repo-avatars/timber.gif',
   'dashing': '/images/repo-avatars/dashing.gif',
-  'superdb': '/images/repo-avatars/super-debugger.gif'
+  'superdb': '/images/repo-avatars/super-debugger.gif',
+  'batman': '/images/repo-avatars/batmanjs.gif'
 }
