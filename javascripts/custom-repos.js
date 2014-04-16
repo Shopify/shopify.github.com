@@ -18,13 +18,6 @@ var customRepoAvatar = {
   'superdb': '/images/repo-avatars/super-debugger.gif'
 }
 
-// Set featured repos (currently unused, sort by stars)
-var featuredRepos = {
-  'Timber': true,
-  'liquid': true,
-  'active_merchant': true
-}
-
 // Manually ignore repos
 var ignoreRepos = {
   'dmca': true,

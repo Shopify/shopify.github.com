@@ -201,8 +201,7 @@ jQuery(function($){
             stars: repo.stargazers_count ? repo.stargazers_count : 0,
             forks: repo.forks_count ? repo.forks_count : 0,
             avatar: repo.name in customRepoAvatar ? customRepoAvatar[repo.name] : null,
-            homepage: repo.homepage,
-            featured: repo.name in featuredRepos ? true : false // unused right now
+            homepage: repo.homepage
           };
 
           items.push(item);
