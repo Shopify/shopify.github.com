@@ -236,6 +236,11 @@ jQuery(function($){
             repo.languageClass = (repo.language || '').toLowerCase();
           }
 
+          // Make sure homepage URLs start with http. If not, add them
+          if (repo.homepage && repo.homepage.substring(0, 4) != "http") {
+            repo.homepage = 'http://' + repo.homepage;
+          }
+
           item = {
             url: repo.html_url,
             name: repo.name,
