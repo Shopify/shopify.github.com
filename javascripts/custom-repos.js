@@ -8,7 +8,8 @@ var customRepoLanguage = {
   'dashing': 'Ruby',
   'shopify_theme': 'Ruby',
   'Shopify-Developer-Book': 'Ruby',
-  'offsite-gateway-sim': 'Ruby'
+  'offsite-gateway-sim': 'Ruby',
+  'shopify.github.com': 'JavaScript'
 }
 
 // Custom repo avatars. Dimensions should be 40x40
@@ -18,11 +19,45 @@ var customRepoAvatar = {
   'superdb': '/images/repo-avatars/super-debugger.gif'
 }
 
-// Manually ignore repos
-var ignoreRepos = {
-  'dmca': true,
-  'twilio-door': true
-}
+// Opt-in repos (case sensitive)
+var optInRepos = [
+  'dashing',
+  'active_merchant',
+  'liquid',
+  'superdb',
+  'active_shipping',
+  'shopify_app',
+  'identity_cache',
+  'skeleton_theme',
+  'statsd-instrument',
+  'shopify_theme',
+  'shopify_api',
+  'sarama',
+  'Timber',
+  'active_fulfillment',
+  'vision',
+  'shopify_python_api',
+  'wolverine',
+  'verdict',
+  'shopify_php_api',
+  'shopify_django_app',
+  'browser_sniffer',
+  'importer',
+  'active_utils',
+  'embedded-app-example',
+  'connect-googleapps',
+  'omniauth-shopify-oauth2',
+  'shipping-fulfillment-app',
+  'sysv_mq',
+  'money',
+  'sync_app_demo',
+  'rails_parallel',
+  'shopify.github.com',
+  'dukpt',
+  'splunk-auth-proxy',
+  'magnet',
+  'googleTrustedShopifyStores'
+]
 
 // Add custom repos (currently unused)
 // To do this properly, each repo requires a separate API request, and as

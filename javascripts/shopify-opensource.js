@@ -116,7 +116,6 @@ jQuery(function($){
             } else {
               // We have all of Shopify's repos, now get the custom ones
               o.getCustomRepos(repos);
-              $("#countRepos").removeClass('is-loading').text(repos.length);
             }
           });
         } else {
@@ -140,7 +139,6 @@ jQuery(function($){
               } else {
                 // We have all of Shopify's repos, now get the custom ones
                 o.getCustomRepos(repos);
-                $("#countRepos").removeClass('is-loading').text(repos.length);
               }
             }
           });
@@ -162,7 +160,7 @@ jQuery(function($){
 
       addRepos: function(repos) {
         var o = this,
-            repoCount = repos.length;
+            repoCount = 0;
 
         var items = [],
             item = {},
@@ -174,13 +172,13 @@ jQuery(function($){
 
           // Ignore forked repos
           if (o.$ignoreForks && repo.fork) {
-            repoCount = repoCount - 1;
             return;
           }
 
-          // Ignore manually defined repos
-          if ( repo.name in ignoreRepos ) {
-            repoCount = repoCount - 1;
+          // Opt-in repos only
+          if ( optInRepos.indexOf(repo.name) > -1 ) {
+            repoCount = repoCount + 1;
+          } else {
             return;
           }
 
@@ -207,18 +205,20 @@ jQuery(function($){
           items.push(item);
         });
 
+        // Sort by stars
         items.sort(function(a,b) {
           if (a.stars < b.stars) return 1;
           if (b.stars < a.stars) return -1;
           return 0;
         });
 
+        // Create handlebars.js data
         data = { items: items };
 
         // Append handlebars templates
         o.$repoContainer.addClass('is-loaded').append(template(data));
 
-        // Display public repo count (minus forks)
+        // Display public repo count of opt-in repos (minus forks)
         $('#countRepos').removeClass('is-loading').text(repoCount);
 
         // Setup isotope
