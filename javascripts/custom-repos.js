@@ -15,7 +15,6 @@ var optInRepos = [
   'sarama',
   'Timber',
   'active_fulfillment',
-  'vision',
   'shopify_python_api',
   'wolverine',
   'verdict',
