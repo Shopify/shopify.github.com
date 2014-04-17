@@ -1,4 +1,51 @@
-// Global variables that hold custom attributes for repos, keyed by repo name
+// Opt-in repos (case sensitive)
+// - These are all children of Shopify and visible at https://github.com/Shopify
+var optInRepos = [
+  'dashing',
+  'active_merchant',
+  'liquid',
+  'superdb',
+  'active_shipping',
+  'shopify_app',
+  'identity_cache',
+  'skeleton-theme',
+  'statsd-instrument',
+  'shopify_theme',
+  'shopify_api',
+  'sarama',
+  'Timber',
+  'active_fulfillment',
+  'vision',
+  'shopify_python_api',
+  'wolverine',
+  'verdict',
+  'shopify_php_api',
+  'shopify_django_app',
+  'browser_sniffer',
+  'importer',
+  'active_utils',
+  'embedded-app-example',
+  'connect-googleapps',
+  'omniauth-shopify-oauth2',
+  'shipping-fulfillment-app',
+  'sysv_mq',
+  'money',
+  'sync_app_demo',
+  'rails_parallel',
+  'shopify.github.com',
+  'dukpt',
+  'splunk-auth-proxy',
+  'magnet',
+  'googleTrustedShopifyStores',
+  'goreferrer',
+  'asset_cloud'
+]
+
+// Add custom repos by full_name. Take the org/user and repo name
+// - e.g. batmanjs/batman from https://github.com/batmanjs/batman
+var customRepos = [
+  'batmanjs/batman'
+]
 
 // Custom repo language, different than that defined by GitHub
 var customRepoLanguage = {
@@ -8,42 +55,16 @@ var customRepoLanguage = {
   'dashing': 'Ruby',
   'shopify_theme': 'Ruby',
   'Shopify-Developer-Book': 'Ruby',
-  'offsite-gateway-sim': 'Ruby'
+  'offsite-gateway-sim': 'Ruby',
+  'shopify.github.com': 'JavaScript',
+  'batman': 'JavaScript'
 }
 
 // Custom repo avatars. Dimensions should be 40x40
+// - Be sure a custom repo doesn't have the same name as a Shopify one, or a one will be overridden
 var customRepoAvatar = {
   'Timber': '/images/repo-avatars/timber.gif',
   'dashing': '/images/repo-avatars/dashing.gif',
-  'superdb': '/images/repo-avatars/super-debugger.gif'
+  'superdb': '/images/repo-avatars/super-debugger.gif',
+  'batman': '/images/repo-avatars/batmanjs.gif'
 }
-
-// Set featured repos (currently unused, sort by stars)
-var featuredRepos = {
-  'Timber': true,
-  'liquid': true,
-  'active_merchant': true
-}
-
-// Manually ignore repos
-var ignoreRepos = {
-  'dmca': true,
-  'twilio-door': true
-}
-
-// Add custom repos (currently unused)
-// To do this properly, each repo requires a separate API request, and as
-// a non-authenticated app this could potentially hit GitHub's rate too quickly.
-// To enable (without API integration):
-//  - Uncomment lines (approx.) 95-97 in shopify-opensource.js
-//  - Must manually enter data below
-var customRepos = [
-  {
-    'name': 'batman',
-    'html_url': 'https://github.com/batmanjs/batman',
-    'description': 'The best JavaScript framework for Rails developers.',
-    'homepage': 'http://batmanjs.org',
-    'forks_count': 170,
-    'stargazers_count': 1672
-  }
-]

@@ -116,7 +116,6 @@ jQuery(function($){
             } else {
               // We have all of Shopify's repos, now get the custom ones
               o.getCustomRepos(repos);
-              $("#countRepos").removeClass('is-loading').text(repos.length);
             }
           });
         } else {
@@ -140,7 +139,6 @@ jQuery(function($){
               } else {
                 // We have all of Shopify's repos, now get the custom ones
                 o.getCustomRepos(repos);
-                $("#countRepos").removeClass('is-loading').text(repos.length);
               }
             }
           });
@@ -149,20 +147,66 @@ jQuery(function($){
       },
 
       getCustomRepos: function(repos) {
-        // Fetching custom repos isn't active yet. But it's coming!
+        var o = this,
+            repos = repos || [],
+            customApiCalls = 0,
+            callback = this.$useExternalApi ? 'foo' : '?';
 
-        // Add custom repos to data
-        // for (var i = customRepos.length - 1; i >= 0; i--) {
-        //   repos.push(customRepos[i]);
-        // };
+        for (var i = customRepos.length - 1; i >= 0; i--) {
+          repo = customRepos[i];
 
-        // Let's just move on to adding the repos to the page.
-        this.addRepos(repos);
+          if (!this.$useExternalApi) {
+
+            var uri = 'https://api.github.com/repos/'+ repo +'?callback='+callback;
+
+            $.getJSON(uri, function(result) {
+              // Set $useExternalApi to true and rerun this function if we are at rate limit for IP
+              if (result.meta.status == 403) {
+                // At API rate limit! Rerun this method with o.$useExternalApi=true
+                o.$useExternalApi = true;
+                o.getCustom(repos);
+                return;
+              }
+
+              // Add api data to repos array
+              repos = repos.concat(result.data);
+
+              customApiCalls++;
+              if (customApiCalls == customRepos.length) {
+                // If the custom repo ajax calls are done, move one
+                o.addRepos(repos);
+              }
+            });
+          } else {
+
+            var uri = 'https://api.github.com/repos/'+ repo +'?callback='+callback;
+
+            $.ajax({
+              url: o.$externalAppUrl,
+              type: 'GET',
+              data: {url: uri},
+            })
+            .success(function(result) {
+              // We get a semi-broken response (no idea why). Fix it up then parse it here.
+              result = o.fixJson(result);
+
+              // Add api data to repos array
+              repos = repos.concat(result.data);
+
+              customApiCalls++;
+              if (customApiCalls == customRepos.length) {
+                // If the custom repo ajax calls are done, move one
+                o.addRepos(repos);
+              }
+            });
+          }
+        };
+
       },
 
       addRepos: function(repos) {
         var o = this,
-            repoCount = repos.length;
+            repoCount = 0;
 
         var items = [],
             item = {},
@@ -174,13 +218,13 @@ jQuery(function($){
 
           // Ignore forked repos
           if (o.$ignoreForks && repo.fork) {
-            repoCount = repoCount - 1;
             return;
           }
 
-          // Ignore manually defined repos
-          if ( repo.name in ignoreRepos ) {
-            repoCount = repoCount - 1;
+          // Opt-in repos (name) and custom repos (full_name) only
+          if ( optInRepos.indexOf(repo.name) > -1 || customRepos.indexOf(repo.full_name) > -1) {
+            repoCount = repoCount + 1;
+          } else {
             return;
           }
 
@@ -192,6 +236,11 @@ jQuery(function($){
             repo.languageClass = (repo.language || '').toLowerCase();
           }
 
+          // Make sure homepage URLs start with http. If not, add them
+          if (repo.homepage && repo.homepage.substring(0, 4) != "http") {
+            repo.homepage = 'http://' + repo.homepage;
+          }
+
           item = {
             url: repo.html_url,
             name: repo.name,
@@ -201,25 +250,26 @@ jQuery(function($){
             stars: repo.stargazers_count ? repo.stargazers_count : 0,
             forks: repo.forks_count ? repo.forks_count : 0,
             avatar: repo.name in customRepoAvatar ? customRepoAvatar[repo.name] : null,
-            homepage: repo.homepage,
-            featured: repo.name in featuredRepos ? true : false // unused right now
+            homepage: repo.homepage
           };
 
           items.push(item);
         });
 
+        // Sort by stars
         items.sort(function(a,b) {
           if (a.stars < b.stars) return 1;
           if (b.stars < a.stars) return -1;
           return 0;
         });
 
+        // Create handlebars.js data
         data = { items: items };
 
         // Append handlebars templates
         o.$repoContainer.addClass('is-loaded').append(template(data));
 
-        // Display public repo count (minus forks)
+        // Display public repo count of opt-in repos (minus forks)
         $('#countRepos').removeClass('is-loading').text(repoCount);
 
         // Setup isotope
