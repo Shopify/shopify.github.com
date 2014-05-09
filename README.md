@@ -21,10 +21,6 @@ If you want to run it locally
 - Use `rake build` to manually parse SCSS files.
 - There is no easy way to use Jekyll plugins with GitHub pages, so none are used here.
 
-### Notes about API calls
-GitHub caps unauthorized API calls to 60 per hour per IP. To make sure we don't hit this cap (like in the event of a team email), there is an external app that ports all API calls through it *once the 60/hour/ip is hit*.
-That app adds a GitHub application ID and secret key to each request, bumping the rate limit up to 5000.
-
 Dependencies (all included)
 --
 - **[jQuery 1.9](https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js)**
