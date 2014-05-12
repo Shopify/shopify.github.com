@@ -106,10 +106,16 @@ description: As a team that greatly benefits from open-source software, these ar
   var allRepos = [];
 
   {% for repo in site.github.public_repositories %}
-    console.warn('Repo name' + '{{repo.name}}');
-    console.warn('Repo url' + '{{repo.url}}');
-    // console.log({{repo}});
-    // allRepos.push({{repo}});
+    var repo = {
+      name: '{{repo.name}}',
+      html_url: '{{repo.html_url}}',
+      description: '{{repo.description}}',
+      homepage: '{{repo.homepage}}',
+      stars: '{{repo.stargazers_count}}',
+      forks: '{{repo.forks_count}}',
+      language: '{{repo.homepage}}'
+    };
+    allRepos.push(repo);
   {% endfor %}
 
   console.log(allRepos);
