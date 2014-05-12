@@ -55,7 +55,8 @@ jQuery(function($){
       },
 
       getCustomRepos: function() {
-        var o = this;
+        var o = this,
+            customApiCalls = 0;
 
         for (var i = customRepos.length - 1; i >= 0; i--) {
           repo = customRepos[i];
