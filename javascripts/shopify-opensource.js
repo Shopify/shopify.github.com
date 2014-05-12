@@ -12,7 +12,7 @@ jQuery(function($){
       },
       $body: $('body'),
       $repoContainer: $('#repos'),
-      $preventApiCalls: true,
+      $preventApiCalls: false,
       $ignoreForks: true,
 
       init : function() {
