@@ -96,12 +96,6 @@ description: As a team that greatly benefits from open-source software, these ar
 {% endraw %}
 </script>
 
-<div style="display:none;">
-{% for repo in site.github.public_repositories %}
-  <p>ID: {{repo.id}}</p>
-{% endfor %}
-</div>
-
 <script>
   function htmlEncode(s) {
     return s.replace(/&(?!\w+([;\s]|$))/g, "&amp;")
@@ -111,15 +105,15 @@ description: As a team that greatly benefits from open-source software, these ar
   var allRepos = [];
 
   {% for repo in site.github.public_repositories %}
-    var repo = {
-      name: "{{repo.name}}",
-      html_url: "{{repo.html_url}}",
-      description: htmlEncode("{{repo.description}}"),
-      homepage: "{{repo.homepage}}",
-      stars: "{{repo.stargazers_count}}",
-      forks: "{{repo.forks_count}}",
-      language: "{{repo.homepage}}"
-    };
+    // var repo = {
+    //   name: "{{repo.name}}",
+    //   html_url: "{{repo.html_url}}",
+    //   description: htmlEncode("{{repo.description}}"),
+    //   homepage: "{{repo.homepage}}",
+    //   stars: "{{repo.stargazers_count}}",
+    //   forks: "{{repo.forks_count}}",
+    //   language: "{{repo.language}}"
+    // };
     allRepos.push(repo);
   {% endfor %}
 
