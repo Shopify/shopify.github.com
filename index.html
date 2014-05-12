@@ -97,25 +97,19 @@ description: As a team that greatly benefits from open-source software, these ar
 </script>
 
 <script>
-  function htmlEncode(s) {
-    return s.replace(/&(?!\w+([;\s]|$))/g, "&amp;")
-    .replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  }
-
-  var allRepos = [];
+  var repos = [];
 
   {% for repo in site.github.public_repositories %}
-    // var repo = {
-    //   name: "{{repo.name}}",
-    //   html_url: "{{repo.html_url}}",
-    //   description: htmlEncode("repo.description"),
-    //   homepage: "{{repo.homepage}}",
-    //   stars: "{{repo.stargazers_count}}",
-    //   forks: "{{repo.forks_count}}",
-    //   language: "{{repo.language}}"
-    // };
-    // allRepos.push(repo);
+    var repo = {
+      name: "{{repo.name}}",
+      html_url: "{{repo.html_url}}",
+      description: "repo.description",
+      homepage: "{{repo.homepage}}",
+      language: "{{repo.language}}",
+      stars: {{repo.stargazers_count}},
+      forks: {{repo.forks_count}},
+      fork: {{repo.fork}}
+    };
+    repos.push(repo);
   {% endfor %}
-
-  // console.log(allRepos);
 </script>

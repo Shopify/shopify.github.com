@@ -17,8 +17,7 @@ jQuery(function($){
 
       init : function() {
 
-        this.getRepos();
-        this.readRepos();
+        this.getCustomRepos();
         this.addMembers();
         this.tracking();
 
@@ -55,48 +54,8 @@ jQuery(function($){
         });
       },
 
-      readRepos: function() {
-        // public_repositories isn't defined as a JSON object, so not sure how to parse it
-        // var test = JSON.parse(public_repositories);
-      },
-
-      getRepos: function(repos, page) {
-        var o = this,
-            repos = repos || [],
-            page = page || 1,
-            perPage = 100;
-
-        var uri = 'https://api.github.com/orgs/Shopify/repos?callback=?'
-                + '&per_page='+perPage
-                + '&page='+page;
-
-        if (this.$preventApiCalls) return false;
-
-        $.getJSON(uri, function(result) {
-          if (result.meta.status == 403) {
-            // If we hit the rate limit, bail and show an error
-            o.$repoContainer.addClass('is-loaded').append('<div class="limit-error">API Limit Reached from this IP. Please try again later.</div>');
-            return;
-          }
-
-          // Add api data to repos object
-          repos = repos.concat(result.data);
-
-          if (result.data && result.data.length == perPage) {
-            // Pagination wall. Do another call on the next page
-            o.getRepos(repos, page+1);
-          } else {
-            // We have all of Shopify's repos, now get the custom ones
-            o.getCustomRepos(repos);
-          }
-        });
-
-      },
-
-      getCustomRepos: function(repos) {
-        var o = this,
-            repos = repos || [],
-            customApiCalls = 0;
+      getCustomRepos: function() {
+        var o = this;
 
         for (var i = customRepos.length - 1; i >= 0; i--) {
           repo = customRepos[i];
@@ -211,14 +170,6 @@ jQuery(function($){
           var filterValue = $(this).attr('data-filter');
           o.$repoContainer.isotope({ filter: filterValue });
         });
-      },
-
-      fixJson: function(data) {
-        data = data.replace('/**/foo(','');
-        if (data.substring(data.length-1) == ")") {
-          data = data.substring(0, data.length-1);
-        }
-        return JSON.parse(data);
       },
 
       tracking: function() {
