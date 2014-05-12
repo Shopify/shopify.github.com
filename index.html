@@ -103,13 +103,18 @@ description: As a team that greatly benefits from open-source software, these ar
 </div>
 
 <script>
+  function htmlEncode(s) {
+    return s.replace(/&(?!\w+([;\s]|$))/g, "&amp;")
+    .replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
   var allRepos = [];
 
   {% for repo in site.github.public_repositories %}
     var repo = {
       name: "{{repo.name}}",
       html_url: "{{repo.html_url}}",
-      description: "{{repo.description}}",
+      description: htmlEncode"{{repo.description}}"),
       homepage: "{{repo.homepage}}",
       stars: "{{repo.stargazers_count}}",
       forks: "{{repo.forks_count}}",
