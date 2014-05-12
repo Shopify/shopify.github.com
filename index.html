@@ -107,13 +107,13 @@ description: As a team that greatly benefits from open-source software, these ar
 
   {% for repo in site.github.public_repositories %}
     var repo = {
-      name: '{{repo.name}}',
-      html_url: '{{repo.html_url}}',
-      description: '{{repo.description}}',
-      homepage: '{{repo.homepage}}',
-      stars: '{{repo.stargazers_count}}',
-      forks: '{{repo.forks_count}}',
-      language: '{{repo.homepage}}'
+      name: "{{repo.name}}",
+      html_url: "{{repo.html_url}}",
+      description: "{{repo.description}}",
+      homepage: "{{repo.homepage}}",
+      stars: "{{repo.stargazers_count}}",
+      forks: "{{repo.forks_count}}",
+      language: "{{repo.homepage}}"
     };
     allRepos.push(repo);
   {% endfor %}
