@@ -96,11 +96,21 @@ description: As a team that greatly benefits from open-source software, these ar
 {% endraw %}
 </script>
 
-
-<div style="display: none;">
-  <p>Title: {{ site.github.project_title }}</p>
-  <p>Repo URL: {{ site.github.repository_url }}</p>
-  <p>Public Repos: {{ site.github.public_repositories }}</p>
-  <p>Org Members: {{ site.github.organization_members }}</p>
-  <p>Contributors: {{ site.github.contributors }}</p>
+<div style="display:none;">
+{% for repo in site.github.public_repositories %}
+  <p>ID: {{repo.id}}</p>
+{% endfor %}
 </div>
+
+<script>
+  var allRepos = [],
+      repo;
+
+  {% for repo in site.github.public_repositories %}
+    if (repo) {
+      allRepos.push(repo);
+    }
+  {% endfor %}
+
+  console.log(allRepos);
+</script>

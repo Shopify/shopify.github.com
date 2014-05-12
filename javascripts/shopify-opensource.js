@@ -18,6 +18,7 @@ jQuery(function($){
       init : function() {
 
         this.getRepos();
+        this.readRepos();
         this.addMembers();
         this.tracking();
 
@@ -52,6 +53,11 @@ jQuery(function($){
             $("#countMembers").removeClass('is-loading').text(members.length);
           }
         });
+      },
+
+      readRepos: function() {
+        // public_repositories isn't defined as a JSON object, so not sure how to parse it
+        // var test = JSON.parse(public_repositories);
       },
 
       getRepos: function(repos, page) {
