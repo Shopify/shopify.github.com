@@ -36,28 +36,30 @@ $large_up: unquote( "min-width: #{$large + 1}" );
 // ==============================================================================
 $margin: 20px;
 $gutter: 30px;
-$layout_max_width: 1200px;
+$layout_max_width: 800px;
 $border_radius: 3px;
 
 
 // ==============================================================================
 // Typography
 // ==============================================================================
-$bodyFontStack: 'Open Sans', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$bodyFontStack: Helvetica, Arial, sans-serif;
 
 
 
 // ==============================================================================
 // Colours
 // ==============================================================================
-$textColor: #273b41;
-$linkColor: #297293;
+$headertextColor: #fff;
+$textColor: #b6d9f9;
+$linkColor: #a3ccf1;
 
-$heroBg: #389fba;
+$borderColor: #539fea;
+$borderColorLight: #207ed5;
+
+$iconColor: #539fea;
 
 $filterActive: #7863ac;
-
-$footerLinks: #2e9dcf;
 
 $cardFooterBg: #1c5f7d;
 $cardFooterText: #8ed5df;

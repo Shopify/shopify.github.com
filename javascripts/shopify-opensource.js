@@ -158,10 +158,6 @@ jQuery(function($){
       flowyGrid: function() {
         var o = this;
 
-        this.$repoContainer.isotope({
-          itemSelector: '.repo'
-        });
-
         // bind filter button click
         var filterButtons = $('#filters button');
         filterButtons.on( 'click', function() {

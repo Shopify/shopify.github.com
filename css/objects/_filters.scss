@@ -2,9 +2,8 @@
 // #Filter Bar
 // ==============================================================================
 .filter-bar {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
-  padding: $margin/2 0;
   text-transform: uppercase;
 }
 
@@ -33,7 +32,7 @@
 
   &:hover,
   &.is-active {
-    color: #fff;
+    color: #539ee4;
     background-color: $filterActive;
   }
 

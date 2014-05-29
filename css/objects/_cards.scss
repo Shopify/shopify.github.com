@@ -2,62 +2,105 @@
 // #Repo Cards
 // ==============================================================================
 .repo {
+  border: 3px solid $borderColor;
   margin-bottom: $gutter/2;
+
   @include transform(translateZ(0));
 
-  h2, .h2 {
-    margin-bottom: 4px;
-    word-wrap: break-word;
+  a {
+    border: 0;
+  }
+  
+  h2 a,.h2 a {
+    color: $headertextColor;
   }
 
   h4, .h4 {
     color: #5d7880;
   }
-}
-
-.repo-inner {
-  background-color: #fff;
-  padding: $margin $margin $margin/1.5 $margin;
 
   p {
-    margin-bottom: 0;
+    margin: $margin*0.75 $margin;
   }
 }
 
 .homepage-link {
   display: block;
-  float: right;
+  float: left;
+  height: 26px;
+  margin-right: $margin*0.75;
+  width: 26px;
 
   img {
-    display: block;
+    height: 26px;
+    width: 26px;    
   }
 }
 
-.repo-footer {
-  background-color: $cardFooterBg;
-  color: $cardFooterText;
-  font-weight: 600;
-  font-size: 14px;
+.repo-header {
+  border-bottom: 3px solid $borderColorLight;
   @include clearfix;
+
+  i {
+    color: $iconColor;
+  }
+
+  h2,.h2 {
+    margin: $margin*0.7 $margin;
+
+    @include responsify($small_up,true) {
+      font-size: 16px;
+    }
+
+    @include responsify($medium_up,true) {
+      font-size: 22px;
+    }
+  }
 }
 
-.repo-footer--left {
+.repo-meta {
+  border-top: 3px solid $borderColorLight;
+  font-size: 12px;
+  text-align: right;
+  @include clearfix;
+
+  @include responsify($small_up, true) {
+    border-top: 0;
+  }
+}
+
+.repo-git {
+  float: right;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  a {
+    background: url(../images/git-back.png) repeat;
+    border-left: 3px solid $borderColorLight;
+    display: block;
+    padding: $margin*0.75 $margin;
+
+    @include responsify($small_up,true) {
+      padding: $margin*0.75;
+    }
+
+    @include responsify($medium_up,true) {
+      padding: $margin*0.75 $margin;
+    }
+  }
+}
+
+.repo-stats {
   float: left;
-  padding: $margin/2 $margin;
+  padding: $margin*0.75;
 
   i {
     position: relative;
     top: -1px;
   }
 
-  i:last-child {
-    margin-left: $margin/4;
+  @include responsify($small_up, true) {
+    float: right;  
+    padding: $margin*0.75 $margin;
   }
-}
-
-.repo-footer--right {
-  float: right;
-  display: block;
-  padding: $margin/2 $margin;
-  background-color: $linkColor;
 }
