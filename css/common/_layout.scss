@@ -10,11 +10,20 @@
 // ==============================================================================
 .pagewidth {
   max-width: $layout_max_width;
+  padding: 0 $margin;
+
+  @include responsify( $medium_up, true ) {
+  	padding: 0 $gutter;
+  }
+
+  @include responsify( $xlarge_up, true ) {
+  	padding: 0;
+  }
 }
 
 
 html, body {
   margin: 0;
-  font-size: 14px; // Henseforth known as 1em
+  font-size: 14px; // Henceforth known as 1em
   background: #1773c8;
 }

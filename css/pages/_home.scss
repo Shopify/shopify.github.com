@@ -13,13 +13,17 @@
 
 .hero-lines {
   position: absolute;
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
   bottom: 0;
   background-image: url(/images/hero-lines.png);
   background-position: center top;
   background-repeat: repeat-x;
+
+  @include responsify( $small_up,true ) {
+    top: 0;
+  }
 }
 
 
@@ -28,23 +32,30 @@
 // ==============================================================================
 .hero-header {
   background-color: rgba(#fff,0.1);
-  padding: $gutter 0;
+  padding: $margin 0;
   @include clearfix;
+
+  @include responsify( $small_up, true ) {
+    padding: $gutter 0;
+  }
 }
 
 .git-stats {
+  color: $headertextColor;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 13px;
-  margin: 0;
+  font-size: 14px;
+  margin: $margin/2 0 0;
   text-align: center;
 
   @include responsify( $medium_up, true ) {
     float: right;
+    margin: $margin/4 0 0;
     text-align: right;
   }
 
   li {
+    margin: 0;
     padding: 0 0 0 10px;
     white-space: nowrap;
   }
@@ -72,21 +83,30 @@
   text-align: center;
   display: table-cell;
   vertical-align: middle;
-  height: 400px;
+  height: 200px;
 
   @include transition(padding 0.2s ease-in-out);
 
   p {
     color: $headertextColor;
   }
+
+  @include responsify( $medium_up, true ) {
+    height: 320px;
+  }
 }
 
 .hero-text {
+  font-size: 18px;
   margin-bottom: 10px;
 
-  @include responsify( $large_down ) {
+  @include responsify( $small_up, true ) {
     font-size: 24px;
     line-height: 1.325;
+  }
+
+  @include responsify( $medium_up, true ) {
+    font-size: 30px;
   }
 }
 

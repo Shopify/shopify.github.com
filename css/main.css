@@ -2183,9 +2183,22 @@ pre {
 /* line 11, common/_layout.scss */
 .pagewidth {
   max-width: 800px;
+  padding: 0 20px;
+}
+@media (min-width: 769px) {
+  /* line 11, common/_layout.scss */
+  .pagewidth {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1076px) {
+  /* line 11, common/_layout.scss */
+  .pagewidth {
+    padding: 0;
+  }
 }
 
-/* line 16, common/_layout.scss */
+/* line 25, common/_layout.scss */
 html, body {
   margin: 0;
   font-size: 14px;
@@ -2389,84 +2402,98 @@ a:hover {
 
 /* line 4, objects/_footer.scss */
 .footer {
-  color: #b6d9f9;
+  color: white;
   font-size: 12px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 /* line 4, objects/_filters.scss */
 .filter-bar {
+  background: url(../images/git-back.png) repeat;
+  border: 3px solid #539fea;
   font-size: 12px;
   font-weight: 600;
+  padding: 10px 20px;
   text-transform: uppercase;
 }
-
-/* line 10, objects/_filters.scss */
-.filter-label {
-  padding: 2px 5px;
+/* line 13, objects/_filters.scss */
+.filter-bar .filter-bar--left,
+.filter-bar .filter-bar--right {
+  text-align: center;
+}
+@media (min-width: 481px) {
+  /* line 48, common/_mixins.scss */
+  .filter-bar:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* line 20, objects/_filters.scss */
+  .filter-bar .filter-bar--left {
+    float: left;
+    text-align: left;
+  }
+  /* line 25, objects/_filters.scss */
+  .filter-bar .filter-bar--right {
+    float: right;
+    text-align: right;
+  }
 }
 
-/* line 18, objects/_filters.scss */
+/* line 36, objects/_filters.scss */
 .btn,
 .btn:visited {
-  display: inline-block;
-  border: 1px solid transparent;
-  background: none;
-  font: inherit;
-  text-transform: inherit;
-  color: #5d7880;
-  text-align: center;
-  padding: 2px 13.33333px;
-  text-decoration: none;
-  white-space: nowrap;
-  border-radius: 15px;
+  background-color: transparent;
+  border: 0;
+  color: #539fea;
   cursor: pointer;
+  font: inherit;
+  margin: 0 10px 0 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: inherit;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-/* line 34, objects/_filters.scss */
+/* line 49, objects/_filters.scss */
 .btn:hover, .btn.is-active,
 .btn:visited:hover,
 .btn:visited.is-active {
-  color: #539ee4;
-  background-color: #7863ac;
-}
-/* line 39, objects/_filters.scss */
-.btn:focus,
-.btn:visited:focus {
-  outline: 0 none;
-  border: 1px solid #9584be;
+  border-bottom: 1px solid rgba(182, 217, 249, 0.8);
+  color: #b6d9f9;
 }
 
 /* line 4, objects/_cards.scss */
 .repo {
   border: 3px solid #539fea;
   margin-bottom: 15px;
+  width: 100%;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
 }
-/* line 10, objects/_cards.scss */
+/* line 11, objects/_cards.scss */
 .repo a {
   border: 0;
 }
-/* line 14, objects/_cards.scss */
+/* line 15, objects/_cards.scss */
 .repo h2 a, .repo .h2 a {
   color: white;
 }
-/* line 18, objects/_cards.scss */
+/* line 19, objects/_cards.scss */
 .repo h4, .repo .h4 {
   color: #5d7880;
 }
-/* line 22, objects/_cards.scss */
+/* line 23, objects/_cards.scss */
 .repo p {
   margin: 15px 20px;
 }
 
-/* line 27, objects/_cards.scss */
+/* line 28, objects/_cards.scss */
 .homepage-link {
   display: block;
   float: left;
@@ -2474,13 +2501,13 @@ a:hover {
   margin-right: 15px;
   width: 26px;
 }
-/* line 34, objects/_cards.scss */
+/* line 35, objects/_cards.scss */
 .homepage-link img {
   height: 26px;
   width: 26px;
 }
 
-/* line 40, objects/_cards.scss */
+/* line 41, objects/_cards.scss */
 .repo-header {
   border-bottom: 3px solid #207ed5;
 }
@@ -2490,28 +2517,26 @@ a:hover {
   display: table;
   clear: both;
 }
-/* line 44, objects/_cards.scss */
+/* line 45, objects/_cards.scss */
+.no-desc .repo-header {
+  border: 0;
+}
+/* line 49, objects/_cards.scss */
 .repo-header i {
   color: #539fea;
 }
-/* line 48, objects/_cards.scss */
+/* line 53, objects/_cards.scss */
 .repo-header h2, .repo-header .h2 {
   margin: 14px 20px;
 }
-@media (min-width: 481px) {
-  /* line 48, objects/_cards.scss */
-  .repo-header h2, .repo-header .h2 {
-    font-size: 16px;
-  }
-}
 @media (min-width: 769px) {
-  /* line 48, objects/_cards.scss */
+  /* line 53, objects/_cards.scss */
   .repo-header h2, .repo-header .h2 {
     font-size: 22px;
   }
 }
 
-/* line 61, objects/_cards.scss */
+/* line 62, objects/_cards.scss */
 .repo-meta {
   border-top: 3px solid #207ed5;
   font-size: 12px;
@@ -2523,55 +2548,86 @@ a:hover {
   display: table;
   clear: both;
 }
-@media (min-width: 481px) {
-  /* line 61, objects/_cards.scss */
+@media (min-width: 769px) {
+  /* line 62, objects/_cards.scss */
   .repo-meta {
     border-top: 0;
   }
 }
 
-/* line 72, objects/_cards.scss */
+/* line 73, objects/_cards.scss */
 .repo-git {
   float: right;
   font-weight: 600;
   text-transform: uppercase;
 }
-/* line 77, objects/_cards.scss */
+/* line 78, objects/_cards.scss */
 .repo-git a {
   background: url(../images/git-back.png) repeat;
   border-left: 3px solid #207ed5;
   display: block;
   padding: 15px 20px;
 }
-@media (min-width: 481px) {
-  /* line 77, objects/_cards.scss */
-  .repo-git a {
-    padding: 15px;
-  }
-}
 @media (min-width: 769px) {
-  /* line 77, objects/_cards.scss */
+  /* line 78, objects/_cards.scss */
   .repo-git a {
-    padding: 15px 20px;
+    padding: 17px 20px;
   }
 }
-
-/* line 93, objects/_cards.scss */
-.repo-stats {
-  float: left;
-  padding: 15px;
-}
-/* line 97, objects/_cards.scss */
-.repo-stats i {
+/* line 89, objects/_cards.scss */
+.repo-git i {
   position: relative;
   top: -1px;
 }
-@media (min-width: 481px) {
-  /* line 93, objects/_cards.scss */
+
+/* line 95, objects/_cards.scss */
+.repo-stats {
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px;
+}
+/* line 101, objects/_cards.scss */
+.repo-stats i {
+  position: relative;
+  top: -2px;
+}
+/* line 106, objects/_cards.scss */
+.repo-stats i.icon-forks {
+  margin-left: 5px;
+}
+@media (min-width: 769px) {
+  /* line 95, objects/_cards.scss */
   .repo-stats {
     float: right;
-    padding: 15px 20px;
+    padding: 17px 20px;
   }
+}
+
+/* line 116, objects/_cards.scss */
+.repo-lang {
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+/* line 120, objects/_cards.scss */
+.coffeescript .repo-lang, .javascript .repo-lang {
+  color: #eff54e;
+}
+/* line 121, objects/_cards.scss */
+.liquid .repo-lang {
+  color: #76ddff;
+}
+/* line 122, objects/_cards.scss */
+.objective-c .repo-lang {
+  color: #d6d6d6;
+}
+/* line 123, objects/_cards.scss */
+.php .repo-lang, .python .repo-lang {
+  color: #d1a4ff;
+}
+/* line 124, objects/_cards.scss */
+.ruby .repo-lang {
+  color: #f67a7a;
 }
 
 /* line 5, objects/_loader.scss */
@@ -2674,7 +2730,7 @@ a:hover {
 /* line 14, pages/_home.scss */
 .hero-lines {
   position: absolute;
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -2682,11 +2738,17 @@ a:hover {
   background-position: center top;
   background-repeat: repeat-x;
 }
+@media (min-width: 481px) {
+  /* line 14, pages/_home.scss */
+  .hero-lines {
+    top: 0;
+  }
+}
 
-/* line 29, pages/_home.scss */
+/* line 33, pages/_home.scss */
 .hero-header {
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 30px 0;
+  padding: 20px 0;
 }
 /* line 48, common/_mixins.scss */
 .hero-header:after {
@@ -2694,35 +2756,44 @@ a:hover {
   display: table;
   clear: both;
 }
+@media (min-width: 481px) {
+  /* line 33, pages/_home.scss */
+  .hero-header {
+    padding: 30px 0;
+  }
+}
 
-/* line 35, pages/_home.scss */
+/* line 43, pages/_home.scss */
 .git-stats {
+  color: white;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 13px;
-  margin: 0;
+  font-size: 14px;
+  margin: 10px 0 0;
   text-align: center;
 }
 @media (min-width: 769px) {
-  /* line 35, pages/_home.scss */
+  /* line 43, pages/_home.scss */
   .git-stats {
     float: right;
+    margin: 5px 0 0;
     text-align: right;
   }
 }
-/* line 47, pages/_home.scss */
+/* line 57, pages/_home.scss */
 .git-stats li {
+  margin: 0;
   padding: 0 0 0 10px;
   white-space: nowrap;
 }
 
-/* line 53, pages/_home.scss */
+/* line 64, pages/_home.scss */
 .git-stat {
   color: #8ec9ee;
   padding-right: 3px;
 }
 
-/* line 58, pages/_home.scss */
+/* line 69, pages/_home.scss */
 .logo {
   display: block;
   margin: 0 auto;
@@ -2730,74 +2801,87 @@ a:hover {
   height: 30px;
 }
 @media (min-width: 769px) {
-  /* line 58, pages/_home.scss */
+  /* line 69, pages/_home.scss */
   .logo {
     float: left;
   }
 }
 
-/* line 71, pages/_home.scss */
+/* line 82, pages/_home.scss */
 .hero-inner {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
-  height: 400px;
+  height: 200px;
   -webkit-transition: padding 0.2s ease-in-out;
   -moz-transition: padding 0.2s ease-in-out;
   transition: padding 0.2s ease-in-out;
 }
-/* line 79, pages/_home.scss */
+/* line 90, pages/_home.scss */
 .hero-inner p {
   color: white;
 }
+@media (min-width: 769px) {
+  /* line 82, pages/_home.scss */
+  .hero-inner {
+    height: 320px;
+  }
+}
 
-/* line 84, pages/_home.scss */
+/* line 99, pages/_home.scss */
 .hero-text {
+  font-size: 18px;
   margin-bottom: 10px;
 }
-@media (max-width: 769px) {
-  /* line 84, pages/_home.scss */
+@media (min-width: 481px) {
+  /* line 99, pages/_home.scss */
   .hero-text {
     font-size: 24px;
     line-height: 1.325;
   }
 }
+@media (min-width: 769px) {
+  /* line 99, pages/_home.scss */
+  .hero-text {
+    font-size: 30px;
+  }
+}
 
-/* line 96, pages/_home.scss */
+/* line 116, pages/_home.scss */
 .repoWrap {
   padding: 15px 0;
 }
 @media (min-width: 769px) {
-  /* line 96, pages/_home.scss */
+  /* line 116, pages/_home.scss */
   .repoWrap {
     padding: 30px 0;
   }
 }
 
-/* line 104, pages/_home.scss */
+/* line 124, pages/_home.scss */
 .repo-loader {
   display: table;
   width: 100%;
   min-height: 300px;
 }
-/* line 109, pages/_home.scss */
+/* line 129, pages/_home.scss */
 .repo-loader .repo-loader--inner {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-/* line 116, pages/_home.scss */
+/* line 136, pages/_home.scss */
 .repo-loader .spinner:before,
 .repo-loader .spinner:after {
   background-color: #8ec9ee;
 }
 
-/* line 121, pages/_home.scss */
+/* line 141, pages/_home.scss */
 #repos.is-loaded + .repo-loader {
   display: none;
 }
 
-/* line 128, pages/_home.scss */
+/* line 148, pages/_home.scss */
 .limit-error {
   text-align: center;
   padding: 100px 0;

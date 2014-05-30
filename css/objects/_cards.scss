@@ -4,6 +4,7 @@
 .repo {
   border: 3px solid $borderColor;
   margin-bottom: $gutter/2;
+  width: 100%;
 
   @include transform(translateZ(0));
 
@@ -41,16 +42,16 @@
   border-bottom: 3px solid $borderColorLight;
   @include clearfix;
 
+  .no-desc & {
+    border: 0;
+  }
+
   i {
     color: $iconColor;
   }
 
   h2,.h2 {
     margin: $margin*0.7 $margin;
-
-    @include responsify($small_up,true) {
-      font-size: 16px;
-    }
 
     @include responsify($medium_up,true) {
       font-size: 22px;
@@ -64,7 +65,7 @@
   text-align: right;
   @include clearfix;
 
-  @include responsify($small_up, true) {
+  @include responsify($medium_up, true) {
     border-top: 0;
   }
 }
@@ -80,27 +81,45 @@
     display: block;
     padding: $margin*0.75 $margin;
 
-    @include responsify($small_up,true) {
-      padding: $margin*0.75;
-    }
-
     @include responsify($medium_up,true) {
-      padding: $margin*0.75 $margin;
+      padding: $margin*0.85 $margin;
     }
   }
-}
-
-.repo-stats {
-  float: left;
-  padding: $margin*0.75;
 
   i {
     position: relative;
     top: -1px;
   }
+}
 
-  @include responsify($small_up, true) {
-    float: right;  
-    padding: $margin*0.75 $margin;
+.repo-stats {
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: $margin*0.75;
+
+  i {
+    position: relative;
+    top: -2px;
   }
+
+  i.icon-forks {
+    margin-left: $margin/4;
+  }
+
+  @include responsify($medium_up, true) {
+    float: right;  
+    padding: $margin*0.85 $margin;
+  }
+}
+
+.repo-lang {
+  margin-left: $margin/4;
+  text-transform: uppercase;
+
+  .coffeescript &,.javascript & { color: $javascript; }
+  .liquid & { color: $liquid; }
+  .objective-c & { color: $objective-c; }
+  .php &,.python & { color: $php; }
+  .ruby & { color: $ruby; }
 }

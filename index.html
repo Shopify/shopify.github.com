@@ -27,18 +27,21 @@ description: As a team that greatly benefits from open-source software, these ar
   </div>
 </div>
 
-<div class="filter-bar">
-  <div class="pagewidth text-center">
+<div class="pagewidth">
+  <div class="filter-bar">
     <div class="button-group js-radio-button-group" id="filters">
-      <span class="filter-label">Show</span>
-      <button class="btn is-active" data-filter="*">All</button>
-      <button class="btn" data-filter=".go">Go</button>
-      <button class="btn" data-filter=".javascript">JavaScript</button>
-      <button class="btn" data-filter=".liquid">Liquid</button>
-      <button class="btn" data-filter=".objective-c">Objective-C</button>
-      <button class="btn" data-filter=".ruby">Ruby</button>
-      <button class="btn" data-filter=":not(.go, .css, .javascript, .objective-c, .ruby, .liquid)">Other</button>
-
+      <div class="filter-bar--left">
+        Show
+      </div>
+      <div class="filter-bar--right">
+        <button class="btn is-active" data-filter="*">All</button>
+        <button class="btn" data-filter=".go">Go</button>
+        <button class="btn" data-filter=".javascript">JavaScript</button>
+        <button class="btn" data-filter=".liquid">Liquid</button>
+        <button class="btn" data-filter=".objective-c">Objective-C</button>
+        <button class="btn" data-filter=".ruby">Ruby</button>
+        <button class="btn" data-filter=":not(.go, .css, .javascript, .objective-c, .ruby, .liquid)">Other</button>
+      </div>
     </div>
   </div>
 </div>
@@ -57,10 +60,10 @@ description: As a team that greatly benefits from open-source software, these ar
 <script id="repoTemplate" type="text/template">
 {% raw %}
   {{#items}}
-  <div class="repo {{languageClass}}">
+  <div class="repo {{languageClass}}{{#unless description}} no-desc{{/unless}}">
     <header class="repo-header">
       <div class="grid">
-        <div class="grid-item medium--one-half large--one-half">
+        <div class="grid-item large--one-half">
           <h2>
           {{#if homepage}}
             {{#if avatar}}
@@ -81,7 +84,7 @@ description: As a team that greatly benefits from open-source software, these ar
           {{/if}}
           </h2>
         </div>
-        <div class="grid-item medium--one-half large--one-half">
+        <div class="grid-item large--one-half">
           <div class="repo-meta">
             <div class="repo-git">
               <a href="{{url}}" title="View {{name}} on GitHub">
@@ -91,13 +94,15 @@ description: As a team that greatly benefits from open-source software, these ar
             <div class="repo-stats">
               <i class="icon-star" title="Stars"></i> {{stars}}
               <i class="icon-forks" title="Forks"></i> {{forks}}
-              {{language}}
+              <span class="repo-lang">{{language}}</span>
             </div>
           </div>
         </div>
       </div>
     </header>
+    {{#if description}}
     <p>{{description}}</p>
+    {{/if}}
   </div>
   {{/items}}
 {% endraw %}

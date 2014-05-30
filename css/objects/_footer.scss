@@ -2,7 +2,8 @@
 // General Footer Styles
 // ==============================================================================
 .footer {
-  color: $textColor;
+  color: $headertextColor;
   font-size: 12px;
+  margin-bottom: $gutter;
   text-align: center;
 }
