@@ -2397,6 +2397,10 @@ a:hover {
   margin-bottom: 30px;
   text-align: center;
 }
+/* line 10, objects/_footer.scss */
+.footer a i {
+  border: 0;
+}
 
 /* line 4, objects/_filters.scss */
 .filter-bar {
