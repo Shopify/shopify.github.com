@@ -71,8 +71,21 @@
   margin: 0 auto;
   width: 215px;
   height: 30px;
+
+  .lt-ie9 & {
+    display: none;
+  }
+
   @include responsify( $medium_up, true ) {
     float: left;
+  }
+}
+
+.logo--ie {
+  display: none;
+
+  .lt-ie9 & {
+    display: block;
   }
 }
 

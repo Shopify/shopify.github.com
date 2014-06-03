@@ -9,6 +9,7 @@ description: As a team that greatly benefits from open-source software, these ar
   <header class="hero-header">
     <div class="pagewidth">
       <img src="/images/shopify-open-source.svg" alt="Shopify Open Source" class="logo">
+      <img src="/images/shopify-open-source.png" alt="Shopify Open Source" class="logo--ie">
       <ul class="inline-list git-stats">
         <li>
           <span id="countRepos" class="git-stat is-loading"></span> Repos
@@ -109,20 +110,20 @@ description: As a team that greatly benefits from open-source software, these ar
 </script>
 
 <script>
-  // var repos = [];
+  var repos = [];
 
-  // {% for repo in site.github.public_repositories %}
-  //   var repo = {
-  //     name: "{{repo.name}}",
-  //     html_url: "{{repo.html_url}}",
-  //     description: "{{repo.description}}",
-  //     homepage: "{{repo.homepage}}",
-  //     language: "{{repo.language}}",
-  //     stargazers_count: {{repo.stargazers_count}},
-  //     forks_count: {{repo.forks_count}},
-  //     fork: {{repo.fork}}
-  //   };
-  //   repos.push(repo);
-  // {% endfor %}
+  {% for repo in site.github.public_repositories %}
+    var repo = {
+      name: "{{repo.name}}",
+      html_url: "{{repo.html_url}}",
+      description: "{{repo.description}}",
+      homepage: "{{repo.homepage}}",
+      language: "{{repo.language}}",
+      stargazers_count: {{repo.stargazers_count}},
+      forks_count: {{repo.forks_count}},
+      fork: {{repo.fork}}
+    };
+    repos.push(repo);
+  {% endfor %}
 </script>
 

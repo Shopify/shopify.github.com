@@ -2337,7 +2337,7 @@ a {
   transition: color 0.1s ease-in-out;
 }
 /* line 10, common/_links.scss */
-a:hover {
+a:hover, a:focus {
   color: #cfe5f8;
   text-decoration: none;
 }
@@ -2758,8 +2758,21 @@ a:hover {
   height: 30px;
   float: left;
 }
+/* line 75, pages/_home.scss */
+.lt-ie9 .logo {
+  display: none;
+}
 
-/* line 82, pages/_home.scss */
+/* line 84, pages/_home.scss */
+.logo--ie {
+  display: none;
+}
+/* line 87, pages/_home.scss */
+.lt-ie9 .logo--ie {
+  display: block;
+}
+
+/* line 95, pages/_home.scss */
 .hero-inner {
   text-align: center;
   display: table-cell;
@@ -2770,12 +2783,12 @@ a:hover {
   transition: padding 0.2s ease-in-out;
   height: 320px;
 }
-/* line 90, pages/_home.scss */
+/* line 103, pages/_home.scss */
 .hero-inner p {
   color: white;
 }
 
-/* line 99, pages/_home.scss */
+/* line 112, pages/_home.scss */
 .hero-text {
   font-size: 18px;
   margin-bottom: 10px;
@@ -2784,36 +2797,36 @@ a:hover {
   font-size: 30px;
 }
 
-/* line 116, pages/_home.scss */
+/* line 129, pages/_home.scss */
 .repoWrap {
   padding: 15px 0;
   padding: 30px 0;
 }
 
-/* line 124, pages/_home.scss */
+/* line 137, pages/_home.scss */
 .repo-loader {
   display: table;
   width: 100%;
   min-height: 300px;
 }
-/* line 129, pages/_home.scss */
+/* line 142, pages/_home.scss */
 .repo-loader .repo-loader--inner {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-/* line 136, pages/_home.scss */
+/* line 149, pages/_home.scss */
 .repo-loader .spinner:before,
 .repo-loader .spinner:after {
   background-color: #8ec9ee;
 }
 
-/* line 141, pages/_home.scss */
+/* line 154, pages/_home.scss */
 #repos.is-loaded + .repo-loader {
   display: none;
 }
 
-/* line 148, pages/_home.scss */
+/* line 161, pages/_home.scss */
 .limit-error {
   text-align: center;
   padding: 100px 0;
