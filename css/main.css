@@ -2352,6 +2352,15 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+/* line 16, common/_links.scss */
+a.twitter-link {
+  border: 0;
+}
+/* line 19, common/_links.scss */
+a.twitter-link .under {
+  border-bottom: 1px solid rgba(163, 204, 241, 0.8);
+}
+
 /* line 5, common/_icons.scss */
 [class^="icon-"] {
   display: inline-block;
