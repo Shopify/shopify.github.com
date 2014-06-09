@@ -5,13 +5,12 @@
   border: 3px solid $borderColor;
   margin-bottom: $gutter/2;
   width: 100%;
-
   @include transform(translateZ(0));
 
   a {
     border: 0;
   }
-  
+
   h2 a,.h2 a {
     color: $headertextColor;
   }
@@ -34,13 +33,13 @@
 
   img {
     height: 26px;
-    width: 26px;    
+    width: 26px;
   }
 }
 
 .repo-header {
-  border-bottom: 3px solid $borderColorLight;
   @include clearfix;
+  border-bottom: 3px solid $borderColorLight;
 
   .no-desc & {
     border: 0;
@@ -53,19 +52,19 @@
   h2,.h2 {
     margin: $margin*0.7 $margin;
 
-    @include responsify($medium_up,true) {
+    @include responsify( $medium_up, true ) {
       font-size: 22px;
     }
   }
 }
 
 .repo-meta {
+  @include clearfix;
   border-top: 3px solid $borderColorLight;
   font-size: 12px;
   text-align: right;
-  @include clearfix;
 
-  @include responsify($medium_up, true) {
+  @include responsify( $medium_up, true ) {
     border-top: 0;
   }
 }
@@ -76,12 +75,12 @@
   text-transform: uppercase;
 
   a {
-    background: url(../images/git-back.png) repeat;
+    background: url(/images/git-back.png) repeat;
     border-left: 3px solid $borderColorLight;
     display: block;
     padding: $margin*0.75 $margin;
 
-    @include responsify($medium_up,true) {
+    @include responsify( $medium_up, true ) {
       padding: $margin*0.85 $margin;
     }
   }
@@ -107,8 +106,8 @@
     margin-left: $margin/4;
   }
 
-  @include responsify($medium_up, true) {
-    float: right;  
+  @include responsify( $medium_up, true ) {
+    float: right;
     padding: $margin*0.85 $margin;
   }
 }

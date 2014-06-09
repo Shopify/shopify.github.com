@@ -2423,7 +2423,7 @@ a.twitter-link .under {
 
 /* line 4, objects/_filters.scss */
 .filter-bar {
-  background: url(../images/git-back.png) repeat;
+  background: url(/images/git-back.png) repeat;
   border: 3px solid #539fea;
   font-size: 12px;
   font-weight: 600;
@@ -2489,24 +2489,24 @@ a.twitter-link .under {
   -o-transform: translateZ(0);
   transform: translateZ(0);
 }
-/* line 11, objects/_cards.scss */
+/* line 10, objects/_cards.scss */
 .repo a {
   border: 0;
 }
-/* line 15, objects/_cards.scss */
+/* line 14, objects/_cards.scss */
 .repo h2 a, .repo .h2 a {
   color: white;
 }
-/* line 19, objects/_cards.scss */
+/* line 18, objects/_cards.scss */
 .repo h4, .repo .h4 {
   color: #5d7880;
 }
-/* line 23, objects/_cards.scss */
+/* line 22, objects/_cards.scss */
 .repo p {
   margin: 15px 20px;
 }
 
-/* line 28, objects/_cards.scss */
+/* line 27, objects/_cards.scss */
 .homepage-link {
   display: block;
   float: left;
@@ -2514,13 +2514,13 @@ a.twitter-link .under {
   margin-right: 15px;
   width: 26px;
 }
-/* line 35, objects/_cards.scss */
+/* line 34, objects/_cards.scss */
 .homepage-link img {
   height: 26px;
   width: 26px;
 }
 
-/* line 41, objects/_cards.scss */
+/* line 40, objects/_cards.scss */
 .repo-header {
   border-bottom: 3px solid #207ed5;
 }
@@ -2530,26 +2530,26 @@ a.twitter-link .under {
   display: table;
   clear: both;
 }
-/* line 45, objects/_cards.scss */
+/* line 44, objects/_cards.scss */
 .no-desc .repo-header {
   border: 0;
 }
-/* line 49, objects/_cards.scss */
+/* line 48, objects/_cards.scss */
 .repo-header i {
   color: #539fea;
 }
-/* line 53, objects/_cards.scss */
+/* line 52, objects/_cards.scss */
 .repo-header h2, .repo-header .h2 {
   margin: 14px 20px;
 }
 @media (min-width: 769px) {
-  /* line 53, objects/_cards.scss */
+  /* line 52, objects/_cards.scss */
   .repo-header h2, .repo-header .h2 {
     font-size: 22px;
   }
 }
 
-/* line 62, objects/_cards.scss */
+/* line 61, objects/_cards.scss */
 .repo-meta {
   border-top: 3px solid #207ed5;
   font-size: 12px;
@@ -2562,83 +2562,83 @@ a.twitter-link .under {
   clear: both;
 }
 @media (min-width: 769px) {
-  /* line 62, objects/_cards.scss */
+  /* line 61, objects/_cards.scss */
   .repo-meta {
     border-top: 0;
   }
 }
 
-/* line 73, objects/_cards.scss */
+/* line 72, objects/_cards.scss */
 .repo-git {
   float: right;
   font-weight: 600;
   text-transform: uppercase;
 }
-/* line 78, objects/_cards.scss */
+/* line 77, objects/_cards.scss */
 .repo-git a {
-  background: url(../images/git-back.png) repeat;
+  background: url(/images/git-back.png) repeat;
   border-left: 3px solid #207ed5;
   display: block;
   padding: 15px 20px;
 }
 @media (min-width: 769px) {
-  /* line 78, objects/_cards.scss */
+  /* line 77, objects/_cards.scss */
   .repo-git a {
     padding: 17px 20px;
   }
 }
-/* line 89, objects/_cards.scss */
+/* line 88, objects/_cards.scss */
 .repo-git i {
   position: relative;
   top: -1px;
 }
 
-/* line 95, objects/_cards.scss */
+/* line 94, objects/_cards.scss */
 .repo-stats {
   float: left;
   font-weight: bold;
   text-transform: uppercase;
   padding: 15px;
 }
-/* line 101, objects/_cards.scss */
+/* line 100, objects/_cards.scss */
 .repo-stats i {
   position: relative;
   top: -2px;
 }
-/* line 106, objects/_cards.scss */
+/* line 105, objects/_cards.scss */
 .repo-stats i.icon-forks {
   margin-left: 5px;
 }
 @media (min-width: 769px) {
-  /* line 95, objects/_cards.scss */
+  /* line 94, objects/_cards.scss */
   .repo-stats {
     float: right;
     padding: 17px 20px;
   }
 }
 
-/* line 116, objects/_cards.scss */
+/* line 115, objects/_cards.scss */
 .repo-lang {
   margin-left: 5px;
   text-transform: uppercase;
 }
-/* line 120, objects/_cards.scss */
+/* line 119, objects/_cards.scss */
 .coffeescript .repo-lang, .javascript .repo-lang {
   color: #eff54e;
 }
-/* line 121, objects/_cards.scss */
+/* line 120, objects/_cards.scss */
 .liquid .repo-lang {
   color: #76ddff;
 }
-/* line 122, objects/_cards.scss */
+/* line 121, objects/_cards.scss */
 .objective-c .repo-lang {
   color: #d6d6d6;
 }
-/* line 123, objects/_cards.scss */
+/* line 122, objects/_cards.scss */
 .php .repo-lang, .python .repo-lang {
   color: #d1a4ff;
 }
-/* line 124, objects/_cards.scss */
+/* line 123, objects/_cards.scss */
 .ruby .repo-lang {
   color: #f67a7a;
 }
@@ -2689,14 +2689,14 @@ a.twitter-link .under {
 }
 
 @-webkit-keyframes rotate {
-  /* line 47, objects/_loader.scss */
+  /* line 48, objects/_loader.scss */
   100% {
     -webkit-transform: rotate(360deg);
   }
 }
 
 @keyframes rotate {
-  /* line 49, objects/_loader.scss */
+  /* line 53, objects/_loader.scss */
   100% {
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
@@ -2704,25 +2704,25 @@ a.twitter-link .under {
 }
 
 @-webkit-keyframes bounce {
-  /* line 56, objects/_loader.scss */
+  /* line 60, objects/_loader.scss */
   0%, 100% {
     -webkit-transform: scale(0);
   }
 
-  /* line 57, objects/_loader.scss */
+  /* line 63, objects/_loader.scss */
   50% {
     -webkit-transform: scale(1);
   }
 }
 
 @keyframes bounce {
-  /* line 61, objects/_loader.scss */
+  /* line 69, objects/_loader.scss */
   0%, 100% {
     transform: scale(0);
     -webkit-transform: scale(0);
   }
 
-  /* line 64, objects/_loader.scss */
+  /* line 72, objects/_loader.scss */
   50% {
     transform: scale(1);
     -webkit-transform: scale(1);
@@ -2826,7 +2826,7 @@ a.twitter-link .under {
 
 /* line 84, pages/_home.scss */
 .lt-ie9 .logo--ie {
-  background: transparent url("../images/shopify-open-source.png") no-repeat;
+  background: transparent url(/images/shopify-open-source.png) no-repeat;
   height: 30px;
   width: 215px;
 }

@@ -21,7 +21,7 @@
   background-position: center top;
   background-repeat: repeat-x;
 
-  @include responsify( $small_up,true ) {
+  @include responsify( $small_up, true ) {
     top: 0;
   }
 }
@@ -82,10 +82,10 @@
 }
 
 .lt-ie9 .logo--ie {
-  background: transparent url('../images/shopify-open-source.png') no-repeat;
+  background: transparent url(/images/shopify-open-source.png) no-repeat;
   height: 30px;
   width: 215px;
-  
+
   .logo {
     display: none;
   }

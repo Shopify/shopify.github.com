@@ -44,7 +44,11 @@
   animation-delay: -1.0s;
 }
 
-@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg) }}
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
@@ -53,8 +57,12 @@
 }
 
 @-webkit-keyframes bounce {
-  0%, 100% { -webkit-transform: scale(0.0) }
-  50% { -webkit-transform: scale(1.0) }
+  0%, 100% {
+    -webkit-transform: scale(0.0);
+  }
+  50% {
+    -webkit-transform: scale(1.0);
+  }
 }
 
 @keyframes bounce {
