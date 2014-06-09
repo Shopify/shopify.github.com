@@ -78,8 +78,6 @@ jQuery(function($){
             customApiCalls = 0,
             repos = repos ? repos : []; // Make sure repos is set (originally in index.html)
 
-        console.log('1: ' + repos.length);
-
         for (var i = customRepos.length - 1; i >= 0; i--) {
           repo = customRepos[i];
 
@@ -109,7 +107,8 @@ jQuery(function($){
         var o = this,
             repoCount = 0;
 
-        console.log('2: ' + repos.length);
+        console.log('addRepos');
+        console.log(repos);
 
         var items = [],
             item = {},
