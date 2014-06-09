@@ -36,9 +36,8 @@ jQuery(function($){
 
         $('html').removeClass('no-js').addClass('js');
 
-        console.log(repos);
-        repos = repos ? repos : []; // Make sure repos is set (originally in index.html)
-        console.log(repos);
+        // Make sure repos is set (originally in index.html)
+        repos = repos ? repos : [];
 
         this.getCustomRepos();
         this.addMembers();
@@ -109,9 +108,6 @@ jQuery(function($){
       addRepos: function(repos) {
         var o = this,
             repoCount = 0;
-
-        console.log('addRepos');
-        console.log(repos);
 
         var items = [],
             item = {},
