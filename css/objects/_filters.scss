@@ -2,14 +2,31 @@
 // #Filter Bar
 // ==============================================================================
 .filter-bar {
-  font-size: 14px;
+  background: url(/images/git-back.png) repeat;
+  border: 3px solid $borderColor;
+  font-size: 12px;
   font-weight: 600;
-  padding: $margin/2 0;
+  padding: $margin/2 $margin;
   text-transform: uppercase;
-}
 
-.filter-label {
-  padding: 2px $margin/4;
+  .filter-bar--left,
+  .filter-bar--right {
+    text-align: center;
+  }
+
+  @include responsify( $small_up, true ) {
+    @include clearfix;
+
+    .filter-bar--left {
+      float: left;
+      text-align: left;
+    }
+
+    .filter-bar--right {
+      float: right;
+      text-align: right;
+    }
+  }
 }
 
 // ==============================================================================
@@ -17,28 +34,20 @@
 // ==============================================================================
 .btn,
 .btn:visited {
-  display: inline-block;
-  border: 1px solid transparent;
-  background: none;
-  font: inherit;
-  text-transform: inherit;
-  color: #5d7880;
-  text-align: center;
-  padding: 2px $margin/1.5;
-  text-decoration: none;
-  white-space: nowrap;
-  border-radius: 15px;
+  background-color: transparent;
+  border: 0;
+  color: $iconColor;
   cursor: pointer;
+  font: inherit;
+  margin: 0 $margin/2 0 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: inherit;
   @include transition(all 0.1s ease-in-out);
 
   &:hover,
   &.is-active {
-    color: #fff;
-    background-color: $filterActive;
-  }
-
-  &:focus {
-    outline: 0 none;
-    border: 1px solid lighten($filterActive, 10%);
+    border-bottom: 1px solid rgba($textColor,0.8);
+    color: $textColor;
   }
 }

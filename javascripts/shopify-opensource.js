@@ -1,3 +1,20 @@
+// Fix for .indexOf in IE8 and below
+if (!Array.prototype.indexOf) {
+  Array.prototype.indexOf = function(elt /*, from*/) {
+    var len = this.length >>> 0,
+        from = Number(arguments[1]) || 0;
+    from = (from < 0) ? Math.ceil(from) : Math.floor(from);
+    if (from < 0)
+      from += len;
+
+    for (; from < len; from++) {
+      if (from in this && this[from] === elt)
+        return from;
+    }
+    return -1;
+  };
+}
+
 window.SHOPIFYTIMBER = window.SHOPIFYTIMBER || {};
 
 jQuery(function($){
@@ -16,6 +33,8 @@ jQuery(function($){
       $ignoreForks: true,
 
       init : function() {
+
+        $('html').removeClass('no-js').addClass('js');
 
         this.getCustomRepos();
         this.addMembers();
@@ -56,7 +75,8 @@ jQuery(function($){
 
       getCustomRepos: function() {
         var o = this,
-            customApiCalls = 0;
+            customApiCalls = 0,
+            repos = repos ? repos : []; // Make sure repos is set (originally in index.html)
 
         for (var i = customRepos.length - 1; i >= 0; i--) {
           repo = customRepos[i];
@@ -157,10 +177,6 @@ jQuery(function($){
 
       flowyGrid: function() {
         var o = this;
-
-        this.$repoContainer.isotope({
-          itemSelector: '.repo'
-        });
 
         // bind filter button click
         var filterButtons = $('#filters button');

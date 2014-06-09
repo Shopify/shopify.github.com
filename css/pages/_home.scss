@@ -3,31 +3,27 @@
 // ==============================================================================
 .hero {
   position: relative;
-  background-position: center top;
-  background-repeat: repeat-x;
-  @include gradient(#6e69a2, #1d798f, #53729d);
-  color: #fff;
 
   .pagewidth {
     position: relative;
     display: table;
     width: 100%;
-    height: 400px;
-    padding-top: 80px;
-
-    @include responsify( $medium_up, true ) {
-      height: 430px;
-    }
   }
 }
 
 .hero-lines {
   position: absolute;
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
   bottom: 0;
   background-image: url(/images/hero-lines.png);
+  background-position: center top;
+  background-repeat: repeat-x;
+
+  @include responsify( $small_up, true ) {
+    top: 0;
+  }
 }
 
 
@@ -35,26 +31,31 @@
 // #Hero Header
 // ==============================================================================
 .hero-header {
-  position: absolute;
-  left: $gutter/2;
-  right: $gutter;
-  top: $gutter;
+  background-color: rgba(#fff,0.1);
+  padding: $margin 0;
   @include clearfix;
+
+  @include responsify( $small_up, true ) {
+    padding: $gutter 0;
+  }
 }
 
 .git-stats {
+  color: $headertextColor;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 13px;
-  margin: 0;
+  font-size: 14px;
+  margin: $margin/2 0 0;
   text-align: center;
 
   @include responsify( $medium_up, true ) {
     float: right;
+    margin: $margin/4 0 0;
     text-align: right;
   }
 
   li {
+    margin: 0;
     padding: 0 0 0 10px;
     white-space: nowrap;
   }
@@ -68,10 +69,29 @@
 .logo {
   display: block;
   margin: 0 auto;
-  width: 267px;
-  height: 50px;
+  width: 215px;
+  height: 30px;
+
+  .lt-ie9 & {
+    display: none;
+  }
+
   @include responsify( $medium_up, true ) {
     float: left;
+  }
+}
+
+.lt-ie9 .logo--ie {
+  background: transparent url(/images/shopify-open-source.png) no-repeat;
+  height: 30px;
+  width: 215px;
+
+  @include responsify( $medium_up, true ) {
+    float: left;
+  }
+
+  .logo {
+    display: none;
   }
 }
 
@@ -82,28 +102,30 @@
   text-align: center;
   display: table-cell;
   vertical-align: middle;
+  height: 200px;
 
   @include transition(padding 0.2s ease-in-out);
 
-  @include responsify( $medium_up, true ) {
-    padding: 0 120px;
-  }
-
-  a {
-    color: $blueLight;
-  }
-
   p {
-    font-size: 12px;
+    color: $headertextColor;
+  }
+
+  @include responsify( $medium_up, true ) {
+    height: 340px;
   }
 }
 
 .hero-text {
+  font-size: 18px;
   margin-bottom: 10px;
 
-  @include responsify( $large_down ) {
+  @include responsify( $small_up, true ) {
     font-size: 24px;
     line-height: 1.325;
+  }
+
+  @include responsify( $medium_up, true ) {
+    font-size: 30px;
   }
 }
 
@@ -111,7 +133,6 @@
 // #Repo area
 // ==============================================================================
 .repoWrap {
-  background-color: #e8f0f5;
   padding: $gutter/2 0;
 
   @include responsify( $medium_up, true ) {
