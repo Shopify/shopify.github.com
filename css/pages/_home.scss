@@ -134,6 +134,7 @@
 // ==============================================================================
 .repoWrap {
   padding: $gutter/2 0;
+  overflow: hidden;
 
   @include responsify( $medium_up, true ) {
     padding: $gutter 0;
