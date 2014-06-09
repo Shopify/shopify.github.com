@@ -86,6 +86,10 @@
   height: 30px;
   width: 215px;
 
+  @include responsify( $medium_up, true ) {
+    float: left;
+  }
+
   .logo {
     display: none;
   }
