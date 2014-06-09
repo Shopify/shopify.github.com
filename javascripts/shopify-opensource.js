@@ -36,6 +36,10 @@ jQuery(function($){
 
         $('html').removeClass('no-js').addClass('js');
 
+        console.log(repos);
+        repos = repos ? repos : []; // Make sure repos is set (originally in index.html)
+        console.log(repos);
+
         this.getCustomRepos();
         this.addMembers();
         this.tracking();
@@ -75,8 +79,7 @@ jQuery(function($){
 
       getCustomRepos: function() {
         var o = this,
-            customApiCalls = 0,
-            repos = repos ? repos : []; // Make sure repos is set (originally in index.html)
+            customApiCalls = 0;
 
         for (var i = customRepos.length - 1; i >= 0; i--) {
           repo = customRepos[i];
