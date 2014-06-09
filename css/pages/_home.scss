@@ -81,11 +81,13 @@
   }
 }
 
-.logo--ie {
-  display: none;
-
-  .lt-ie9 & {
-    display: block;
+.lt-ie9 .logo--ie {
+  background: transparent url('../images/shopify-open-source.png') no-repeat;
+  height: 30px;
+  width: 215px;
+  
+  .logo {
+    display: none;
   }
 }
 

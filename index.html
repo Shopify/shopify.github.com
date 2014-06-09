@@ -8,8 +8,9 @@ description: As a team that greatly benefits from open-source software, these ar
   <div class="hero-lines"></div>
   <header class="hero-header">
     <div class="pagewidth">
-      <img src="/images/shopify-open-source.svg" alt="Shopify Open Source" class="logo">
-      <img src="/images/shopify-open-source.png" alt="Shopify Open Source" class="logo--ie">
+      <div class="logo--ie">
+        <img src="/images/shopify-open-source.svg" alt="Shopify Open Source" class="logo">
+      </div>
       <ul class="inline-list git-stats">
         <li>
           <span id="countRepos" class="git-stat is-loading"></span> Repos
@@ -49,7 +50,7 @@ description: As a team that greatly benefits from open-source software, these ar
 
 <div class="repoWrap">
   <div class="pagewidth">
-    <div class="" id="repos"></div>
+    <div id="repos"></div>
     <div class="repo-loader">
       <div class="repo-loader--inner">
         <div class="spinner spinner-large"></div>
@@ -69,7 +70,7 @@ description: As a team that greatly benefits from open-source software, these ar
           {{#if homepage}}
             {{#if avatar}}
               <a href="{{homepage}}" class="homepage-link">
-                <img src="{{avatar}}">
+                <img src="{{avatar}}" alt="{{name}}">
               </a>
             {{else}}
               <a href="{{homepage}}" class="homepage-link">
@@ -79,7 +80,7 @@ description: As a team that greatly benefits from open-source software, these ar
             <a href="{{homepage}}" title="View {{name}} on Github">{{name}}</a>
           {{else}}
             {{#if avatar}}
-              <img src="{{avatar}}" class="homepage-link">
+              <img src="{{avatar}}" class="homepage-link" alt="{{name}}">
             {{/if}}
             <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
           {{/if}}
