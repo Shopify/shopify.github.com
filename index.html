@@ -111,19 +111,5 @@ description: As a team that greatly benefits from open-source software, these ar
 </script>
 
 <script>
-  var repos = [];
-
-  {% for repo in site.github.public_repositories %}
-    var repo = {
-      name: "{{repo.name}}",
-      html_url: "{{repo.html_url}}",
-      description: "{{repo.description}}",
-      homepage: "{{repo.homepage}}",
-      language: "{{repo.language}}",
-      stargazers_count: {{repo.stargazers_count}},
-      forks_count: {{repo.forks_count}},
-      fork: {{repo.fork}}
-    };
-    repos.push(repo);
-  {% endfor %}
+  var repos = {{ site.github.public_repositories | jsonify }};
 </script>
