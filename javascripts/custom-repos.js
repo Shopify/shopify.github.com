@@ -19,7 +19,6 @@ var optInRepos = [
   'shopify_python_api',
   'wolverine',
   'verdict',
-  'shopify_php_api',
   'shopify_django_app',
   'browser_sniffer',
   'importer',
