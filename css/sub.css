@@ -2359,10 +2359,11 @@ a.twitter-link .under {
 /* line 26, common/_sublinks.scss */
 .breadcrumb a,
 footer a {
+  border-color: #b2cfe9;
   color: #b2cfe9;
 }
 
-/* line 31, common/_sublinks.scss */
+/* line 32, common/_sublinks.scss */
 .float {
   display: inline-block;
   -webkit-transition-duration: 1s;
