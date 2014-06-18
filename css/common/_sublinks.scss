@@ -20,14 +20,3 @@ a.twitter-link {
     border-bottom: 1px solid rgba($linkColor,0.8);
   }
 }
-
-.breadcrumb,
-footer {
-  a {
-    color: lighten($linkColor,30%);
-  }  
-}
-
-.float {
-  @include float();
-}
