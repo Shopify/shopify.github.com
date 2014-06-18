@@ -2353,16 +2353,17 @@ a.twitter-link {
 }
 /* line 19, common/_sublinks.scss */
 a.twitter-link .under {
-  border-bottom: 1px solid rgba(60, 132, 198, 0.8);
+  border-bottom: 1px solid #b2cfe9;
 }
 
 /* line 26, common/_sublinks.scss */
 .breadcrumb a,
 footer a {
+  border-color: #b2cfe9;
   color: #b2cfe9;
 }
 
-/* line 31, common/_sublinks.scss */
+/* line 32, common/_sublinks.scss */
 .float {
   display: inline-block;
   -webkit-transition-duration: 1s;

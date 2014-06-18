@@ -17,13 +17,14 @@ a.twitter-link {
   border: 0;
 
   .under {
-    border-bottom: 1px solid rgba($linkColor,0.8);
+    border-bottom: 1px solid lighten($linkColor,30%);
   }
 }
 
 .breadcrumb,
 footer {
   a {
+    border-color: lighten($linkColor,30%);
     color: lighten($linkColor,30%);
   }  
 }
