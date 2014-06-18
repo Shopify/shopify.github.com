@@ -1,0 +1,105 @@
+// ==============================================================================
+// #Typography
+// ==============================================================================
+body,
+input,
+textarea,
+button,
+select {
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: $bodyFontStack;
+  color: $textColor;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $headertextColor;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+
+  a {
+    text-decoration: none;
+  }
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a { font-weight: inherit; }
+
+// Pixel to EM conversion tool http://pxtoem.com/
+h1, .h1 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+h2, .h2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.125;
+}
+h3, .h3 { font-size: 16px; }
+h4, .h4 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+p { margin: 0; }
+
+em { font-style: italic; }
+strong { font-weight: 600; }
+small { font-size: 80%; }
+
+// ==============================================================================
+// #Documentation Typography
+// Most styles are inherited from the main open source page but documentation typography
+// is treated differently
+// ==============================================================================
+
+.documentation {
+  h1, .h1 {
+    color: $blue;
+    margin: 0 0 20px;
+  }
+
+  h2, .h2 {
+    color: $blue;
+    line-height: 30px;
+    margin: 0 0 10px 0;
+  }
+
+  h3, .h3 {
+    color: $textDarkColor;
+    font-weight: 600;
+    margin: 0 0 15px;
+  }
+
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    color: $textDarkColor;
+    margin: 0 0 10px;
+  }
+
+  p {
+    color: $textColor;
+    line-height: 25px;
+    margin: 0 0 15px;
+  }
+}
+
+// ==============================================================================
+// #Lists
+// ==============================================================================
+ol,
+ul {
+  margin: 0 0 20px 0;
+}
+ol li,
+ul li {
+  margin-bottom: 9px;
+}
+.inline-list li { display: inline-block; }
