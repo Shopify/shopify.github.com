@@ -2346,6 +2346,42 @@ a.twitter-link .under {
   border-bottom: 1px solid rgba(60, 132, 198, 0.8);
 }
 
+/* line 26, common/_sublinks.scss */
+.breadcrumb a,
+footer a {
+  border-color: #b2cfe9;
+  color: #b2cfe9;
+}
+
+/* line 32, common/_sublinks.scss */
+.float {
+  display: inline-block;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: transform;
+  -moz-transition-property: transform;
+  -ms-transition-property: transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+/* line 155, common/_submixins.scss */
+.float:hover, .float:focus, .float:active {
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
 /* line 5, common/_icons.scss */
 [class^="icon-"] {
   display: inline-block;
