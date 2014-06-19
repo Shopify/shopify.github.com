@@ -1,5 +1,11 @@
 var shopifyOpenSource = (function(module, $) {
 
+  'use strict';
+
+  // Functions
+  var init, getStats;
+
+  // Variables
   var settings;
 
   init = function (options) {
@@ -13,7 +19,7 @@ var shopifyOpenSource = (function(module, $) {
     $.extend(settings, options);
 
     // Remove links from images inside links
-    $('a:has(img)').addClass("nounderline");
+    $('a:has(img)').addClass('nounderline');
   };
 
   getStats = function () {
@@ -29,6 +35,12 @@ var shopifyOpenSource = (function(module, $) {
         document.getElementById('forkCount').innerHTML = result.data.forks_count;
       }
     });
-  }
+  };
+
+  module = {
+    init: init
+  };
+
+  return module;
 
 }(shopifyOpenSource || {}, jQuery));
