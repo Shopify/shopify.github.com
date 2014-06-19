@@ -23,6 +23,7 @@ var shopifyOpenSource = (function(module, $) {
   };
 
   getStats = function () {
+
     var uri = 'https://api.github.com/repos/' + settings.repo_name + '?callback=?';
 
     $.getJSON(uri, function(result) {
