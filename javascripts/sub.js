@@ -18,6 +18,9 @@ var shopifyOpenSource = (function(module, $) {
     // Override defaults with arguments
     $.extend(settings, options);
 
+    // Run functions on load
+    getStats();
+
     // Remove links from images inside links
     $('a:has(img)').addClass('nounderline');
   };
