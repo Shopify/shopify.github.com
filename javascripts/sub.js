@@ -26,6 +26,10 @@ var shopifyOpenSource = (function(module, $) {
   };
 
   getStats = function () {
+    // Bail if we don't have a repo name
+    if (!settings.repo_name) {
+      return;
+    }
 
     var uri = 'https://api.github.com/repos/' + settings.repo_name + '?callback=?';
 
