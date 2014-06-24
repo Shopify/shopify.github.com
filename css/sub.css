@@ -2718,36 +2718,26 @@ ul li {
 
 /* line 4, common/_sublinks.scss */
 a {
-  border-bottom: 1px solid rgba(60, 132, 198, 0.8);
   color: #3c84c6;
   text-decoration: none;
   -webkit-transition: color 0.5s ease-in-out;
   -moz-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
 }
-/* line 10, common/_sublinks.scss */
+/* line 9, common/_sublinks.scss */
 a:hover, a:focus {
   color: #639dd2;
   text-decoration: none;
 }
 
-/* line 16, common/_sublinks.scss */
-a.twitter-link {
-  border: 0;
-}
-/* line 19, common/_sublinks.scss */
-a.twitter-link .under {
-  border-bottom: 1px solid #b2cfe9;
-}
-
-/* line 26, common/_sublinks.scss */
+/* line 17, common/_sublinks.scss */
 .breadcrumb a,
 footer a {
   border-color: #b2cfe9;
   color: #b2cfe9;
 }
 
-/* line 32, common/_sublinks.scss */
+/* line 23, common/_sublinks.scss */
 .float {
   display: inline-block;
   -webkit-transition-duration: 1s;
@@ -2860,7 +2850,7 @@ footer a {
 #wolverine,
 #shopify_python_api,
 #verdict,
-#active_fulfillment,
+#active-fulfillment,
 #shopify_api,
 #sarama,
 #shopify_theme,

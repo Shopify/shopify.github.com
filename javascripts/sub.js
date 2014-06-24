@@ -21,8 +21,6 @@ var shopifyOpenSource = (function(module, $) {
     // Run functions on load
     getStats();
 
-    // Remove links from images inside links
-    $('a:has(img)').addClass('nounderline');
   };
 
   getStats = function () {

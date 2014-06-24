@@ -2329,26 +2329,16 @@ li {
 
 /* line 4, common/_links.scss */
 a {
-  border-bottom: 1px solid rgba(163, 204, 241, 0.8);
   color: #a3ccf1;
   text-decoration: none;
   -webkit-transition: color 0.1s ease-in-out;
   -moz-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out;
 }
-/* line 10, common/_links.scss */
+/* line 9, common/_links.scss */
 a:hover, a:focus {
   color: #cfe5f8;
   text-decoration: none;
-}
-
-/* line 16, common/_links.scss */
-a.twitter-link {
-  border: 0;
-}
-/* line 19, common/_links.scss */
-a.twitter-link .under {
-  border-bottom: 1px solid rgba(163, 204, 241, 0.8);
 }
 
 /* line 5, common/_icons.scss */
