@@ -2826,60 +2826,20 @@ footer a {
   border: 0;
 }
 
-/* line 39, pages/_sub.scss */
-#active-fulfillment,
-#active-shipping,
-#google-trusted-shopify-stores,
-#magnet,
-#shopify-css-import,
-#splunk-auth-proxy,
-#dukpt,
-#goreferrer,
-#asset_cloud,
-#rails_parallel,
-#sync_app_demo,
-#money,
-#sysv_mq,
-#omniauth-shopify-oauth2,
-#connect-googleapps,
-#importer,
-#shipping-fulfillment-app,
-#browser_sniffer,
-#embedded-app-example,
-#active_utils,
-#shopify_php_api,
-#shopify_djando_app,
-#wolverine,
-#shopify_python_api,
-#verdict,
-#shopify_api,
-#sarama,
-#shopify_theme,
-#skeleton_theme,
-#statsd-instrument,
-#shopify_app,
-#identitycache,
-#superdb,
-#liquid,
-#active_merchant,
-#dashing {
-  display: none;
-}
-
-/* line 47, pages/_sub.scss */
+/* line 5, pages/_sub.scss */
 .hero .pagewidth {
   position: relative;
   display: table;
   width: 100%;
 }
 @media (min-width: 769px) {
-  /* line 46, pages/_sub.scss */
+  /* line 4, pages/_sub.scss */
   .hero {
     position: relative;
   }
 }
 
-/* line 58, pages/_sub.scss */
+/* line 16, pages/_sub.scss */
 .hero-lines {
   position: absolute;
   top: -120px;
@@ -2891,13 +2851,13 @@ footer a {
   background-repeat: repeat-x;
 }
 @media (min-width: 769px) {
-  /* line 58, pages/_sub.scss */
+  /* line 16, pages/_sub.scss */
   .hero-lines {
     top: 0;
   }
 }
 
-/* line 77, pages/_sub.scss */
+/* line 35, pages/_sub.scss */
 .breadcrumb {
   color: white;
   display: inline;
@@ -2908,7 +2868,7 @@ footer a {
   top: -8px;
 }
 @media (min-width: 769px) {
-  /* line 77, pages/_sub.scss */
+  /* line 35, pages/_sub.scss */
   .breadcrumb {
     display: inline;
     position: relative;
@@ -2917,11 +2877,11 @@ footer a {
   }
 }
 
-/* line 94, pages/_sub.scss */
+/* line 52, pages/_sub.scss */
 .cta-buttons {
   margin-top: 12px;
 }
-/* line 97, pages/_sub.scss */
+/* line 55, pages/_sub.scss */
 .cta-buttons a {
   border: 3px solid #fff;
   border-radius: 50px;
@@ -2935,31 +2895,31 @@ footer a {
   -moz-transition: all 0.15s ease-out 0;
   transition: all 0.15s ease-out 0;
 }
-/* line 110, pages/_sub.scss */
+/* line 68, pages/_sub.scss */
 .cta-buttons .github {
   background-color: #fff;
   border: 3px solid #fff;
   color: #1773c8;
   margin-bottom: 0;
 }
-/* line 116, pages/_sub.scss */
+/* line 74, pages/_sub.scss */
 .cta-buttons .github i {
   color: white;
   position: relative;
   top: -2px;
 }
-/* line 122, pages/_sub.scss */
+/* line 80, pages/_sub.scss */
 .cta-buttons .github i.icon-star {
   margin-left: 6px;
 }
 @media (min-width: 769px) {
-  /* line 94, pages/_sub.scss */
+  /* line 52, pages/_sub.scss */
   .cta-buttons {
     margin-top: 30px;
   }
 }
 
-/* line 132, pages/_sub.scss */
+/* line 90, pages/_sub.scss */
 .hero-header {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px 0;
@@ -2971,13 +2931,13 @@ footer a {
   clear: both;
 }
 @media (min-width: 481px) {
-  /* line 132, pages/_sub.scss */
+  /* line 90, pages/_sub.scss */
   .hero-header {
     padding: 30px 0;
   }
 }
 
-/* line 142, pages/_sub.scss */
+/* line 100, pages/_sub.scss */
 .git-stats {
   color: white;
   font-weight: 600;
@@ -2987,116 +2947,116 @@ footer a {
   text-align: center;
 }
 @media (min-width: 769px) {
-  /* line 142, pages/_sub.scss */
+  /* line 100, pages/_sub.scss */
   .git-stats {
     float: right;
     margin: 5px 0 0;
     text-align: right;
   }
 }
-/* line 156, pages/_sub.scss */
+/* line 114, pages/_sub.scss */
 .git-stats li {
   margin: 0;
   padding: 0;
   white-space: nowrap;
 }
-/* line 161, pages/_sub.scss */
+/* line 119, pages/_sub.scss */
 .git-stats li + li {
   padding-left: 10px;
 }
 
-/* line 167, pages/_sub.scss */
+/* line 125, pages/_sub.scss */
 .git-stat {
   color: #8ec9ee;
   padding-right: 3px;
 }
 
-/* line 172, pages/_sub.scss */
+/* line 130, pages/_sub.scss */
 .logo {
   display: inline;
   height: 30px;
   margin-right: 3px;
   width: 27px;
 }
-/* line 178, pages/_sub.scss */
+/* line 136, pages/_sub.scss */
 .lt-ie9 .logo {
   display: none;
 }
 @media (min-width: 769px) {
-  /* line 172, pages/_sub.scss */
+  /* line 130, pages/_sub.scss */
   .logo {
     float: left;
   }
 }
 
-/* line 187, pages/_sub.scss */
+/* line 145, pages/_sub.scss */
 .logo--ie {
   text-align: center;
 }
 @media (min-width: 769px) {
-  /* line 187, pages/_sub.scss */
+  /* line 145, pages/_sub.scss */
   .logo--ie {
     float: left;
   }
 }
 
-/* line 195, pages/_sub.scss */
+/* line 153, pages/_sub.scss */
 .lt-ie9 .logo--ie {
   background: transparent url(/images/shopify-blankproject.png) no-repeat;
   height: 27px;
   width: 30px;
 }
 @media (min-width: 769px) {
-  /* line 195, pages/_sub.scss */
+  /* line 153, pages/_sub.scss */
   .lt-ie9 .logo--ie {
     float: left;
   }
 }
-/* line 204, pages/_sub.scss */
+/* line 162, pages/_sub.scss */
 .lt-ie9 .logo--ie .logo {
   display: none;
 }
 
-/* line 209, pages/_sub.scss */
+/* line 167, pages/_sub.scss */
 .repo__logo {
   max-width: 200px;
 }
 @media (min-width: 769px) {
-  /* line 209, pages/_sub.scss */
+  /* line 167, pages/_sub.scss */
   .repo__logo {
     max-width: 250px;
   }
 }
 
-/* line 217, pages/_sub.scss */
+/* line 175, pages/_sub.scss */
 .repo-lang {
   font-weight: bold;
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 223, pages/_sub.scss */
+/* line 181, pages/_sub.scss */
 .repo-lang.coffeescript, .repo-lang.javascript {
   color: #eff54e;
 }
-/* line 224, pages/_sub.scss */
+/* line 182, pages/_sub.scss */
 .repo-lang.liquid {
   color: #76ddff;
 }
-/* line 225, pages/_sub.scss */
+/* line 183, pages/_sub.scss */
 .repo-lang.objective-c {
   color: #d6d6d6;
 }
-/* line 226, pages/_sub.scss */
+/* line 184, pages/_sub.scss */
 .repo-lang.php, .repo-lang.python {
   color: #d1a4ff;
 }
-/* line 227, pages/_sub.scss */
+/* line 185, pages/_sub.scss */
 .repo-lang.ruby {
   color: #fea0a0;
 }
 @media (min-width: 769px) {
-  /* line 217, pages/_sub.scss */
+  /* line 175, pages/_sub.scss */
   .repo-lang {
     float: right;
     position: relative;
@@ -3105,7 +3065,7 @@ footer a {
   }
 }
 
-/* line 240, pages/_sub.scss */
+/* line 198, pages/_sub.scss */
 .hero-inner {
   padding: 30px 0 30px;
   text-align: center;
@@ -3114,72 +3074,72 @@ footer a {
   -moz-transition: padding 0.2s ease-in-out;
   transition: padding 0.2s ease-in-out;
 }
-/* line 247, pages/_sub.scss */
+/* line 205, pages/_sub.scss */
 .hero-inner p {
   color: white;
 }
 @media (min-width: 769px) {
-  /* line 240, pages/_sub.scss */
+  /* line 198, pages/_sub.scss */
   .hero-inner {
     display: table-cell;
     padding: 50px 0;
   }
 }
 
-/* line 257, pages/_sub.scss */
+/* line 215, pages/_sub.scss */
 .hero-logo {
   font-size: 25px;
   margin: 0;
 }
 @media (min-width: 481px) {
-  /* line 257, pages/_sub.scss */
+  /* line 215, pages/_sub.scss */
   .hero-logo {
     font-size: 35px;
   }
 }
 @media (min-width: 769px) {
-  /* line 257, pages/_sub.scss */
+  /* line 215, pages/_sub.scss */
   .hero-logo {
     font-size: 50px;
   }
 }
 
-/* line 270, pages/_sub.scss */
+/* line 228, pages/_sub.scss */
 .hero-text {
   font-size: 18px;
   line-height: 1.5;
   margin: 0 0 10px;
 }
 @media (min-width: 481px) {
-  /* line 270, pages/_sub.scss */
+  /* line 228, pages/_sub.scss */
   .hero-text {
     font-size: 24px;
     line-height: 1.325;
   }
 }
 @media (min-width: 769px) {
-  /* line 270, pages/_sub.scss */
+  /* line 228, pages/_sub.scss */
   .hero-text {
     font-size: 30px;
   }
 }
 
-/* line 289, pages/_sub.scss */
+/* line 247, pages/_sub.scss */
 .documentation {
   background-color: #fff;
   margin-bottom: 30px;
   padding: 30px 0 20px;
 }
-/* line 294, pages/_sub.scss */
+/* line 252, pages/_sub.scss */
 .documentation img {
   text-decoration: none;
 }
-/* line 298, pages/_sub.scss */
+/* line 256, pages/_sub.scss */
 .documentation .nounderline {
   text-decoration: none;
   border-bottom: 0 none;
 }
-/* line 303, pages/_sub.scss */
+/* line 261, pages/_sub.scss */
 .documentation code {
   background-color: #efefef;
   border-radius: 5px;
@@ -3187,7 +3147,7 @@ footer a {
   color: #666666;
   padding: 5px 7px;
 }
-/* line 311, pages/_sub.scss */
+/* line 269, pages/_sub.scss */
 .documentation pre {
   background-color: #efefef;
   border-radius: 5px;
@@ -3195,19 +3155,19 @@ footer a {
   margin: 10px 0 15px;
   padding: 10px 15px;
 }
-/* line 318, pages/_sub.scss */
+/* line 276, pages/_sub.scss */
 .documentation pre code {
   background-color: transparent;
   border-radius: 0;
   box-shadow: none;
   padding: 0;
 }
-/* line 326, pages/_sub.scss */
+/* line 284, pages/_sub.scss */
 .documentation .nounderline {
   border-bottom: 0;
 }
 @media (min-width: 769px) {
-  /* line 289, pages/_sub.scss */
+  /* line 247, pages/_sub.scss */
   .documentation {
     padding: 50px 0 40px;
   }
