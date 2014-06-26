@@ -2827,6 +2827,8 @@ footer a {
 }
 
 /* line 39, pages/_sub.scss */
+#active-fulfillment,
+#active-shipping,
 #google-trusted-shopify-stores,
 #magnet,
 #shopify-css-import,
@@ -2850,14 +2852,12 @@ footer a {
 #wolverine,
 #shopify_python_api,
 #verdict,
-#active-fulfillment,
 #shopify_api,
 #sarama,
 #shopify_theme,
 #skeleton_theme,
 #statsd-instrument,
 #shopify_app,
-#active_shipping,
 #identitycache,
 #superdb,
 #liquid,
