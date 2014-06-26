@@ -21,7 +21,6 @@ var optInRepos = [
   'verdict',
   'shopify_django_app',
   'browser_sniffer',
-  'importer',
   'active_utils',
   'embedded-app-example',
   'connect-googleapps',
