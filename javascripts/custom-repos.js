@@ -25,7 +25,7 @@ var optInRepos = [
   'embedded-app-example',
   'connect-googleapps',
   'omniauth-shopify-oauth2',
-  'shipping-fulfillment-app',
+  'shopify-fulfillment-integration',
   'sysv_mq',
   'money',
   'sync_app_demo',
