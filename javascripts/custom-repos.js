@@ -35,7 +35,8 @@ var optInRepos = [
   'magnet',
   'googleTrustedShopifyStores',
   'goreferrer',
-  'asset_cloud'
+  'asset_cloud',
+  'minesweeper'
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
