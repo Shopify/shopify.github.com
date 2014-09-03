@@ -20,6 +20,7 @@ If you want to run it locally
 - `compass watch` will update ie.css and main.css.
 - Use `rake build` to manually parse SCSS files.
 - There is no easy way to use Jekyll plugins with GitHub pages, so none are used here.
+- Since the majority of repos are grabbed through the `site.github.public_repositories` object, only custom added repos will show up locally.
 
 Dependencies (all included)
 --
