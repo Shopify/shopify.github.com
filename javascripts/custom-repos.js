@@ -33,7 +33,6 @@ var optInRepos = [
   'dukpt',
   'splunk-auth-proxy',
   'magnet',
-  'googleTrustedShopifyStores',
   'goreferrer',
   'asset_cloud',
   'minesweeper'
