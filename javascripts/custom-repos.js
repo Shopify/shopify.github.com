@@ -35,7 +35,9 @@ var optInRepos = [
   'magnet',
   'goreferrer',
   'asset_cloud',
-  'minesweeper'
+  'minesweeper',
+  'toxiproxy',
+  'toxiproxy-ruby'
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
