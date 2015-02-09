@@ -37,7 +37,8 @@ var optInRepos = [
   'asset_cloud',
   'minesweeper',
   'toxiproxy',
-  'toxiproxy-ruby'
+  'toxiproxy-ruby',
+  'grizzly_ber'
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
