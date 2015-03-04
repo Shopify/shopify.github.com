@@ -38,7 +38,10 @@ var optInRepos = [
   'minesweeper',
   'toxiproxy',
   'toxiproxy-ruby',
-  'grizzly_ber'
+  'grizzly_ber',
+  'semian',
+  'go-lua',
+  'goluago'
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
