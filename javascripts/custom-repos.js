@@ -41,7 +41,8 @@ var optInRepos = [
   'grizzly_ber',
   'semian',
   'go-lua',
-  'goluago'
+  'goluago',
+  'shipit-engine'
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
