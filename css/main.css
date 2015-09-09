@@ -2403,10 +2403,11 @@ a:hover, a:focus {
 .footer {
   color: white;
   font-size: 12px;
+  margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
 }
-/* line 10, objects/_footer.scss */
+/* line 11, objects/_footer.scss */
 .footer a i {
   border: 0;
 }
@@ -2915,4 +2916,11 @@ a:hover, a:focus {
   text-align: center;
   padding: 100px 0;
   font-size: 30px;
+}
+
+@media (max-width: 1075px) {
+  /* line 181, pages/_home.scss */
+  .developer-community {
+    margin-top: 30px;
+  }
 }

@@ -174,3 +174,12 @@
   padding: 100px 0;
   font-size: 30px;
 }
+
+// ==============================================================================
+// #Developer Community
+// ==============================================================================
+.developer-community {
+  @include responsify( $xlarge_down, true ) {
+    margin-top: $gutter;
+  }
+}

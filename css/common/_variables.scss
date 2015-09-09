@@ -29,7 +29,7 @@ $medium_down: unquote( "max-width: #{$medium}" );
 $medium_up: unquote( "min-width: #{$medium + 1}" );
 $large_down: unquote( "max-width: #{$large}" );
 $large_up: unquote( "min-width: #{$large + 1}" );
-$large_up: unquote( "max-width: #{$xlarge}" );
+$xlarge_down: unquote( "max-width: #{$xlarge}" );
 $xlarge_up: unquote( "min-width: #{$xlarge + 1}" );
 
 
