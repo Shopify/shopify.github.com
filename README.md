@@ -11,12 +11,12 @@ If you want to run it locally
     * Use `sass -v` to make sure it worked
 4. Install Compass: `gem install compass`
 5. Make sure everything is setup with `bundle install`
-6. Run `jekyll serve --watch`
+6. Run `bundle exec jerkyll serve`
 7. In another terminal window, run `compass watch`
-8. Access the docs at `http://localhost:4000`
+8. Access the page at `http://localhost:4000`
 
 ### Notes about local build
-- `jerkyll serve --watch` will compile the Jekyll and Sass files into static assets in the **_site** folder each time a file is saved. That folder is excluded from the repo.
+- `bundle exec jerkyll serve` will compile the Jekyll and Sass files into static assets in the **_site** folder each time a file is saved. That folder is excluded from the repo.
 - `compass watch` will update ie.css and main.css.
 - Use `rake build` to manually parse SCSS files.
 - Your local build will be nearly empty because:
