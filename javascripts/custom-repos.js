@@ -1,6 +1,7 @@
 // Opt-in repos (case sensitive)
 // - These are all children of Shopify and visible at https://github.com/Shopify
 var optInRepos = [
+  'js-buy-sdk',
   'dashing',
   'active_merchant',
   'liquid',
@@ -42,7 +43,7 @@ var optInRepos = [
   'semian',
   'go-lua',
   'goluago',
-  'shipit-engine'
+  'shipit-engine',
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
