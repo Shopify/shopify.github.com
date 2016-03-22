@@ -30,4 +30,3 @@ Dependencies (all included)
 - **[Bourbon](http://bourbon.io/)**
 - **[Handlebars.js](http://handlebarsjs.com/)**
 - **[Isotope](http://isotope.metafizzy.co/)**
-
