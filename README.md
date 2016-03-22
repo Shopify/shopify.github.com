@@ -11,7 +11,7 @@ If you want to run it locally
     * Use `sass -v` to make sure it worked
 4. Install Compass: `gem install compass`
 5. Make sure everything is setup with `bundle install`
-6. Run `bundle exec jerkyll serve`
+6. Run `bundle exec jekyll serve`
 7. In another terminal window, run `compass watch`
 8. Access the page at `http://localhost:4000`
 
