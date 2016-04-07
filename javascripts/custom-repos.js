@@ -44,6 +44,7 @@ var optInRepos = [
   'go-lua',
   'goluago',
   'shipit-engine',
+  'pyreferrer',
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
