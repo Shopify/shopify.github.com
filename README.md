@@ -16,7 +16,7 @@ If you want to run it locally
 8. Access the page at `http://localhost:4000`
 
 ### Notes about local build
-- `bundle exec jerkyll serve` will compile the Jekyll and Sass files into static assets in the **_site** folder each time a file is saved. That folder is excluded from the repo.
+- `bundle exec jekyll serve` will compile the Jekyll and Sass files into static assets in the **_site** folder each time a file is saved. That folder is excluded from the repo.
 - `compass watch` will update ie.css and main.css.
 - Use `rake build` to manually parse SCSS files.
 - Your local build will be nearly empty because:
