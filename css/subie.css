@@ -29,7 +29,7 @@ body {
  * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-/* line 32, common/_subnormal.scss */
+/* line 43, common/_subnormal.scss */
 article,
 aside,
 details,
@@ -49,7 +49,7 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 52, common/_subnormal.scss */
+/* line 55, common/_subnormal.scss */
 audio,
 canvas,
 progress,
@@ -74,7 +74,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-/* line 75, common/_subnormal.scss */
+/* line 76, common/_subnormal.scss */
 [hidden],
 template {
   display: none;
@@ -93,7 +93,7 @@ a {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 95, common/_subnormal.scss */
+/* line 96, common/_subnormal.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -112,7 +112,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 115, common/_subnormal.scss */
+/* line 116, common/_subnormal.scss */
 b,
 strong {
   font-weight: bold;
@@ -156,7 +156,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 159, common/_subnormal.scss */
+/* line 160, common/_subnormal.scss */
 sub,
 sup {
   font-size: 75%;
@@ -224,7 +224,7 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 227, common/_subnormal.scss */
+/* line 230, common/_subnormal.scss */
 code,
 kbd,
 pre,
@@ -245,7 +245,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 250, common/_subnormal.scss */
+/* line 254, common/_subnormal.scss */
 button,
 input,
 optgroup,
@@ -273,7 +273,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 275, common/_subnormal.scss */
+/* line 276, common/_subnormal.scss */
 button,
 select {
   text-transform: none;
@@ -286,7 +286,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 288, common/_subnormal.scss */
+/* line 291, common/_subnormal.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -300,7 +300,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 300, common/_subnormal.scss */
+/* line 301, common/_subnormal.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -309,7 +309,7 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 309, common/_subnormal.scss */
+/* line 310, common/_subnormal.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -332,7 +332,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 332, common/_subnormal.scss */
+/* line 333, common/_subnormal.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -346,7 +346,7 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 344, common/_subnormal.scss */
+/* line 345, common/_subnormal.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -372,7 +372,7 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 368, common/_subnormal.scss */
+/* line 369, common/_subnormal.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -428,7 +428,7 @@ table {
   border-spacing: 0;
 }
 
-/* line 422, common/_subnormal.scss */
+/* line 423, common/_subnormal.scss */
 td,
 th {
   padding: 0;
@@ -436,12 +436,12 @@ th {
 
 /* The following are dependencies of csswizardry grid */
 /* Force clearfix on grids */
-/* line 16, common/_grid.scss */
+/* line 17, common/_grid.scss */
 .grid, .grid--rev, .grid--full, .grid--right, .grid--center,
 .grid-uniform {
   *zoom: 1;
 }
-/* line 18, libs/bourbon/addons/_clearfix.scss */
+/* line 19, libs/bourbon/addons/_clearfix.scss */
 .grid:before, .grid--rev:before, .grid--full:before, .grid--right:before, .grid--center:before, .grid:after, .grid--rev:after, .grid--full:after, .grid--right:after, .grid--center:after,
 .grid-uniform:before,
 .grid-uniform:after {
@@ -472,7 +472,7 @@ th {
  * 2. Remove any margins and paddings that might affect the grid system.
  * 3. Apply a negative `margin-left` to negate the columns' gutters.
  */
-/* line 73, common/_grid.scss */
+/* line 74, common/_grid.scss */
 .grid, .grid--rev, .grid--full, .grid--right, .grid--center,
 .grid-uniform {
   list-style: none;
@@ -887,7 +887,7 @@ th {
     float: right !important;
   }
 
-  /* line 219, common/_grid.scss */
+  /* line 233, common/_grid.scss */
   .grid-uniform .small--one-half:nth-child(2n+1), .grid-uniform .small--two-quarters:nth-child(2n+1), .grid-uniform .small--three-sixths:nth-child(2n+1), .grid-uniform .small--four-eighths:nth-child(2n+1), .grid-uniform .small--five-tenths:nth-child(2n+1), .grid-uniform .small--six-twelfths:nth-child(2n+1),
   .grid-uniform .small--one-third:nth-child(3n+1),
   .grid-uniform .small--two-sixths:nth-child(3n+1),
@@ -1077,7 +1077,7 @@ th {
     float: right !important;
   }
 
-  /* line 219, common/_grid.scss */
+  /* line 233, common/_grid.scss */
   .grid-uniform .medium--one-half:nth-child(2n+1), .grid-uniform .medium--two-quarters:nth-child(2n+1), .grid-uniform .medium--three-sixths:nth-child(2n+1), .grid-uniform .medium--four-eighths:nth-child(2n+1), .grid-uniform .medium--five-tenths:nth-child(2n+1), .grid-uniform .medium--six-twelfths:nth-child(2n+1),
   .grid-uniform .medium--one-third:nth-child(3n+1),
   .grid-uniform .medium--two-sixths:nth-child(3n+1),
@@ -1267,7 +1267,7 @@ th {
     float: right !important;
   }
 
-  /* line 219, common/_grid.scss */
+  /* line 233, common/_grid.scss */
   .grid-uniform .large--one-half:nth-child(2n+1), .grid-uniform .large--two-quarters:nth-child(2n+1), .grid-uniform .large--three-sixths:nth-child(2n+1), .grid-uniform .large--four-eighths:nth-child(2n+1), .grid-uniform .large--five-tenths:nth-child(2n+1), .grid-uniform .large--six-twelfths:nth-child(2n+1),
   .grid-uniform .large--one-third:nth-child(3n+1),
   .grid-uniform .large--two-sixths:nth-child(3n+1),
@@ -1457,7 +1457,7 @@ th {
     float: right !important;
   }
 
-  /* line 219, common/_grid.scss */
+  /* line 233, common/_grid.scss */
   .grid-uniform .xlarge--one-half:nth-child(2n+1), .grid-uniform .xlarge--two-quarters:nth-child(2n+1), .grid-uniform .xlarge--three-sixths:nth-child(2n+1), .grid-uniform .xlarge--four-eighths:nth-child(2n+1), .grid-uniform .xlarge--five-tenths:nth-child(2n+1), .grid-uniform .xlarge--six-twelfths:nth-child(2n+1),
   .grid-uniform .xlarge--one-third:nth-child(3n+1),
   .grid-uniform .xlarge--two-sixths:nth-child(3n+1),
@@ -2067,7 +2067,7 @@ html, body {
   background: #1773c8;
 }
 
-/* line 4, common/_subtypography.scss */
+/* line 8, common/_subtypography.scss */
 body,
 input,
 textarea,
@@ -2076,16 +2076,16 @@ select {
   font-size: 14px;
   line-height: 1.6;
   font-family: Helvetica, Arial, sans-serif;
-  color: #666;
+  color: #666666;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
 
-/* line 18, common/_subtypography.scss */
+/* line 19, common/_subtypography.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #fff;
+  color: white;
   font-weight: 400;
   margin-bottom: 0.5em;
   line-height: 1.4;
@@ -2096,7 +2096,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
   text-decoration: none;
 }
 
-/* line 29, common/_subtypography.scss */
+/* line 30, common/_subtypography.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
   font-weight: inherit;
@@ -2161,37 +2161,47 @@ small {
 }
 /* line 74, common/_subtypography.scss */
 .documentation h3, .documentation .h3 {
-  color: #333;
+  color: #333333;
   font-weight: 600;
   margin: 0 0 15px;
 }
-/* line 80, common/_subtypography.scss */
+/* line 82, common/_subtypography.scss */
 .documentation h4, .documentation .h4,
 .documentation h5, .documentation .h5,
 .documentation h6, .documentation .h6 {
-  color: #333;
+  color: #333333;
   margin: 0 0 10px;
 }
 /* line 87, common/_subtypography.scss */
 .documentation p {
-  color: #666;
+  color: #666666;
   line-height: 25px;
   margin: 0 0 15px;
 }
 
-/* line 97, common/_subtypography.scss */
+/* line 98, common/_subtypography.scss */
 ol,
 ul {
   margin: 0 0 20px 0;
 }
 
-/* line 101, common/_subtypography.scss */
+/* line 102, common/_subtypography.scss */
 ol li,
 ul li {
   margin-bottom: 9px;
 }
 
 /* line 105, common/_subtypography.scss */
+li ul {
+  margin: 0;
+  padding-left: 24px;
+}
+/* line 109, common/_subtypography.scss */
+li ul li {
+  margin: 4px 0;
+}
+
+/* line 113, common/_subtypography.scss */
 .inline-list li {
   display: inline-block;
 }
@@ -2235,9 +2245,9 @@ footer a {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-/* line 153, common/_submixins.scss */
+/* line 155, common/_submixins.scss */
 .float:hover, .float:focus, .float:active {
   -webkit-transform: translateY(-5px);
   -moz-transform: translateY(-5px);
@@ -2294,9 +2304,265 @@ footer a {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTlweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTkgMTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE5IDE2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJsYXllcjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yODIuMzIwNTMsLTM5Ni4zMDczNCkiPg0KCTxwYXRoIGlkPSJwYXRoNSIgZmlsbD0iIzJCQTlFMCIgZD0iTTMwMS4zLDM5OC4xYy0wLjcsMC4zLTEuNSwwLjUtMi4yLDAuNg0KCQljMC44LTAuNSwxLjQtMS4yLDEuNy0yLjJjLTAuOCwwLjQtMS42LDAuOC0yLjUsMC45Yy0wLjctMC44LTEuNy0xLjItMi44LTEuMmMtMi4yLDAtMy45LDEuNy0zLjksMy45YzAsMC4zLDAsMC42LDAuMSwwLjkNCgkJYy0zLjItMC4yLTYuMS0xLjctOC00LjFjLTAuMywwLjYtMC41LDEuMi0wLjUsMmMwLDEuNCwwLjcsMi41LDEuNywzLjJjLTAuNiwwLTEuMi0wLjItMS44LTAuNWMwLDAsMCwwLDAsMGMwLDEuOSwxLjMsMy41LDMuMSwzLjgNCgkJYy0wLjMsMC4xLTAuNywwLjEtMSwwLjFjLTAuMywwLTAuNSwwLTAuNy0wLjFjMC41LDEuNSwxLjksMi43LDMuNiwyLjdjLTEuMywxLTMsMS43LTQuOCwxLjdjLTAuMywwLTAuNiwwLTAuOS0wLjENCgkJYzEuNywxLjEsMy44LDEuOCw2LDEuOGM3LjIsMCwxMS4xLTUuOSwxMS4xLTExLjFjMC0wLjIsMC0wLjMsMC0wLjVDMzAwLjEsMzk5LjYsMzAwLjgsMzk4LjksMzAxLjMsMzk4LjFMMzAxLjMsMzk4LjF6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==);
 }
 
+/* line 1, common/_syntax.scss */
+.highlight {
+  background: #ffffff;
+}
+/* line 4, common/_syntax.scss */
+.highlight .c {
+  color: #999988;
+  font-style: italic;
+}
+/* line 5, common/_syntax.scss */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+/* line 6, common/_syntax.scss */
+.highlight .k {
+  font-weight: bold;
+}
+/* line 7, common/_syntax.scss */
+.highlight .o {
+  font-weight: bold;
+}
+/* line 8, common/_syntax.scss */
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
+}
+/* line 9, common/_syntax.scss */
+.highlight .cp {
+  color: #999999;
+  font-weight: bold;
+}
+/* line 10, common/_syntax.scss */
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
+}
+/* line 11, common/_syntax.scss */
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 12, common/_syntax.scss */
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+/* line 14, common/_syntax.scss */
+.highlight .gd .x {
+  color: #000000;
+  background-color: #ffaaaa;
+}
+/* line 16, common/_syntax.scss */
+.highlight .ge {
+  font-style: italic;
+}
+/* line 17, common/_syntax.scss */
+.highlight .gr {
+  color: #aa0000;
+}
+/* line 18, common/_syntax.scss */
+.highlight .gh {
+  color: #999999;
+}
+/* line 19, common/_syntax.scss */
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+/* line 21, common/_syntax.scss */
+.highlight .gi .x {
+  color: #000000;
+  background-color: #aaffaa;
+}
+/* line 23, common/_syntax.scss */
+.highlight .go {
+  color: #888888;
+}
+/* line 24, common/_syntax.scss */
+.highlight .gp {
+  color: #555555;
+}
+/* line 25, common/_syntax.scss */
+.highlight .gs {
+  font-weight: bold;
+}
+/* line 26, common/_syntax.scss */
+.highlight .gu {
+  color: #aaaaaa;
+}
+/* line 27, common/_syntax.scss */
+.highlight .gt {
+  color: #aa0000;
+}
+/* line 28, common/_syntax.scss */
+.highlight .kc {
+  font-weight: bold;
+}
+/* line 29, common/_syntax.scss */
+.highlight .kd {
+  font-weight: bold;
+}
+/* line 30, common/_syntax.scss */
+.highlight .kp {
+  font-weight: bold;
+}
+/* line 31, common/_syntax.scss */
+.highlight .kr {
+  font-weight: bold;
+}
+/* line 32, common/_syntax.scss */
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+/* line 33, common/_syntax.scss */
+.highlight .m {
+  color: #009999;
+}
+/* line 34, common/_syntax.scss */
+.highlight .s {
+  color: #dd1144;
+}
+/* line 35, common/_syntax.scss */
+.highlight .na {
+  color: teal;
+}
+/* line 36, common/_syntax.scss */
+.highlight .nb {
+  color: #0086b3;
+}
+/* line 37, common/_syntax.scss */
+.highlight .nc {
+  color: #445588;
+  font-weight: bold;
+}
+/* line 38, common/_syntax.scss */
+.highlight .no {
+  color: teal;
+}
+/* line 39, common/_syntax.scss */
+.highlight .ni {
+  color: purple;
+}
+/* line 40, common/_syntax.scss */
+.highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+/* line 41, common/_syntax.scss */
+.highlight .nf {
+  color: #990000;
+  font-weight: bold;
+}
+/* line 42, common/_syntax.scss */
+.highlight .nn {
+  color: #555555;
+}
+/* line 43, common/_syntax.scss */
+.highlight .nt {
+  color: navy;
+}
+/* line 44, common/_syntax.scss */
+.highlight .nv {
+  color: teal;
+}
+/* line 45, common/_syntax.scss */
+.highlight .ow {
+  font-weight: bold;
+}
+/* line 46, common/_syntax.scss */
+.highlight .w {
+  color: #bbbbbb;
+}
+/* line 47, common/_syntax.scss */
+.highlight .mf {
+  color: #009999;
+}
+/* line 48, common/_syntax.scss */
+.highlight .mh {
+  color: #009999;
+}
+/* line 49, common/_syntax.scss */
+.highlight .mi {
+  color: #009999;
+}
+/* line 50, common/_syntax.scss */
+.highlight .mo {
+  color: #009999;
+}
+/* line 51, common/_syntax.scss */
+.highlight .sb {
+  color: #dd1144;
+}
+/* line 52, common/_syntax.scss */
+.highlight .sc {
+  color: #dd1144;
+}
+/* line 53, common/_syntax.scss */
+.highlight .sd {
+  color: #dd1144;
+}
+/* line 54, common/_syntax.scss */
+.highlight .s2 {
+  color: #dd1144;
+}
+/* line 55, common/_syntax.scss */
+.highlight .se {
+  color: #dd1144;
+}
+/* line 56, common/_syntax.scss */
+.highlight .sh {
+  color: #dd1144;
+}
+/* line 57, common/_syntax.scss */
+.highlight .si {
+  color: #dd1144;
+}
+/* line 58, common/_syntax.scss */
+.highlight .sx {
+  color: #dd1144;
+}
+/* line 59, common/_syntax.scss */
+.highlight .sr {
+  color: #009926;
+}
+/* line 60, common/_syntax.scss */
+.highlight .s1 {
+  color: #dd1144;
+}
+/* line 61, common/_syntax.scss */
+.highlight .ss {
+  color: #990073;
+}
+/* line 62, common/_syntax.scss */
+.highlight .bp {
+  color: #999999;
+}
+/* line 63, common/_syntax.scss */
+.highlight .vc {
+  color: teal;
+}
+/* line 64, common/_syntax.scss */
+.highlight .vg {
+  color: teal;
+}
+/* line 65, common/_syntax.scss */
+.highlight .vi {
+  color: teal;
+}
+/* line 66, common/_syntax.scss */
+.highlight .il {
+  color: #009999;
+}
+
 /* line 4, objects/_subfooter.scss */
 .footer {
-  color: #fff;
+  color: white;
   font-size: 12px;
   margin-bottom: 30px;
   text-align: center;
@@ -2332,7 +2598,7 @@ footer a {
 
 /* line 35, pages/_sub.scss */
 .breadcrumb {
-  color: #fff;
+  color: white;
   display: inline;
   font-size: 14px;
   font-weight: 600;
@@ -2397,7 +2663,7 @@ footer a {
 
 /* line 100, pages/_sub.scss */
 .git-stats {
-  color: #fff;
+  color: white;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
@@ -2506,7 +2772,7 @@ footer a {
 }
 /* line 205, pages/_sub.scss */
 .hero-inner p {
-  color: #fff;
+  color: white;
 }
 
 /* line 215, pages/_sub.scss */
@@ -2536,22 +2802,23 @@ footer a {
 }
 /* line 252, pages/_sub.scss */
 .documentation img {
+  max-width: 100%;
   text-decoration: none;
 }
-/* line 256, pages/_sub.scss */
+/* line 257, pages/_sub.scss */
 .documentation .nounderline {
   text-decoration: none;
   border-bottom: 0 none;
 }
-/* line 261, pages/_sub.scss */
+/* line 262, pages/_sub.scss */
 .documentation code {
   background-color: #efefef;
   border-radius: 5px;
   box-shadow: inset 0px 0 3px #ccc;
-  color: #666;
+  color: #666666;
   padding: 5px 7px;
 }
-/* line 269, pages/_sub.scss */
+/* line 270, pages/_sub.scss */
 .documentation pre {
   background-color: #efefef;
   border-radius: 5px;
@@ -2559,14 +2826,14 @@ footer a {
   margin: 10px 0 15px;
   padding: 10px 15px;
 }
-/* line 276, pages/_sub.scss */
+/* line 277, pages/_sub.scss */
 .documentation pre code {
   background-color: transparent;
   border-radius: 0;
   box-shadow: none;
   padding: 0;
 }
-/* line 284, pages/_sub.scss */
+/* line 285, pages/_sub.scss */
 .documentation .nounderline {
   border-bottom: 0;
 }
