@@ -102,4 +102,12 @@ ol li,
 ul li {
   margin-bottom: 9px;
 }
+li ul {
+  margin: 0;
+  padding-left: 24px;
+
+  li {
+    margin: 4px 0;
+  }
+}
 .inline-list li { display: inline-block; }
