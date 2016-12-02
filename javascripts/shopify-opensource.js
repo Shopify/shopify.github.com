@@ -39,7 +39,12 @@ jQuery(function($){
         // Make sure repos is set (originally in index.html)
         repos = repos ? repos : [];
 
-        this.getCustomRepos();
+        if (customRepos.length > 0) {
+          this.getCustomRepos();
+        } else {
+          this.addRepos(repos);
+        }
+
         this.addMembers();
         this.tracking();
 
