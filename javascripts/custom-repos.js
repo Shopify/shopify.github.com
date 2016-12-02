@@ -50,7 +50,6 @@ var optInRepos = [
 // Add custom repos by full_name. Take the org/user and repo name
 // - e.g. batmanjs/batman from https://github.com/batmanjs/batman
 var customRepos = [
-  'batmanjs/batman'
 ]
 
 // Custom repo language, different than that defined by GitHub
@@ -63,7 +62,6 @@ var customRepoLanguage = {
   'Shopify-Developer-Book': 'Ruby',
   'offsite-gateway-sim': 'Ruby',
   'shopify.github.com': 'JavaScript',
-  'batman': 'JavaScript'
 }
 
 // Custom repo avatars. Dimensions should be 40x40
@@ -72,5 +70,4 @@ var customRepoAvatar = {
   'Timber': '/images/repo-avatars/timber.gif',
   'dashing': '/images/repo-avatars/dashing.gif',
   'superdb': '/images/repo-avatars/super-debugger.gif',
-  'batman': '/images/repo-avatars/batmanjs.gif'
 }
