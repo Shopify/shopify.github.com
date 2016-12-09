@@ -45,6 +45,9 @@ var optInRepos = [
   'goluago',
   'shipit-engine',
   'pyreferrer',
+  'themekit',
+  'turbograft',
+  'twine',
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
