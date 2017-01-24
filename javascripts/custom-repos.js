@@ -48,6 +48,7 @@ var optInRepos = [
   'themekit',
   'turbograft',
   'twine',
+  'tslint-config-shopify'
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
