@@ -41,3 +41,4 @@ Thumbs.db
 ######################
 *.sass-cache*
 /_site
+.ruby-version
