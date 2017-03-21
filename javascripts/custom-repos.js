@@ -15,6 +15,8 @@ var optInRepos = [
   'shopify_api',
   'sarama',
   'Timber',
+  'slate',
+  'slate-cli',
   'shopify-css-import',
   'active_fulfillment',
   'shopify_python_api',
@@ -60,6 +62,7 @@ var customRepos = [
 var customRepoLanguage = {
   'liquid': 'Liquid',
   'Timber': 'Liquid',
+  'slate': 'Liquid',
   'skeleton-theme': 'Liquid',
   'dashing': 'Ruby',
   'shopify_theme': 'Ruby',
