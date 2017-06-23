@@ -50,7 +50,8 @@ var optInRepos = [
   'themekit',
   'turbograft',
   'twine',
-  'tslint-config-shopify'
+  'tslint-config-shopify',
+  'rotoscope',
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
@@ -69,6 +70,7 @@ var customRepoLanguage = {
   'Shopify-Developer-Book': 'Ruby',
   'offsite-gateway-sim': 'Ruby',
   'shopify.github.com': 'JavaScript',
+  'rotoscope': 'C',
 }
 
 // Custom repo avatars. Dimensions should be 40x40
