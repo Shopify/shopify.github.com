@@ -52,6 +52,7 @@ var optInRepos = [
   'twine',
   'tslint-config-shopify',
   'rotoscope',
+  'polaris',
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
