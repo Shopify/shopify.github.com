@@ -3,6 +3,7 @@
 var optInRepos = [
   'js-buy-sdk',
   'dashing',
+  'draggable',
   'active_merchant',
   'liquid',
   'superdb',
