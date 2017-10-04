@@ -78,6 +78,7 @@ var customRepoLanguage = {
 // - Be sure a custom repo doesn't have the same name as a Shopify one, or a one will be overridden
 var customRepoAvatar = {
   'Timber': '/images/repo-avatars/timber.gif',
+  'slate': '/images/repo-avatars/slate.gif',
   'dashing': '/images/repo-avatars/dashing.gif',
   'superdb': '/images/repo-avatars/super-debugger.gif',
 }
