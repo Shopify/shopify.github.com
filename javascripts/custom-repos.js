@@ -10,14 +10,11 @@ var optInRepos = [
   'active_shipping',
   'shopify_app',
   'identity_cache',
-  'skeleton-theme',
   'statsd-instrument',
   'shopify_theme',
   'shopify_api',
   'sarama',
-  'Timber',
   'slate',
-  'slate-cli',
   'shopify-css-import',
   'active_fulfillment',
   'shopify_python_api',
@@ -64,9 +61,7 @@ var customRepos = [
 // Custom repo language, different than that defined by GitHub
 var customRepoLanguage = {
   'liquid': 'Liquid',
-  'Timber': 'Liquid',
   'slate': 'Liquid',
-  'skeleton-theme': 'Liquid',
   'dashing': 'Ruby',
   'shopify_theme': 'Ruby',
   'Shopify-Developer-Book': 'Ruby',
@@ -78,7 +73,6 @@ var customRepoLanguage = {
 // Custom repo avatars. Dimensions should be 40x40
 // - Be sure a custom repo doesn't have the same name as a Shopify one, or a one will be overridden
 var customRepoAvatar = {
-  'Timber': '/images/repo-avatars/timber.gif',
   'slate': '/images/repo-avatars/slate.gif',
   'draggable': '/images/repo-avatars/draggable.png',
   'dashing': '/images/repo-avatars/dashing.gif',
