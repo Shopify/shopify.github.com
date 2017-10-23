@@ -80,6 +80,7 @@ var customRepoLanguage = {
 var customRepoAvatar = {
   'Timber': '/images/repo-avatars/timber.gif',
   'slate': '/images/repo-avatars/slate.gif',
+  'draggable': '/images/repo-avatars/draggable.png',
   'dashing': '/images/repo-avatars/dashing.gif',
   'superdb': '/images/repo-avatars/super-debugger.gif',
 }
