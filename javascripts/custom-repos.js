@@ -51,6 +51,7 @@ var optInRepos = [
   'tslint-config-shopify',
   'rotoscope',
   'polaris',
+  'kubeaudit',
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
