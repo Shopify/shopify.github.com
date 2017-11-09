@@ -3,6 +3,10 @@ Shopify Open Source
 
 Shopify's Open Source page is build with [Jekyll](http://jekyllrb.com/) and [Sass](http://sass-lang.com/) and hosted on [GitHub Pages](http://pages.github.com/).
 
+All of the data comes from Jekyll. Any change in [index.html](https://github.com/Shopify/shopify.github.com/blob/master/index.html) (including whitespace commits - [e.g.](https://github.com/Shopify/shopify.github.com/commit/818fd9aeb05d9120c41a9af08819b4f191b4e76f)) will trigger a rebuild and update all of the numbers.
+
+To include a repo in the list, add it to `optInRepos` in `javascripts/custom-repos.js`. The repo must be owned by Shopify. To include non-Shopify repos, use `customRepos`. Set a defined project language or custom avatar in the same file.
+
 If you want to run it locally
 --
 1. Clone this branch or [download the zip](https://codeload.github.com/Shopify/shopify.github.com/zip/master) and navigate to the folder in terminal
