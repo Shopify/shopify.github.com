@@ -52,6 +52,7 @@ var optInRepos = [
   'rotoscope',
   'polaris',
   'kubeaudit',
+  'FunctionalTableData',
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
