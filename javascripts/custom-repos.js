@@ -1,7 +1,7 @@
 // Opt-in repos (case sensitive)
 // - These are all children of Shopify and visible at https://github.com/Shopify
 var optInRepos = [
-  'Intro_to_GraphQL_Powered_by_Shopify'
+  'Intro_to_GraphQL_Powered_by_Shopify',
   'js-buy-sdk',
   'dashing',
   'draggable',
