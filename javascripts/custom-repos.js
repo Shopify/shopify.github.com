@@ -56,7 +56,9 @@ var optInRepos = [
   'turbograft',
   'twine',
   'verdict',
-  'wolverine'
+  'wolverine',
+  'promise-kotlin',
+  'promise-swift'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
