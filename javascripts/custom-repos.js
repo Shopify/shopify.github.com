@@ -56,6 +56,7 @@ var optInRepos = [
   'turbograft',
   'twine',
   'verdict',
+  'voucher',
   'wolverine',
   'promise-kotlin',
   'promise-swift'
