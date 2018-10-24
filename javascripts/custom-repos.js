@@ -26,7 +26,7 @@ var optInRepos = [
   'minesweeper',
   'money',
   'omniauth-shopify-oauth2',
-  'polaris',
+  'polaris-react',
   'pyreferrer',
   'rails_parallel',
   'rotoscope',
