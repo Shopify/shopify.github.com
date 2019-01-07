@@ -13,6 +13,7 @@ var optInRepos = [
   'dashing',
   'draggable',
   'dukpt',
+  'ejson2env',
   'embedded-app-example',
   'go-lua',
   'goluago',
@@ -57,6 +58,7 @@ var optInRepos = [
   'twine',
   'verdict',
   'voucher',
+  'vouch4cluster',
   'wolverine',
   'promise-kotlin',
   'promise-swift'
