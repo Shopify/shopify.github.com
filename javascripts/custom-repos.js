@@ -61,7 +61,8 @@ var optInRepos = [
   'vouch4cluster',
   'wolverine',
   'promise-kotlin',
-  'promise-swift'
+  'promise-swift',
+  'android-testify'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
