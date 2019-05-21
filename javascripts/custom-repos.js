@@ -62,7 +62,8 @@ var optInRepos = [
   'wolverine',
   'promise-kotlin',
   'promise-swift',
-  'android-testify'
+  'android-testify',
+  'kubernetes-deploy'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
