@@ -9,12 +9,14 @@ description: As a team that greatly benefits from open-source software, these ar
   <header class="hero-header">
     <div class="pagewidth">
       <div class="logo--ie">
-        <img src="/images/shopify-open-source.svg" alt="Shopify Open Source" class="logo">
+        <img
+          src="/images/shopify-open-source.svg"
+          alt="Shopify Open Source"
+          class="logo"
+        />
       </div>
       <ul class="inline-list git-stats">
-        <li>
-          <span id="countRepos" class="git-stat is-loading"></span> Repos
-        </li>
+        <li><span id="countRepos" class="git-stat is-loading"></span> Repos</li>
         <li>
           <span id="countMembers" class="git-stat is-loading"></span> Members
         </li>
@@ -23,8 +25,10 @@ description: As a team that greatly benefits from open-source software, these ar
   </header>
   <div class="pagewidth">
     <div class="hero-inner">
-      <h1 class="hero-text">As a team that greatly benefits from open-source software, these are the projects that we have contributed back to the community.</h1>
-      <p>All repos released under the <a href="https://github.com/Shopify/shopify.github.com/blob/master/LICENSE.md">MIT license</a></p>
+      <h1 class="hero-text">
+        As a team that greatly benefits from open-source software, these are the
+        projects that we have contributed back to the community.
+      </h1>
     </div>
   </div>
 </div>
@@ -43,7 +47,12 @@ description: As a team that greatly benefits from open-source software, these ar
         <button class="btn" data-filter=".swift">Swift</button>
         <button class="btn" data-filter=".ruby">Ruby</button>
         <button class="btn" data-filter=".kotlin">Kotlin</button>
-        <button class="btn" data-filter=":not(.go, .css, .javascript, .swift, .ruby, .liquid, .kotlin)">Other</button>
+        <button
+          class="btn"
+          data-filter=":not(.go, .css, .javascript, .swift, .ruby, .liquid, .kotlin)"
+        >
+          Other
+        </button>
       </div>
     </div>
   </div>
@@ -61,58 +70,56 @@ description: As a team that greatly benefits from open-source software, these ar
 </div>
 
 <script id="repoTemplate" type="text/template">
-{% raw %}
-  {{#items}}
-  <div class="repo {{languageClass}}{{#unless description}} no-desc{{/unless}}">
-    <header class="repo-header">
-      <div class="grid">
-        <div class="grid-item large--one-half">
-          <h2>
-          {{#if homepage}}
-            {{#if avatar}}
-              <a href="{{homepage}}" class="homepage-link">
-                <img src="{{avatar}}" alt="{{name}}">
-              </a>
+  {% raw %}
+    {{#items}}
+    <div class="repo {{languageClass}}{{#unless description}} no-desc{{/unless}}">
+      <header class="repo-header">
+        <div class="grid">
+          <div class="grid-item large--one-half">
+            <h2>
+            {{#if homepage}}
+              {{#if avatar}}
+                <a href="{{homepage}}" class="homepage-link">
+                  <img src="{{avatar}}" alt="{{name}}">
+                </a>
+              {{else}}
+                <a href="{{homepage}}" class="homepage-link">
+                  <i class="icon-world"></i>
+                </a>
+              {{/if}}
+              <a href="{{homepage}}" title="View {{name}} on Github">{{name}}</a>
             {{else}}
-              <a href="{{homepage}}" class="homepage-link">
-                <i class="icon-world"></i>
-              </a>
+              {{#if avatar}}
+                <img src="{{avatar}}" class="homepage-link" alt="{{name}}">
+              {{/if}}
+              <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
             {{/if}}
-            <a href="{{homepage}}" title="View {{name}} on Github">{{name}}</a>
-          {{else}}
-            {{#if avatar}}
-              <img src="{{avatar}}" class="homepage-link" alt="{{name}}">
-            {{/if}}
-            <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
-          {{/if}}
-          </h2>
-        </div>
-        <div class="grid-item large--one-half">
-          <div class="repo-meta">
-            <div class="repo-git">
-              <a href="{{url}}" title="View {{name}} on GitHub">
-                <i class="icon-github" title="View on GitHub"></i> Repo
-              </a>
-            </div>
-            <div class="repo-stats">
-              <i class="icon-star" title="Stars"></i> {{stars}}
-              <i class="icon-forks" title="Forks"></i> {{forks}}
-              <span class="repo-lang">{{language}}</span>
+            </h2>
+          </div>
+          <div class="grid-item large--one-half">
+            <div class="repo-meta">
+              <div class="repo-git">
+                <a href="{{url}}" title="View {{name}} on GitHub">
+                  <i class="icon-github" title="View on GitHub"></i> Repo
+                </a>
+              </div>
+              <div class="repo-stats">
+                <i class="icon-star" title="Stars"></i> {{stars}}
+                <i class="icon-forks" title="Forks"></i> {{forks}}
+                <span class="repo-lang">{{language}}</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    {{#if description}}
-    <p>{{description}}</p>
-    {{/if}}
-  </div>
-  {{/items}}
-{% endraw %}
+      </header>
+      {{#if description}}
+      <p>{{description}}</p>
+      {{/if}}
+    </div>
+    {{/items}}
+  {% endraw %}
 </script>
 
 <script>
-  var repos = {{ site.github.public_repositories | jsonify }}; 
+  var repos = {{ site.github.public_repositories | jsonify }};
 </script>
-
-  
