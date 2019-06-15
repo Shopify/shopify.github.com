@@ -28,6 +28,7 @@ var optInRepos = [
   'money',
   'omniauth-shopify-oauth2',
   'polaris-react',
+  'polaris-icons',
   'pyreferrer',
   'rails_parallel',
   'rotoscope',
