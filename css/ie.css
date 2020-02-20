@@ -52,12 +52,12 @@ pre {
 
 /* The following are dependencies of csswizardry grid */
 /* Force clearfix on grids */
-/* line 16, common/_grid.scss */
+/* line 17, common/_grid.scss */
 .grid, .grid--rev, .grid--full, .grid--right, .grid--center,
 .grid-uniform {
   *zoom: 1;
 }
-/* line 18, libs/bourbon/addons/_clearfix.scss */
+/* line 19, libs/bourbon/addons/_clearfix.scss */
 .grid:before, .grid--rev:before, .grid--full:before, .grid--right:before, .grid--center:before, .grid:after, .grid--rev:after, .grid--full:after, .grid--right:after, .grid--center:after,
 .grid-uniform:before,
 .grid-uniform:after {
@@ -88,7 +88,7 @@ pre {
  * 2. Remove any margins and paddings that might affect the grid system.
  * 3. Apply a negative `margin-left` to negate the columns' gutters.
  */
-/* line 73, common/_grid.scss */
+/* line 74, common/_grid.scss */
 .grid, .grid--rev, .grid--full, .grid--right, .grid--center,
 .grid-uniform {
   list-style: none;
@@ -338,7 +338,7 @@ pre {
 }
 
 /* Our responsive classes, if we have enabled them. */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 610px) {
   /** Whole */
   /* line 151, common/_grid.scss */
   .small--one-whole {
@@ -503,7 +503,7 @@ pre {
     float: right !important;
   }
 
-  /* line 219, common/_grid.scss */
+  /* line 233, common/_grid.scss */
   .grid-uniform .small--one-half:nth-child(2n+1), .grid-uniform .small--two-quarters:nth-child(2n+1), .grid-uniform .small--three-sixths:nth-child(2n+1), .grid-uniform .small--four-eighths:nth-child(2n+1), .grid-uniform .small--five-tenths:nth-child(2n+1), .grid-uniform .small--six-twelfths:nth-child(2n+1),
   .grid-uniform .small--one-third:nth-child(3n+1),
   .grid-uniform .small--two-sixths:nth-child(3n+1),
@@ -528,7 +528,7 @@ pre {
     clear: both;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 611px) and (max-width: 768px) {
   /** Whole */
   /* line 151, common/_grid.scss */
   .medium--one-whole {
@@ -693,7 +693,7 @@ pre {
     float: right !important;
   }
 
-  /* line 219, common/_grid.scss */
+  /* line 233, common/_grid.scss */
   .grid-uniform .medium--one-half:nth-child(2n+1), .grid-uniform .medium--two-quarters:nth-child(2n+1), .grid-uniform .medium--three-sixths:nth-child(2n+1), .grid-uniform .medium--four-eighths:nth-child(2n+1), .grid-uniform .medium--five-tenths:nth-child(2n+1), .grid-uniform .medium--six-twelfths:nth-child(2n+1),
   .grid-uniform .medium--one-third:nth-child(3n+1),
   .grid-uniform .medium--two-sixths:nth-child(3n+1),
@@ -883,7 +883,7 @@ pre {
     float: right !important;
   }
 
-  /* line 219, common/_grid.scss */
+  /* line 233, common/_grid.scss */
   .grid-uniform .large--one-half:nth-child(2n+1), .grid-uniform .large--two-quarters:nth-child(2n+1), .grid-uniform .large--three-sixths:nth-child(2n+1), .grid-uniform .large--four-eighths:nth-child(2n+1), .grid-uniform .large--five-tenths:nth-child(2n+1), .grid-uniform .large--six-twelfths:nth-child(2n+1),
   .grid-uniform .large--one-third:nth-child(3n+1),
   .grid-uniform .large--two-sixths:nth-child(3n+1),
@@ -1073,7 +1073,7 @@ pre {
     float: right !important;
   }
 
-  /* line 219, common/_grid.scss */
+  /* line 233, common/_grid.scss */
   .grid-uniform .xlarge--one-half:nth-child(2n+1), .grid-uniform .xlarge--two-quarters:nth-child(2n+1), .grid-uniform .xlarge--three-sixths:nth-child(2n+1), .grid-uniform .xlarge--four-eighths:nth-child(2n+1), .grid-uniform .xlarge--five-tenths:nth-child(2n+1), .grid-uniform .xlarge--six-twelfths:nth-child(2n+1),
   .grid-uniform .xlarge--one-third:nth-child(3n+1),
   .grid-uniform .xlarge--two-sixths:nth-child(3n+1),
@@ -1239,7 +1239,7 @@ pre {
   left: 91.666%;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 610px) {
   /* Whole */
   /* line 287, common/_grid.scss */
   .push--small--one-whole {
@@ -1369,7 +1369,7 @@ pre {
     left: 91.666%;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 611px) and (max-width: 768px) {
   /* Whole */
   /* line 287, common/_grid.scss */
   .push--medium--one-whole {
@@ -1685,7 +1685,7 @@ html, body {
   background: #1773c8;
 }
 
-/* line 4, common/_typography.scss */
+/* line 8, common/_typography.scss */
 body,
 input,
 textarea,
@@ -1700,10 +1700,10 @@ select {
   -webkit-text-size-adjust: 100%;
 }
 
-/* line 18, common/_typography.scss */
+/* line 19, common/_typography.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #fff;
+  color: white;
   font-weight: 400;
   margin-bottom: 0.5em;
   line-height: 1.4;
@@ -1714,7 +1714,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
   text-decoration: none;
 }
 
-/* line 29, common/_typography.scss */
+/* line 30, common/_typography.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
   font-weight: inherit;
@@ -1801,7 +1801,7 @@ ol.alpha {
   list-style: lower-alpha outside;
 }
 
-/* line 66, common/_typography.scss */
+/* line 67, common/_typography.scss */
 ul ul, ul ol,
 ol ol, ol ul {
   margin: 4px 0 5px 20px;
@@ -1881,7 +1881,7 @@ a:hover, a:focus {
 
 /* line 4, objects/_footer.scss */
 .footer {
-  color: #fff;
+  color: white;
   font-size: 12px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -1901,7 +1901,7 @@ a:hover, a:focus {
   padding: 10px 20px;
   text-transform: uppercase;
 }
-/* line 12, objects/_filters.scss */
+/* line 13, objects/_filters.scss */
 .filter-bar .filter-bar--left,
 .filter-bar .filter-bar--right {
   text-align: center;
@@ -1923,7 +1923,7 @@ a:hover, a:focus {
   text-align: right;
 }
 
-/* line 35, objects/_filters.scss */
+/* line 36, objects/_filters.scss */
 .btn,
 .btn:visited {
   background-color: transparent;
@@ -1939,7 +1939,7 @@ a:hover, a:focus {
   -moz-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-/* line 48, objects/_filters.scss */
+/* line 49, objects/_filters.scss */
 .btn:hover, .btn.is-active,
 .btn:visited:hover,
 .btn:visited.is-active {
@@ -1964,7 +1964,7 @@ a:hover, a:focus {
 }
 /* line 14, objects/_cards.scss */
 .repo h2 a, .repo .h2 a {
-  color: #fff;
+  color: white;
 }
 /* line 18, objects/_cards.scss */
 .repo h4, .repo .h4 {
@@ -2092,7 +2092,7 @@ a:hover, a:focus {
   color: #fea0a0;
 }
 
-/* line 4, objects/_loader.scss */
+/* line 5, objects/_loader.scss */
 .git-stat.is-loading,
 .spinner {
   display: inline-block;
@@ -2110,7 +2110,7 @@ a:hover, a:focus {
   height: 50px;
 }
 
-/* line 21, objects/_loader.scss */
+/* line 24, objects/_loader.scss */
 .spinner:before,
 .spinner:after,
 .git-stat.is-loading:before,
@@ -2128,7 +2128,7 @@ a:hover, a:focus {
   animation: bounce 2.0s infinite ease-in-out;
 }
 
-/* line 39, objects/_loader.scss */
+/* line 40, objects/_loader.scss */
 .spinner:after,
 .git-stat.is-loading:after {
   top: auto;
@@ -2138,34 +2138,46 @@ a:hover, a:focus {
 }
 
 @-webkit-keyframes rotate {
+  /* line 48, objects/_loader.scss */
   100% {
     -webkit-transform: rotate(360deg);
   }
 }
+
 @keyframes rotate {
+  /* line 53, objects/_loader.scss */
   100% {
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes bounce {
+  /* line 60, objects/_loader.scss */
   0%, 100% {
     -webkit-transform: scale(0);
   }
+
+  /* line 63, objects/_loader.scss */
   50% {
     -webkit-transform: scale(1);
   }
 }
+
 @keyframes bounce {
+  /* line 69, objects/_loader.scss */
   0%, 100% {
     transform: scale(0);
     -webkit-transform: scale(0);
   }
+
+  /* line 72, objects/_loader.scss */
   50% {
     transform: scale(1);
     -webkit-transform: scale(1);
   }
 }
+
 /* line 4, pages/_home.scss */
 .hero {
   position: relative;
@@ -2205,7 +2217,7 @@ a:hover, a:focus {
 
 /* line 43, pages/_home.scss */
 .git-stats {
-  color: #fff;
+  color: white;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
@@ -2270,7 +2282,7 @@ a:hover, a:focus {
 }
 /* line 113, pages/_home.scss */
 .hero-inner p {
-  color: #fff;
+  color: white;
 }
 
 /* line 122, pages/_home.scss */
@@ -2301,7 +2313,7 @@ a:hover, a:focus {
   vertical-align: middle;
   text-align: center;
 }
-/* line 159, pages/_home.scss */
+/* line 160, pages/_home.scss */
 .repo-loader .spinner:before,
 .repo-loader .spinner:after {
   background-color: #8ec9ee;

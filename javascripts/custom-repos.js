@@ -64,7 +64,9 @@ var optInRepos = [
   'promise-kotlin',
   'promise-swift',
   'android-testify',
-  'kubernetes-deploy'
+  'kubernetes-deploy',
+  'quilt',
+  'graphql-tools-web'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
