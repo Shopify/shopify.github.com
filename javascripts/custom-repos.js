@@ -7,6 +7,7 @@ var optInRepos = [
   'active_merchant',
   'active_shipping',
   'active_utils',
+  'app_profiler',
   'asset_cloud',
   'browser_sniffer',
   'connect-googleapps',
