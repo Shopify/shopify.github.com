@@ -1,7 +1,7 @@
 Shopify Open Source
 =====================
 
-Shopify's Open Source page is build with [Jekyll](http://jekyllrb.com/) and [Sass](http://sass-lang.com/) and hosted on [GitHub Pages](http://pages.github.com/).
+Shopify's Open Source page is built with [Jekyll](http://jekyllrb.com/) and [Sass](http://sass-lang.com/) and hosted on [GitHub Pages](http://pages.github.com/).
 
 All of the data comes from Jekyll. Any change in [index.html](https://github.com/Shopify/shopify.github.com/blob/master/index.html) (including whitespace commits - [e.g.](https://github.com/Shopify/shopify.github.com/commit/818fd9aeb05d9120c41a9af08819b4f191b4e76f)) will trigger a rebuild and update all of the numbers.
 
