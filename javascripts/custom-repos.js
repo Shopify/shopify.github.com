@@ -28,6 +28,7 @@ var optInRepos = [
   'minesweeper',
   'money',
   'omniauth-shopify-oauth2',
+  'packwerk',
   'polaris-react',
   'polaris-icons',
   'pyreferrer',
