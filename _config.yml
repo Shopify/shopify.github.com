@@ -1,3 +1,15 @@
+title: shopify.github.com
 markdown: kramdown
-gems:
-  - jekyll-sitemap
+url: https://shopify.github.io
+baseurl: /
+exclude: [
+  'Gemfile',
+  'Gemfile.lock'
+]
+defaults:
+  - scope:
+      path: ""
+    values:
+      toc: true
+plugins:
+  - jekyll-redirect-from
