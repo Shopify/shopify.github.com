@@ -1,1 +1,0 @@
-(()=>{"use strict";fetch("https://api.github.com/orgs/shopify/repos?type=public").then((function(t){return t.json()})).then((function(t){return console.log(t)}))})();
