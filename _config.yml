@@ -1,4 +1,5 @@
 title: shopify.github.com
+repository: Shopify/shopify.github.com
 markdown: kramdown
 url: https://shopify.github.io
 baseurl: /
@@ -14,3 +15,74 @@ defaults:
       toc: true
 plugins:
   - jekyll-redirect-from
+  - jekyll-github-metadata
+
+optinrepos:
+  FunctionalTableData: {}
+  Intro_to_GraphQL_Powered_by_Shopify: {}
+  active_fulfillment: {}
+  active_merchant: {}
+  active_shipping: {}
+  active_utils: {}
+  app_profiler: {}
+  asset_cloud: {}
+  browser_sniffer: {}
+  connect-googleapps: {}
+  dashing: {lang: 'Ruby', icon: '/images/repo-avatars/dashing.gif'}
+  draggable: {icon: /images/repo-avatars/draggable.png}
+  dukpt: {}
+  ejson2env: {}
+  embedded-app-example: {}
+  go-lua: {}
+  goluago: {}
+  goreferrer: {}
+  grizzly_ber: {}
+  identity_cache: {}
+  js-buy-sdk: {}
+  kubeaudit: {}
+  liquid: {lang: Liquid}
+  magnet: {}
+  minesweeper: {}
+  money: {}
+  omniauth-shopify-oauth2: {}
+  packwerk: {}
+  polaris-react: {}
+  polaris-icons: {}
+  pyreferrer: {}
+  rails_parallel: {}
+  rotoscope: {lang: C}
+  sarama: {}
+  semian: {}
+  shipit-engine: {}
+  shopify-css-import: {}
+  shopify-fulfillment-integration: {}
+  shopify_api: {}
+  shopify_app: {}
+  shopify_django_app: {}
+  shopify_python_api: {}
+  shopify_theme: {lang: Ruby}
+  skeleton-theme: {lang: Liquid}
+  slate: {icon: /images/repo-avatars/slate.svg}
+  splunk-auth-proxy: {}
+  starter-theme: {lang: Liquid}
+  statsd-instrument: {}
+  superdb: {icon: /images/repo-avatars/super-debugger.gif}
+  sync_app_demo: {}
+  sysv_mq: {}
+  themekit: {}
+  theme-scripts: {}
+  toxiproxy: {}
+  toxiproxy-ruby: {}
+  tslint-config-shopify: {}
+  turbograft: {}
+  twine: {}
+  verdict: {}
+  voucher: {}
+  vouch4cluster: {}
+  wolverine: {}
+  promise-kotlin: {}
+  promise-swift: {}
+  android-testify: {}
+  kubernetes-deploy: {}
+  quilt: {}
+  graphql-tools-web: {}
