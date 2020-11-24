@@ -18,7 +18,7 @@
     <header class="site-nav-container">
 
       <div class="marketing-nav-wrapper">
-        <nav class="marketing-nav--skin-dark marketing-nav marketing-nav--primary" id="ShopifyMainNav" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="Main Navigation">
+        <nav class=" marketing-nav marketing-nav--primary" id="ShopifyMainNav" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="Main Navigation">
 
           <div class="marketing-nav__logo color-white">
             <a href="{{ '/' | relative_url }}" class="marketing-nav__logo__shopify">
@@ -31,7 +31,6 @@
     </header>
 
     <div id="PageContainer">
-
       <section class="section section--tight section-padding section--padding-top-only ui-hero">
         <div class="grid">
           <div class="grid__item">
@@ -45,23 +44,6 @@
       </section>
       <section id="Content">
         <div class="grid">
-          <div class="grid__item grid__item--tablet-up-quarter" id="SidebarNav">
-            {% include sidebar_nav.html %}
-          </div>
-          <div class="grid__item grid__item--tablet-up-three-quarters sticky-menu-content">
-            <main role="main" id="Main">
-
-              <article>
-
-                <h1>{{ page.title }}</h1>
-
-                {% if page.toc %}
-                  <h2 class="heading--4">On this page</h2>
-
-                  <div class="on-this-page">
-                    {% include toc.html html=content h_max=2 %}
-                  </div>
-                {% endif %}
 
                 {{ content }}
               </article>

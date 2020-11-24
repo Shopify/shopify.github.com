@@ -4,7 +4,8 @@ url: https://shopify.github.io
 baseurl: /
 exclude: [
   'Gemfile',
-  'Gemfile.lock'
+  'Gemfile.lock',
+  'node_modules'
 ]
 defaults:
   - scope:
