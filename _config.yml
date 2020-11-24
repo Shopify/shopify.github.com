@@ -13,6 +13,7 @@ defaults:
       path: ""
     values:
       toc: true
+
 plugins:
   - jekyll-redirect-from
   - jekyll-github-metadata
@@ -28,8 +29,8 @@ optinrepos:
   asset_cloud: {}
   browser_sniffer: {}
   connect-googleapps: {}
-  dashing: {lang: 'Ruby', icon: '/images/repo-avatars/dashing.gif'}
-  draggable: {icon: /images/repo-avatars/draggable.png}
+  dashing: {lang: 'Ruby'}
+  draggable: {}
   dukpt: {}
   ejson2env: {}
   embedded-app-example: {}
@@ -40,7 +41,7 @@ optinrepos:
   identity_cache: {}
   js-buy-sdk: {}
   kubeaudit: {}
-  liquid: {lang: Liquid}
+  liquid: {lang: 'Liquid'}
   magnet: {}
   minesweeper: {}
   money: {}
@@ -50,7 +51,7 @@ optinrepos:
   polaris-icons: {}
   pyreferrer: {}
   rails_parallel: {}
-  rotoscope: {lang: C}
+  rotoscope: {lang: 'C'}
   sarama: {}
   semian: {}
   shipit-engine: {}
@@ -60,13 +61,13 @@ optinrepos:
   shopify_app: {}
   shopify_django_app: {}
   shopify_python_api: {}
-  shopify_theme: {lang: Ruby}
-  skeleton-theme: {lang: Liquid}
-  slate: {icon: /images/repo-avatars/slate.svg}
+  shopify_theme: {lang: 'Ruby'}
+  skeleton-theme: {lang: 'Liquid'}
+  slate: {}
   splunk-auth-proxy: {}
-  starter-theme: {lang: Liquid}
+  starter-theme: {lang: 'Liquid'}
   statsd-instrument: {}
-  superdb: {icon: /images/repo-avatars/super-debugger.gif}
+  superdb: {}
   sync_app_demo: {}
   sysv_mq: {}
   themekit: {}
