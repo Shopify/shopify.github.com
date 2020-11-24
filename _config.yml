@@ -5,9 +5,7 @@ url: https://shopify.github.io
 exclude: [
   'Gemfile',
   'Gemfile.lock',
-  'node_modules',
-  'javascripts',
-  'css'
+  'node_modules'
 ]
 plugins:
   - jekyll-redirect-from

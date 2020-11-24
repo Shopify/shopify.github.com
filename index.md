@@ -1,12 +1,18 @@
-{% assign repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
-{% for repository in repos %}
-{% assign custom = site.optinrepos[repository.name] %}
-{% if custom %}
 
-<div class="block block--padded block--rounded block--bordered {{repository.language | downcase}}">
-<p class="block__content">
-  {% if custom.lang == nil %}{{repository.language}}{% else %}{{custom.lang}}{% endif %}
-</p>
+{% assign repos = site.github.public_repositories |
+  sort: 'stargazers_count' |
+  reverse %}
+
+{% for repository in repos %}
+{% unless site.optinrepos[repository.name] %}{% continue %}{% endunless %}
+
+{% assign lang = repository.language %}
+{% unless site.optinrepos[repository.name].lang == nil %}
+  {% assign lang = site.optinrepos[repository.name].lang %}
+{% endunless %}
+
+<div class="block block--padded block--rounded block--bordered {{lang | downcase}}">
+<p class="block__content">{{lang}}</p>
 <h3 class="block__heading heading--4">
   <a href="{{repository.homepage}}">{{repository.name}}</a>
 </h3>
@@ -19,6 +25,4 @@
   </p>
 </p>
 </div>
-
-{% endif %}
 {% endfor %}
