@@ -1,22 +1,33 @@
 .featured-projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 35px;
+}
+
+.featured-projects-grid--primary {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 100px;
 }
 
 .featured-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.featured-container--primary {
   padding: 30px;
   background-color: $green;
 }
 
-.featured-content {
+.featured-content--primary {
   margin-bottom: 215px; // art-direction
 }
 
 .featured-content__slug {
   font-family: monospace;
+}
+
+.featured-projects-grid--secondary {
+  grid-template-columns: repeat(4, 1fr);
 }
 

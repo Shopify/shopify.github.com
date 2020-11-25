@@ -14,21 +14,9 @@
         </div>
       </header>
 
-      {% include hero.html %}
-      {% include featured.html %}
-      <section id="Content" class="section">
-        <div class="grid">
-          <div class="grid__item">
-            <main role="main" id="Main">
-              <article>
-                {{ content }}
-              </article>
-            </main>
-          </div>
-        </div>
-      </section>
+      {{ content }}
     </div>
-  </div>
-  {% include footer.html %}
+
+    {% include footer.html %}
   </body>
 </html>

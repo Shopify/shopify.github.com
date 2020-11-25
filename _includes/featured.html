@@ -3,17 +3,39 @@
     <div class="grid__item">
       <h4 class="color-gray-0 gutter-bottom">Featured projects</h4>
 
-      <div class="featured-projects-grid">
+      <div class="featured-projects-grid featured-projects-grid--primary">
         {% for project in site.data.featured.featured_projects %}
-          <div class="featured-container">
-            <div class="featured-content">
+          <div class="featured-container featured-container--primary">
+            <div class="featured-content featured-content--primary">
               <p class="featured-content__slug gutter-bottom--half">{{ project.slug }}</p>
               <h3 class="heading--2 color-gray-0 gutter-bottom">{{ project.title }}</h3>
               <p>{{ project.description }}</p>
             </div>
+
             <div class="featured-link">
-              <a class="link link--secondary color-gray-0" href={{ project.url }}>
+              <a class="link link--secondary color-gray-0" href="{{ project.url }}">
                 {{ project.link }}
+                <span class="link__arrow">
+                  <svg class="icon link__arrow-inner" aria-hidden="true" focusable="false"> <use xlink:href="#modules-arrow-right"></use></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="featured-projects-grid featured-projects-grid--secondary">
+        {% for project in site.data.featured.secondary_featured_projects %}
+          <div class="featured-container">
+            <div class="featured-content gutter-bottom--half">
+              <p class="featured-content__slug gutter-bottom--half">{{ project.slug }}</p>
+              <h3 class="heading--2 color-gray-0 gutter-bottom">{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+            </div>
+
+            <div class="featured-link">
+              <a class="link link--secondary color-gray-0" href="{{ project.url }}">
+                GitHub repo
                 <span class="link__arrow">
                   <svg class="icon link__arrow-inner" aria-hidden="true" focusable="false"> <use xlink:href="#modules-arrow-right"></use></svg>
                 </span>
