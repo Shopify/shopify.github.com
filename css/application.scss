@@ -1,0 +1,9 @@
+---
+# This ensures Jekyll reads the file to be transformed into CSS later
+# Only Main files contain this front matter, not partials.
+---
+
+@import 'variables/colors';
+@import 'partials/header';
+@import 'partials/hero';
+@import 'base';
