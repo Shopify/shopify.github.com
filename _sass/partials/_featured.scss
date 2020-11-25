@@ -1,0 +1,22 @@
+.featured-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 35px;
+}
+
+.featured-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: $green;
+}
+
+.featured-content {
+  margin-bottom: 215px; // art-direction
+}
+
+.featured-content__slug {
+  font-family: monospace;
+}
+
