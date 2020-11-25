@@ -1,0 +1,13 @@
+featured_projects:
+  - slug: /shopify-app-cli
+    title: Shopify App CLI
+    description: Shopify App CLI helps you build Shopify apps faster.
+    links:
+      - /
+      - /
+
+  - slug: /themekit
+    title: Theme Kit
+    description: Shopify theme development command line tool.
+    links:
+      - /

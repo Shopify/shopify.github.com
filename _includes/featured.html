@@ -2,6 +2,15 @@
   <div class="grid">
     <div class="grid__item">
       <h2>Featured projects</h2>
+      <ul>
+        {% for project in site.data.featured.featured_projects %}
+          <li>
+              {{ project.title }}
+              {{ project.slug }}
+              {{ project.description }}
+          </li>
+        {% endfor %}
+        </ul>
     </div>
   </div>
 </section>
