@@ -2,22 +2,14 @@ title: shopify.github.com
 repository: Shopify/shopify.github.com
 markdown: kramdown
 url: https://shopify.github.io
-baseurl: /
 exclude: [
   'Gemfile',
   'Gemfile.lock',
   'node_modules'
 ]
-defaults:
-  - scope:
-      path: ""
-    values:
-      toc: true
-
 plugins:
   - jekyll-redirect-from
   - jekyll-github-metadata
-
 optinrepos:
   FunctionalTableData: {}
   Intro_to_GraphQL_Powered_by_Shopify: {}

@@ -1,12 +1,33 @@
-{% assign repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
-{% for repository in repos %}
-{% assign custom = site.optinrepos[repository.name] %}
-{% if custom %}
 
-<div class="block block--padded block--rounded block--bordered {{repository.language | downcase}}">
-<p class="block__content">
-  {% if custom.lang == nil %}{{repository.language}}{% else %}{{custom.lang}}{% endif %}
-</p>
+<input type="text" id="textfilter" />
+{% assign languages = site.github.public_repositories | map: "language" | uniq | compact %}
+<select name="langtype" id="langtype-select"><option value="">--Language Type--</option>{% for lang in languages %}<option value="{{lang}}">{{lang}}</option>{% endfor %}</select>
+<select name="sort" id="sort-select">
+  <option value="">--Select--</option>
+  <option value="stars">Popularity</option>
+  <option value="forks">Forks</option>
+  <option value="recent">Recent</option>
+</select>
+
+{% assign repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
+
+<section id="sortable-projects">
+{% for repository in repos %}
+{% unless site.optinrepos[repository.name] %}{% continue %}{% endunless %}
+
+{% assign lang = repository.language %}
+{% unless site.optinrepos[repository.name].lang == nil %}
+  {% assign lang = site.optinrepos[repository.name].lang %}
+{% endunless %}
+
+<div class="sortable-project block block--padded block--rounded block--bordered {{lang | downcase}}"
+  data-language="{{lang}}"
+  data-search="{{repository.name | append: repository.description | append: repository.language}}"
+  data-stars="{{repository.stargazers_count}}"
+  data-forks="{{repository.forks_count}}"
+  data-recent="{{repository.id}}"
+  >
+<p class="block__content">{{lang}}</p>
 <h3 class="block__heading heading--4">
   <a href="{{repository.homepage}}">{{repository.name}}</a>
 </h3>
@@ -19,6 +40,5 @@
   </p>
 </p>
 </div>
-
-{% endif %}
 {% endfor %}
+</section>
