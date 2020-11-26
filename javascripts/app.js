@@ -4,11 +4,7 @@ const textinputEl = document.getElementById('textfilter');
 const langselectEl = document.getElementById('langtype-select');
 const sortselectEl = document.getElementById('sort-select');
 const projectsEl = document.getElementById('sortable-projects')
-<<<<<<< Updated upstream
-const shuffle = new Shuffle(projectsEl, {itemSelector: '.sortable-project', sizer: sizer});
-=======
 const shuffle = new Shuffle(projectsEl, '.sortable-project');
->>>>>>> Stashed changes
 
 textinputEl.addEventListener('keyup', (event) => {
   var searchText = event.target.value.toLowerCase();
