@@ -6,6 +6,7 @@ If you want to run it locally
 1. create a personal access token under your github developer settings
 1. `bundle install`
 1. Run `JEKYLL_GITHUB_TOKEN=[you personal access token] bundle exec jekyll serve`
+1. To change JS, run `npm i && npx webpack -w`
 1. Access the page at `http://localhost:4000`
 
 ### Adding opt in repo to page

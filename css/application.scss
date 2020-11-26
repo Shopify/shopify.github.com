@@ -9,3 +9,12 @@
 @import 'partials/featured';
 @import 'partials/all-projects';
 @import 'base';
+
+
+#sortable-projects {
+  display: flex;
+  flex-flow: column nowrap;
+
+  .sortable-project {
+  }
+}

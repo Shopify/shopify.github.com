@@ -7,7 +7,6 @@
       {% assign languages = site.github.public_repositories | map: "language" | uniq | compact %}
       <select name="langtype" id="langtype-select"><option value="">--Language Type--</option>{% for lang in languages %}<option value="{{lang}}">{{lang}}</option>{% endfor %}</select>
       <select name="sort" id="sort-select">
-        <option value="">--Select--</option>
         <option value="stars">Popularity</option>
         <option value="forks">Forks</option>
         <option value="recent">Recent</option>
