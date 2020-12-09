@@ -66,7 +66,7 @@ var optInRepos = [
   'promise-kotlin',
   'promise-swift',
   'android-testify',
-  'kubernetes-deploy',
+  'krane',
   'quilt',
   'graphql-tools-web'
 ];
