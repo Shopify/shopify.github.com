@@ -11,7 +11,6 @@ var optInRepos = [
   'asset_cloud',
   'browser_sniffer',
   'connect-googleapps',
-  'dashing',
   'draggable',
   'dukpt',
   'ejson2env',
@@ -80,7 +79,6 @@ var customRepoLanguage = {
   liquid: 'Liquid',
   'starter-theme': 'Liquid',
   'skeleton-theme': 'Liquid',
-  dashing: 'Ruby',
   shopify_theme: 'Ruby',
   'Shopify-Developer-Book': 'Ruby',
   'offsite-gateway-sim': 'Ruby',
@@ -93,6 +91,5 @@ var customRepoLanguage = {
 var customRepoAvatar = {
   slate: '/images/repo-avatars/slate.svg',
   draggable: '/images/repo-avatars/draggable.png',
-  dashing: '/images/repo-avatars/dashing.gif',
   superdb: '/images/repo-avatars/super-debugger.gif'
 };
