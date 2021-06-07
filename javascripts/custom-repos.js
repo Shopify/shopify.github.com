@@ -51,6 +51,7 @@ var optInRepos = [
   'superdb',
   'sync_app_demo',
   'sysv_mq',
+  'tapioca',
   'themekit',
   'theme-scripts',
   'toxiproxy',
