@@ -61,7 +61,6 @@ var optInRepos = [
   'tslint-config-shopify',
   'turbograft',
   'twine',
-  'verdict',
   'voucher',
   'vouch4cluster',
   'wolverine',
