@@ -19,6 +19,7 @@ var optInRepos = [
   'goluago',
   'goreferrer',
   'grizzly_ber',
+  'hydrogen',
   'identity_cache',
   'js-buy-sdk',
   'kubeaudit',
