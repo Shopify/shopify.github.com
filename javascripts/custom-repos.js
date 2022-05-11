@@ -1,6 +1,8 @@
 // Opt-in repos (case sensitive)
 // - These are all children of Shopify and visible at https://github.com/Shopify
 var optInRepos = [
+  'hoff',
+  'kitt',
   'FunctionalTableData',
   'Intro_to_GraphQL_Powered_by_Shopify',
   'active_fulfillment',
