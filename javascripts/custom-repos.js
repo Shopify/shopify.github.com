@@ -21,6 +21,7 @@ var optInRepos = [
   'grizzly_ber',
   'hydrogen',
   'identity_cache',
+  'javy',
   'js-buy-sdk',
   'kubeaudit',
   'liquid',
