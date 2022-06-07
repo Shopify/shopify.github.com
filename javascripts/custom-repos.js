@@ -33,6 +33,8 @@ var optInRepos = [
   'polaris-icons',
   'pyreferrer',
   'rails_parallel',
+  'rbi',
+  'rbi-central',
   'react-native-skia',
   'rotoscope',
   'rubocop-sorbet',
