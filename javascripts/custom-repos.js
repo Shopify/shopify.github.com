@@ -36,6 +36,8 @@ var optInRepos = [
   'rbi',
   'rbi-central',
   'react-native-skia',
+  'react-native-performance',
+  'restyle',
   'rotoscope',
   'rubocop-sorbet',
   'ruby-lsp',
