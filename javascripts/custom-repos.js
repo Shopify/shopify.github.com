@@ -11,6 +11,7 @@ var optInRepos = [
   'asset_cloud',
   'browser_sniffer',
   'connect-googleapps',
+  'discount-app-components',
   'draggable',
   'dukpt',
   'ejson2env',
