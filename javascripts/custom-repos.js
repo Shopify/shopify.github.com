@@ -16,6 +16,7 @@ var optInRepos = [
   'dukpt',
   'ejson2env',
   'embedded-app-example',
+  'flash-list',
   'go-lua',
   'goluago',
   'goreferrer',
