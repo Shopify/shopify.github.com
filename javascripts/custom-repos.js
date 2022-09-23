@@ -19,6 +19,7 @@ var optInRepos = [
   'flash-list',
   'go-lua',
   'goluago',
+  'goqueuesim',
   'goreferrer',
   'grizzly_ber',
   'hydrogen',
