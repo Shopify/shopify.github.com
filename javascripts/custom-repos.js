@@ -82,7 +82,9 @@ var optInRepos = [
   'android-testify',
   'krane',
   'quilt',
-  'graphql-tools-web'
+  'graphql-tools-web',
+  'handy',
+  'tracky'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
