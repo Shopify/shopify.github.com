@@ -83,8 +83,7 @@ var optInRepos = [
   'krane',
   'quilt',
   'graphql-tools-web',
-  'handy',
-  'tracky'
+  'handy'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
