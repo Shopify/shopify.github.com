@@ -210,7 +210,6 @@ jQuery(function($){
     };
     $.extend(app, timber);
 
-
   }( window.SHOPIFYTIMBER = window.SHOPIFYTIMBER || {} ));
 
   SHOPIFYTIMBER.init();
