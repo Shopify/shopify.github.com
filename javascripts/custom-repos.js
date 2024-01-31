@@ -11,6 +11,7 @@ var optInRepos = [
   'connect-googleapps',
   'discount-app-components',
   'dukpt',
+  'ejson',
   'ejson2env',
   'embedded-app-example',
   'flash-list',
@@ -31,6 +32,7 @@ var optInRepos = [
   'packwerk',
   'polaris-react',
   'polaris-icons',
+  'polaris',
   'pyreferrer',
   'rails_parallel',
   'rbi',
@@ -68,19 +70,27 @@ var optInRepos = [
   'krane',
   'quilt',
   'handy',
-  'tracky'
+  'tracky',
+  'bootsnap',
+  'dawn',
+  'graphql-batch',
+  'shopify-ruby-api',
+  'job-iteration'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
 // - e.g. batmanjs/batman from https://github.com/batmanjs/batman
-var customRepos = [];
+// Shopify originated open source projects hosted elsewhere now
+var customRepos = [
+  'https://github.com/bytecodealliance/javy',
+  'https://github.com/activemerchant/active_merchant',
+  'https://github.com/IBM/sarama',
+  'https://github.com/ndtp/android-testify'
+];
 
 // Custom repo language, different than that defined by GitHub
 var customRepoLanguage = {
   liquid: 'Liquid',
-  'starter-theme': 'Liquid',
-  shopify_theme: 'Ruby',
-  'Shopify-Developer-Book': 'Ruby',
   'offsite-gateway-sim': 'Ruby',
   'shopify.github.com': 'JavaScript',
   rotoscope: 'C'
