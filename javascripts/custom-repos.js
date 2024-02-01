@@ -74,7 +74,7 @@ var optInRepos = [
   'shopify-ruby-api',
   'job-iteration',
   'atlas_engine',
-  'product-taxonomy'.
+  'product-taxonomy',
   'wasmprof',
   'cli',
   'worldwide'
