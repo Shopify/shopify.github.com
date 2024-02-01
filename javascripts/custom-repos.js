@@ -50,7 +50,6 @@ var optInRepos = [
   'shopify_app',
   'shopify_django_app',
   'shopify_python_api',
-  'skeleton-theme',
   'splunk-auth-proxy',
   'spoom',
   'statsd-instrument',
@@ -81,12 +80,7 @@ var optInRepos = [
 // Add custom repos by full_name. Take the org/user and repo name
 // - e.g. batmanjs/batman from https://github.com/batmanjs/batman
 // Shopify originated open source projects hosted elsewhere now
-var customRepos = [
-  'https://github.com/bytecodealliance/javy',
-  'https://github.com/activemerchant/active_merchant',
-  'https://github.com/IBM/sarama',
-  'https://github.com/ndtp/android-testify'
-];
+var customRepos = [];
 
 // Custom repo language, different than that defined by GitHub
 var customRepoLanguage = {
