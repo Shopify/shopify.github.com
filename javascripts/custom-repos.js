@@ -8,8 +8,6 @@ var optInRepos = [
   'app_profiler',
   'asset_cloud',
   'browser_sniffer',
-  'connect-googleapps',
-  'discount-app-components',
   'dukpt',
   'ejson',
   'ejson2env',
@@ -33,6 +31,7 @@ var optInRepos = [
   'polaris-react',
   'polaris-icons',
   'polaris',
+  'polaris-viz',
   'pyreferrer',
   'rails_parallel',
   'rbi',
@@ -56,10 +55,8 @@ var optInRepos = [
   'sync_app_demo',
   'sysv_mq',
   'tapioca',
-  'themekit',
   'toxiproxy',
   'toxiproxy-ruby',
-  'web-configs',
   'turbograft',
   'twine',
   'voucher',
@@ -74,7 +71,12 @@ var optInRepos = [
   'dawn',
   'graphql-batch',
   'shopify-ruby-api',
-  'job-iteration'
+  'job-iteration',
+  'atlas_engine',
+  'product-taxonomy'.
+  'wasmprof',
+  'cli',
+  'worldwide'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
