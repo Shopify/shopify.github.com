@@ -7,9 +7,8 @@ var optInRepos = [
   'active_utils',
   'app_profiler',
   'asset_cloud',
+  'better-html',
   'browser_sniffer',
-  'connect-googleapps',
-  'discount-app-components',
   'dukpt',
   'ejson',
   'ejson2env',
@@ -17,7 +16,6 @@ var optInRepos = [
   'flash-list',
   'go-lua',
   'goluago',
-  'goqueuesim',
   'goreferrer',
   'grizzly_ber',
   'hydrogen',
@@ -33,6 +31,7 @@ var optInRepos = [
   'polaris-react',
   'polaris-icons',
   'polaris',
+  'polaris-viz',
   'pyreferrer',
   'rails_parallel',
   'rbi',
@@ -45,7 +44,6 @@ var optInRepos = [
   'ruby-lsp',
   'semian',
   'shipit-engine',
-  'shopify-css-import',
   'shopify_api',
   'shopify_app',
   'shopify_django_app',
@@ -56,12 +54,9 @@ var optInRepos = [
   'sync_app_demo',
   'sysv_mq',
   'tapioca',
-  'themekit',
   'toxiproxy',
   'toxiproxy-ruby',
-  'web-configs',
   'turbograft',
-  'twine',
   'voucher',
   'vscode-ruby-lsp',
   'vscode-shopify-ruby',
@@ -74,7 +69,12 @@ var optInRepos = [
   'dawn',
   'graphql-batch',
   'shopify-ruby-api',
-  'job-iteration'
+  'job-iteration',
+  'atlas_engine',
+  'product-taxonomy',
+  'wasmprof',
+  'cli',
+  'worldwide'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
@@ -87,7 +87,8 @@ var customRepoLanguage = {
   liquid: 'Liquid',
   'offsite-gateway-sim': 'Ruby',
   'shopify.github.com': 'JavaScript',
-  rotoscope: 'C'
+  rotoscope: 'C',
+  handy: 'Unity'
 };
 
 // Custom repo avatars. Dimensions should be 40x40
