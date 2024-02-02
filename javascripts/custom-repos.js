@@ -16,7 +16,6 @@ var optInRepos = [
   'flash-list',
   'go-lua',
   'goluago',
-  'goqueuesim',
   'goreferrer',
   'grizzly_ber',
   'hydrogen',
@@ -45,7 +44,6 @@ var optInRepos = [
   'ruby-lsp',
   'semian',
   'shipit-engine',
-  'shopify-css-import',
   'shopify_api',
   'shopify_app',
   'shopify_django_app',
@@ -59,7 +57,6 @@ var optInRepos = [
   'toxiproxy',
   'toxiproxy-ruby',
   'turbograft',
-  'twine',
   'voucher',
   'vscode-ruby-lsp',
   'vscode-shopify-ruby',
@@ -90,7 +87,8 @@ var customRepoLanguage = {
   liquid: 'Liquid',
   'offsite-gateway-sim': 'Ruby',
   'shopify.github.com': 'JavaScript',
-  rotoscope: 'C'
+  rotoscope: 'C',
+  handy: 'Unity'
 };
 
 // Custom repo avatars. Dimensions should be 40x40
