@@ -54,6 +54,7 @@ var optInRepos = [
   'sync_app_demo',
   'sysv_mq',
   'tapioca',
+  'tophat',
   'toxiproxy',
   'toxiproxy-ruby',
   'turbograft',
