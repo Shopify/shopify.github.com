@@ -133,7 +133,7 @@ description: As a team that greatly benefits from open-source software, these ar
     {
       name: "{{repo.name}}",
       html_url: "{{repo.html_url}}",
-      description: "{{repo.description}}",
+      description: "{{repo.description | escape}}",
       homepage: "{{repo.homepage}}",
       language: "{{repo.language}}",
       stargazers_count: {{repo.stargazers_count}},
