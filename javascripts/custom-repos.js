@@ -48,6 +48,7 @@ var optInRepos = [
   'shopify_app',
   'shopify_django_app',
   'shopify_python_api',
+  'shopify-function-wasm-api',
   'splunk-auth-proxy',
   'spoom',
   'statsd-instrument',
