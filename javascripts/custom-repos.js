@@ -7,6 +7,7 @@ var optInRepos = [
   'active_utils',
   'app_profiler',
   'asset_cloud',
+  'autosizes',
   'better-html',
   'browser_sniffer',
   'dukpt',
