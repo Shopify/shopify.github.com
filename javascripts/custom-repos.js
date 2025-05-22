@@ -76,7 +76,8 @@ var optInRepos = [
   'product-taxonomy',
   'wasmprof',
   'cli',
-  'worldwide'
+  'worldwide',
+  'roast'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
