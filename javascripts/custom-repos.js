@@ -91,7 +91,13 @@ var optInRepos = [
 // Add custom repos by full_name. Take the org/user and repo name
 // - e.g. batmanjs/batman from https://github.com/batmanjs/batman
 // Shopify originated open source projects hosted elsewhere now
-var customRepos = ['modelcontextprotocol/ruby-sdk', 'Universal-Commerce-Protocol/ucp', 'remix-run/react-router', 'remix-run/remix', 'TangleML/tangle'];
+var customRepos = [
+  'modelcontextprotocol/ruby-sdk',
+  'Universal-Commerce-Protocol/ucp',
+  'remix-run/react-router',
+  'remix-run/remix',
+  'TangleML/tangle',
+];
 
 // Custom repo language, different than that defined by GitHub
 var customRepoLanguage = {
