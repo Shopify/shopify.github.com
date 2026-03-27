@@ -53,20 +53,45 @@ var optInRepos = [
   'handy',
   'tracky',
   'bootsnap',
-  'dawn',
   'graphql-batch',
   'job-iteration',
   'product-taxonomy',
   'wasmprof',
   'cli',
   'worldwide',
-  'roast'
+  'roast',
+  'ucp-proxy',
+  'maintenance_tasks',
+  'cli-ui',
+  'shopify-api-ruby',
+  'shopify-app-template-node',
+  'ghostferry',
+  'erb_lint',
+  'ruby-lsp-rails',
+  'autotuner',
+  'ruby-style-guide',
+  'deprecation_toolkit',
+  'shopify-app-js',
+  'shopify-api-php',
+  'shadowenv',
+  'measured',
+  'gltf-compressor',
+  'ui-extensions',
+  'buy-button-js',
+  'heap-profiler',
+  'ci-queue',
+  'theme-tools',
+  'graphql-metrics',
+  'smart_todo',
+  'shopify-app-template-react-router',
+  'cli-kit',
+  'draggable'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
 // - e.g. batmanjs/batman from https://github.com/batmanjs/batman
 // Shopify originated open source projects hosted elsewhere now
-var customRepos = [];
+var customRepos = ['modelcontextprotocol/ruby-sdk', 'Universal-Commerce-Protocol/ucp', 'remix-run/react-router', 'remix-run/remix', 'TangleML/tangle'];
 
 // Custom repo language, different than that defined by GitHub
 var customRepoLanguage = {
