@@ -127,9 +127,9 @@ description: As a team that greatly benefits from open-source software, these ar
       description: {{ repo.description | jsonify }},
       homepage: {{ repo.homepage | jsonify }},
       language: {{ repo.language | jsonify }},
-      stargazers_count: {{ repo.stargazers_count }},
-      forks_count: {{ repo.forks_count }},
-      fork: {{ repo.fork }}
+      stargazers_count: {{ repo.stargazers_count | default: 0 }},
+      forks_count: {{ repo.forks_count | default: 0 }},
+      fork: {{ repo.fork | default: false }}
     },
   {% endfor %}
   ];
