@@ -137,6 +137,10 @@ jQuery(function($){
       flowyGrid: function() {
         var o = this;
 
+        o.$repoContainer.isotope({
+          layoutMode: 'vertical'
+        });
+
         // bind filter button click
         var filterButtons = $('.filter-bar--right button');
         filterButtons.on( 'click', function() {
