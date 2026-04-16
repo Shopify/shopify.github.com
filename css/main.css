@@ -187,7 +187,7 @@ img {
 /* ── Repo grid (Isotope) ── */
 #repos {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -203,7 +203,7 @@ img {
   box-shadow: var(--shadow);
   overflow: hidden;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
-  width: calc(50% - 10px);
+  width: 100%;
 }
 
 .repo:hover {
@@ -390,7 +390,6 @@ img {
 
 /* ── Join / CTA section ── */
 .hero-header:last-of-type {
-  background: var(--surface);
   border-top: 1px solid var(--border);
 }
 
