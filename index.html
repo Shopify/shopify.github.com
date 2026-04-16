@@ -118,7 +118,21 @@ description: As a team that greatly benefits from open-source software, these ar
 </script>
 
 <script>
-  var repos = [];
+  var repos = [
+  {% for repo in site.data.repos %}
+    {
+      name: {{ repo.name | jsonify }},
+      full_name: {{ repo.name | prepend: "Shopify/" | jsonify }},
+      html_url: {{ repo.html_url | jsonify }},
+      description: {{ repo.description | jsonify }},
+      homepage: {{ repo.homepage | jsonify }},
+      language: {{ repo.language | jsonify }},
+      stargazers_count: {{ repo.stargazers_count }},
+      forks_count: {{ repo.forks_count }},
+      fork: {{ repo.fork }}
+    },
+  {% endfor %}
+  ];
 </script>
 
 <div class="pagewidth bottom-links">

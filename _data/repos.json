@@ -1,0 +1,842 @@
+[
+  {
+    "description": "Liquid markup language. Safe, customer facing template language for flexible web apps. ",
+    "fork": false,
+    "forks_count": 1515,
+    "homepage": "https://shopify.github.io/liquid/",
+    "html_url": "https://github.com/Shopify/liquid",
+    "language": "Ruby",
+    "name": "liquid",
+    "stargazers_count": 11762
+  },
+  {
+    "description": "A Rails Engine for building Shopify Apps",
+    "fork": false,
+    "forks_count": 725,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/shopify_app",
+    "language": "Ruby",
+    "name": "shopify_app",
+    "stargazers_count": 1901
+  },
+  {
+    "description": "ShopifyAPI is a lightweight gem for accessing the Shopify admin REST and GraphQL web services.",
+    "fork": false,
+    "forks_count": 480,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/shopify-api-ruby",
+    "language": "Ruby",
+    "name": "shopify-api-ruby",
+    "stargazers_count": 1093
+  },
+  {
+    "description": "An abstraction layer around arbitrary and diverse asset stores",
+    "fork": false,
+    "forks_count": 8,
+    "homepage": "https://shopify.github.io/asset_cloud/",
+    "html_url": "https://github.com/Shopify/asset_cloud",
+    "language": "Ruby",
+    "name": "asset_cloud",
+    "stargazers_count": 28
+  },
+  {
+    "description": "Manage money in Shopify with a class that won't lose pennies during division",
+    "fork": false,
+    "forks_count": 47,
+    "homepage": "http://shopify.github.io/money",
+    "html_url": "https://github.com/Shopify/money",
+    "language": "Ruby",
+    "name": "money",
+    "stargazers_count": 356
+  },
+  {
+    "description": "A StatsD client for Ruby apps. Provides metaprogramming methods to inject StatsD instrumentation into your code.",
+    "fork": false,
+    "forks_count": 101,
+    "homepage": "http://shopify.github.io/statsd-instrument",
+    "html_url": "https://github.com/Shopify/statsd-instrument",
+    "language": "Ruby",
+    "name": "statsd-instrument",
+    "stargazers_count": 591
+  },
+  {
+    "description": "Active Utils extracts commonly used modules and classes used by Active Merchant, Active Shipping, and Active Fulfillment",
+    "fork": false,
+    "forks_count": 84,
+    "homepage": "https://shopify.github.io/active_utils/",
+    "html_url": "https://github.com/Shopify/active_utils",
+    "language": "Ruby",
+    "name": "active_utils",
+    "stargazers_count": 95
+  },
+  {
+    "description": "ShopifyAPI library allows Python developers to programmatically access the admin section of stores",
+    "fork": false,
+    "forks_count": 388,
+    "homepage": "http://shopify.github.io/shopify_python_api",
+    "html_url": "https://github.com/Shopify/shopify_python_api",
+    "language": "Python",
+    "name": "shopify_python_api",
+    "stargazers_count": 1419
+  },
+  {
+    "description": "Get a Shopify app up and running with Django and Python Shopify API",
+    "fork": false,
+    "forks_count": 165,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/shopify_django_app",
+    "language": "Python",
+    "name": "shopify_django_app",
+    "stargazers_count": 505
+  },
+  {
+    "description": "Shopify OAuth2 Strategy for OmniAuth 1.0",
+    "fork": false,
+    "forks_count": 69,
+    "homepage": "http://shopify.github.io/omniauth-shopify-oauth2",
+    "html_url": "https://github.com/Shopify/omniauth-shopify-oauth2",
+    "language": "Ruby",
+    "name": "omniauth-shopify-oauth2",
+    "stargazers_count": 93
+  },
+  {
+    "description": "Implements a decrypter for ciphertext originating from a device using a Derived Unique Key Per Transaction (DUKPT) scheme",
+    "fork": false,
+    "forks_count": 30,
+    "homepage": "http://shopify.github.io/dukpt",
+    "html_url": "https://github.com/Shopify/dukpt",
+    "language": "Ruby",
+    "name": "dukpt",
+    "stargazers_count": 47
+  },
+  {
+    "description": "IdentityCache is a blob level caching solution to plug into Active Record. Don't #find, #fetch!",
+    "fork": false,
+    "forks_count": 173,
+    "homepage": "http://shopify.github.io/identity_cache",
+    "html_url": "https://github.com/Shopify/identity_cache",
+    "language": "Ruby",
+    "name": "identity_cache",
+    "stargazers_count": 1964
+  },
+  {
+    "description": "Properly detect what browser you are dealing with",
+    "fork": false,
+    "forks_count": 21,
+    "homepage": "https://shopify.github.io/browser_sniffer/",
+    "html_url": "https://github.com/Shopify/browser_sniffer",
+    "language": "Ruby",
+    "name": "browser_sniffer",
+    "stargazers_count": 121
+  },
+  {
+    "description": "a Go wrapper for SysV Message Queues",
+    "fork": false,
+    "forks_count": 16,
+    "homepage": "http://shopify.github.io/sysv_mq",
+    "html_url": "https://github.com/Shopify/sysv_mq",
+    "language": "Go",
+    "name": "sysv_mq",
+    "stargazers_count": 88
+  },
+  {
+    "description": "A Lua VM in Go",
+    "fork": false,
+    "forks_count": 207,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/go-lua",
+    "language": "Go",
+    "name": "go-lua",
+    "stargazers_count": 3432
+  },
+  {
+    "description": "Deployment coordination",
+    "fork": false,
+    "forks_count": 152,
+    "homepage": "https://shopify.engineering/introducing-shipit",
+    "html_url": "https://github.com/Shopify/shipit-engine",
+    "language": "Ruby",
+    "name": "shipit-engine",
+    "stargazers_count": 1473
+  },
+  {
+    "description": "Lua wrappers for the Go standard library",
+    "fork": false,
+    "forks_count": 15,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/goluago",
+    "language": "Go",
+    "name": "goluago",
+    "stargazers_count": 73
+  },
+  {
+    "description": "EJSON is a small library to manage encrypted secrets using asymmetric encryption.",
+    "fork": false,
+    "forks_count": 69,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/ejson",
+    "language": "Go",
+    "name": "ejson",
+    "stargazers_count": 1478
+  },
+  {
+    "description": "A Python package that analyzes and classifies different kinds of referrer URLs (search, social, ...) :rocket:",
+    "fork": false,
+    "forks_count": 18,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/pyreferrer",
+    "language": "Python",
+    "name": "pyreferrer",
+    "stargazers_count": 45
+  },
+  {
+    "description": ":alarm_clock: :fire: A TCP proxy to simulate network and system conditions for chaos and resiliency testing",
+    "fork": false,
+    "forks_count": 498,
+    "homepage": "https://github.com/shopify/toxiproxy",
+    "html_url": "https://github.com/Shopify/toxiproxy",
+    "language": "Go",
+    "name": "toxiproxy",
+    "stargazers_count": 11946
+  },
+  {
+    "description": "Hard fork of turbolinks, adding partial page replacement strategies, and utilities.",
+    "fork": false,
+    "forks_count": 27,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/turbograft",
+    "language": "JavaScript",
+    "name": "turbograft",
+    "stargazers_count": 214
+  },
+  {
+    "description": ":monkey: Resiliency toolkit for Ruby for failing fast",
+    "fork": false,
+    "forks_count": 87,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/semian",
+    "language": "Ruby",
+    "name": "semian",
+    "stargazers_count": 1474
+  },
+  {
+    "description": "A ruby api for Toxiproxy that can be used for resiliency testing.",
+    "fork": false,
+    "forks_count": 15,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/toxiproxy-ruby",
+    "language": "Ruby",
+    "name": "toxiproxy-ruby",
+    "stargazers_count": 124
+  },
+  {
+    "description": "GrizzlyBer, the fiercest TLV-BER parser!",
+    "fork": false,
+    "forks_count": 6,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/grizzly_ber",
+    "language": "Ruby",
+    "name": "grizzly_ber",
+    "stargazers_count": 15
+  },
+  {
+    "description": "Encapsulate measurements and their units in Ruby and Ruby on Rails.",
+    "fork": false,
+    "forks_count": 28,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/measured",
+    "language": "Ruby",
+    "name": "measured",
+    "stargazers_count": 382
+  },
+  {
+    "description": "A query batching executor for the graphql gem",
+    "fork": false,
+    "forks_count": 106,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/graphql-batch",
+    "language": "Ruby",
+    "name": "graphql-batch",
+    "stargazers_count": 1437
+  },
+  {
+    "description": "Shopify’s Ruby Style Guide",
+    "fork": false,
+    "forks_count": 49,
+    "homepage": "https://ruby-style-guide.shopify.dev",
+    "html_url": "https://github.com/Shopify/ruby-style-guide",
+    "language": "Ruby",
+    "name": "ruby-style-guide",
+    "stargazers_count": 580
+  },
+  {
+    "description": "The JS Buy SDK is a lightweight library that allows you to build ecommerce into any website. It is based on Shopify's API and provides the ability to retrieve products and collections from your shop, add products to a cart, and checkout.",
+    "fork": false,
+    "forks_count": 269,
+    "homepage": "https://shopify.github.io/js-buy-sdk",
+    "html_url": "https://github.com/Shopify/js-buy-sdk",
+    "language": "JavaScript",
+    "name": "js-buy-sdk",
+    "stargazers_count": 1015
+  },
+  {
+    "description": "Lint your ERB or HTML files",
+    "fork": false,
+    "forks_count": 135,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/erb_lint",
+    "language": "Ruby",
+    "name": "erb_lint",
+    "stargazers_count": 742
+  },
+  {
+    "description": "(DEPRECATED) Better HTML for Rails",
+    "fork": false,
+    "forks_count": 27,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/better-html",
+    "language": "Ruby",
+    "name": "better-html",
+    "stargazers_count": 448
+  },
+  {
+    "description": "BuyButton.js is a highly customizable UI library for adding ecommerce functionality to any website.",
+    "fork": false,
+    "forks_count": 121,
+    "homepage": "http://shopify.github.io/buy-button-js/",
+    "html_url": "https://github.com/Shopify/buy-button-js",
+    "language": "JavaScript",
+    "name": "buy-button-js",
+    "stargazers_count": 258
+  },
+  {
+    "description": "Distribute tests over many workers using a queue",
+    "fork": false,
+    "forks_count": 34,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/ci-queue",
+    "language": "Ruby",
+    "name": "ci-queue",
+    "stargazers_count": 235
+  },
+  {
+    "description": "High-performance logger of Ruby method invocations",
+    "fork": false,
+    "forks_count": 12,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/rotoscope",
+    "language": "Ruby",
+    "name": "rotoscope",
+    "stargazers_count": 208
+  },
+  {
+    "description": "A command-line tool that helps you ship changes to a Kubernetes namespace and understand the result",
+    "fork": false,
+    "forks_count": 117,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/krane",
+    "language": "Ruby",
+    "name": "krane",
+    "stargazers_count": 1416
+  },
+  {
+    "description": "CLI tooling framework with simple interactive widgets",
+    "fork": false,
+    "forks_count": 55,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/cli-ui",
+    "language": "Ruby",
+    "name": "cli-ui",
+    "stargazers_count": 1125
+  },
+  {
+    "description": "Framework/Engine for command line interfaces",
+    "fork": false,
+    "forks_count": 16,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/cli-kit",
+    "language": "Ruby",
+    "name": "cli-kit",
+    "stargazers_count": 160
+  },
+  {
+    "description": "Lightweight Promises pattern implementation written on Kotlin",
+    "fork": false,
+    "forks_count": 12,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/promise-kotlin",
+    "language": "Kotlin",
+    "name": "promise-kotlin",
+    "stargazers_count": 87
+  },
+  {
+    "description": "Declarative UITableViewDataSource implementation",
+    "fork": false,
+    "forks_count": 28,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/FunctionalTableData",
+    "language": "Swift",
+    "name": "FunctionalTableData",
+    "stargazers_count": 371
+  },
+  {
+    "description": "The JavaScript Drag & Drop library your grandparents warned you about.",
+    "fork": false,
+    "forks_count": 1108,
+    "homepage": "https://shopify.github.io/draggable",
+    "html_url": "https://github.com/Shopify/draggable",
+    "language": "JavaScript",
+    "name": "draggable",
+    "stargazers_count": 18448
+  },
+  {
+    "description": "⚒Eliminate deprecations from your codebase ⚒",
+    "fork": false,
+    "forks_count": 37,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/deprecation_toolkit",
+    "language": "Ruby",
+    "name": "deprecation_toolkit",
+    "stargazers_count": 537
+  },
+  {
+    "description": "The swiss army knife of live data migrations",
+    "fork": false,
+    "forks_count": 75,
+    "homepage": "https://shopify.github.io/ghostferry",
+    "html_url": "https://github.com/Shopify/ghostferry",
+    "language": "Go",
+    "name": "ghostferry",
+    "stargazers_count": 843
+  },
+  {
+    "description": "Makes your background jobs interruptible and resumable by design.",
+    "fork": false,
+    "forks_count": 57,
+    "homepage": "https://www.rubydoc.info/gems/job-iteration",
+    "html_url": "https://github.com/Shopify/job-iteration",
+    "language": "Ruby",
+    "name": "job-iteration",
+    "stargazers_count": 1296
+  },
+  {
+    "description": "Extract as much much detail as you want from GraphQL queries, served up from your Ruby app and the graphql gem. ",
+    "fork": false,
+    "forks_count": 10,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/graphql-metrics",
+    "language": "Ruby",
+    "name": "graphql-metrics",
+    "stargazers_count": 174
+  },
+  {
+    "description": "Decrypt EJSON secrets and export them as environment variables.",
+    "fork": false,
+    "forks_count": 17,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/ejson2env",
+    "language": "Go",
+    "name": "ejson2env",
+    "stargazers_count": 91
+  },
+  {
+    "description": null,
+    "fork": false,
+    "forks_count": 430,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/shopify-app-template-node",
+    "language": "JavaScript",
+    "name": "shopify-app-template-node",
+    "stargazers_count": 1005
+  },
+  {
+    "description": "reversible directory-local environment variable manipulations",
+    "fork": false,
+    "forks_count": 21,
+    "homepage": "https://shopify.github.io/shadowenv/",
+    "html_url": "https://github.com/Shopify/shadowenv",
+    "language": "Rust",
+    "name": "shadowenv",
+    "stargazers_count": 458
+  },
+  {
+    "description": "The swiss army knife of RBI generation",
+    "fork": false,
+    "forks_count": 156,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/tapioca",
+    "language": "Ruby",
+    "name": "tapioca",
+    "stargazers_count": 852
+  },
+  {
+    "description": "A collection of RuboCop rules for Sorbet",
+    "fork": false,
+    "forks_count": 31,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/rubocop-sorbet",
+    "language": "Ruby",
+    "name": "rubocop-sorbet",
+    "stargazers_count": 200
+  },
+  {
+    "description": "Enhance TODO comment in your Ruby code",
+    "fork": false,
+    "forks_count": 8,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/smart_todo",
+    "language": "Ruby",
+    "name": "smart_todo",
+    "stargazers_count": 172
+  },
+  {
+    "description": "A type-enforced system for building UI components in React Native with TypeScript.",
+    "fork": false,
+    "forks_count": 146,
+    "homepage": "https://shopify.github.io/restyle/",
+    "html_url": "https://github.com/Shopify/restyle",
+    "language": "TypeScript",
+    "name": "restyle",
+    "stargazers_count": 3376
+  },
+  {
+    "description": "Collect performance profiles for your Rails application.",
+    "fork": false,
+    "forks_count": 14,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/app_profiler",
+    "language": "Ruby",
+    "name": "app_profiler",
+    "stargazers_count": 266
+  },
+  {
+    "description": "Repo for the public definition of Shopify's UI extension APIs. Please use the community forum to ask questions or report issues: https://community.shopify.dev/c/extensions/5",
+    "fork": false,
+    "forks_count": 56,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/ui-extensions",
+    "language": "TypeScript",
+    "name": "ui-extensions",
+    "stargazers_count": 330
+  },
+  {
+    "description": "Useful tools for Sorbet enthusiasts",
+    "fork": false,
+    "forks_count": 23,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/spoom",
+    "language": "Ruby",
+    "name": "spoom",
+    "stargazers_count": 260
+  },
+  {
+    "description": "Ruby heap profiler",
+    "fork": false,
+    "forks_count": 7,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/heap-profiler",
+    "language": "C++",
+    "name": "heap-profiler",
+    "stargazers_count": 249
+  },
+  {
+    "description": "A Rails engine for queueing and managing data migrations.",
+    "fork": false,
+    "forks_count": 107,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/maintenance_tasks",
+    "language": "Ruby",
+    "name": "maintenance_tasks",
+    "stargazers_count": 1277
+  },
+  {
+    "description": "Good things come in small packages.",
+    "fork": false,
+    "forks_count": 119,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/packwerk",
+    "language": "Ruby",
+    "name": "packwerk",
+    "stargazers_count": 1857
+  },
+  {
+    "description": "RBI generation framework",
+    "fork": false,
+    "forks_count": 14,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/rbi",
+    "language": "Ruby",
+    "name": "rbi",
+    "stargazers_count": 38
+  },
+  {
+    "description": null,
+    "fork": false,
+    "forks_count": 190,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/shopify-api-php",
+    "language": "PHP",
+    "name": "shopify-api-php",
+    "stargazers_count": 465
+  },
+  {
+    "description": "High-performance React Native Graphics using Skia",
+    "fork": false,
+    "forks_count": 589,
+    "homepage": "https://shopify.github.io/react-native-skia",
+    "html_url": "https://github.com/Shopify/react-native-skia",
+    "language": "TypeScript",
+    "name": "react-native-skia",
+    "stargazers_count": 8307
+  },
+  {
+    "description": "A better list for React Native",
+    "fork": false,
+    "forks_count": 359,
+    "homepage": "https://shopify.github.io/flash-list/",
+    "html_url": "https://github.com/Shopify/flash-list",
+    "language": "TypeScript",
+    "name": "flash-list",
+    "stargazers_count": 7023
+  },
+  {
+    "description": "An opinionated language server for Ruby",
+    "fork": false,
+    "forks_count": 250,
+    "homepage": "https://shopify.github.io/ruby-lsp/",
+    "html_url": "https://github.com/Shopify/ruby-lsp",
+    "language": "Ruby",
+    "name": "ruby-lsp",
+    "stargazers_count": 1991
+  },
+  {
+    "description": "An opinionated and auto-configured set of extensions for Ruby development",
+    "fork": false,
+    "forks_count": 17,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/vscode-shopify-ruby",
+    "language": "TypeScript",
+    "name": "vscode-shopify-ruby",
+    "stargazers_count": 196
+  },
+  {
+    "description": null,
+    "fork": false,
+    "forks_count": 48,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/rbi-central",
+    "language": "Ruby",
+    "name": "rbi-central",
+    "stargazers_count": 70
+  },
+  {
+    "description": "Build apps, themes, and hydrogen storefronts for Shopify",
+    "fork": false,
+    "forks_count": 247,
+    "homepage": "https://shopify.dev",
+    "html_url": "https://github.com/Shopify/cli",
+    "language": "TypeScript",
+    "name": "cli",
+    "stargazers_count": 663
+  },
+  {
+    "description": null,
+    "fork": false,
+    "forks_count": 216,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/shopify-app-js",
+    "language": "TypeScript",
+    "name": "shopify-app-js",
+    "stargazers_count": 520
+  },
+  {
+    "description": "Hydrogen lets you build faster headless storefronts in less time, on Shopify.",
+    "fork": false,
+    "forks_count": 401,
+    "homepage": "https://skeleton.hydrogen.shop",
+    "html_url": "https://github.com/Shopify/hydrogen",
+    "language": "TypeScript",
+    "name": "hydrogen",
+    "stargazers_count": 1926
+  },
+  {
+    "description": "The easiest way to mocap your hands!",
+    "fork": false,
+    "forks_count": 16,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/handy",
+    "language": "C#",
+    "name": "handy",
+    "stargazers_count": 152
+  },
+  {
+    "description": "The easiest way to do motion tracking! ",
+    "fork": false,
+    "forks_count": 29,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/tracky",
+    "language": "Swift",
+    "name": "tracky",
+    "stargazers_count": 395
+  },
+  {
+    "description": "A Ruby LSP add-on for Rails",
+    "fork": false,
+    "forks_count": 39,
+    "homepage": "https://shopify.github.io/ruby-lsp/rails-add-on",
+    "html_url": "https://github.com/Shopify/ruby-lsp-rails",
+    "language": "Ruby",
+    "name": "ruby-lsp-rails",
+    "stargazers_count": 679
+  },
+  {
+    "description": null,
+    "fork": false,
+    "forks_count": 6,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/wasmprof",
+    "language": "Rust",
+    "name": "wasmprof",
+    "stargazers_count": 18
+  },
+  {
+    "description": "Get suggestions to tune Ruby's garbage collector",
+    "fork": false,
+    "forks_count": 15,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/autotuner",
+    "language": "Ruby",
+    "name": "autotuner",
+    "stargazers_count": 609
+  },
+  {
+    "description": "Everything developer experience for Shopify themes",
+    "fork": false,
+    "forks_count": 75,
+    "homepage": "https://shopify.dev/docs/themes",
+    "html_url": "https://github.com/Shopify/theme-tools",
+    "language": "TypeScript",
+    "name": "theme-tools",
+    "stargazers_count": 206
+  },
+  {
+    "description": "A gem to assist with the internationalization and localization of ruby code",
+    "fork": false,
+    "forks_count": 9,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/worldwide",
+    "language": "Ruby",
+    "name": "worldwide",
+    "stargazers_count": 92
+  },
+  {
+    "description": "Shopify's standardized product taxonomy.",
+    "fork": false,
+    "forks_count": 83,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/product-taxonomy",
+    "language": "Ruby",
+    "name": "product-taxonomy",
+    "stargazers_count": 293
+  },
+  {
+    "description": "Active Merchant is a simple payment abstraction library extracted from Shopify. The aim of the project is to feel natural to Ruby users and to abstract as many parts as possible away from the user to offer a consistent interface across all supported gateways.",
+    "fork": true,
+    "forks_count": 2,
+    "homepage": "http://activemerchant.org",
+    "html_url": "https://github.com/Shopify/active_merchant",
+    "language": null,
+    "name": "active_merchant",
+    "stargazers_count": 6
+  },
+  {
+    "description": "Easily install and test mobile applications with a single click.",
+    "fork": false,
+    "forks_count": 34,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/tophat",
+    "language": "Swift",
+    "name": "tophat",
+    "stargazers_count": 1036
+  },
+  {
+    "description": "The easiest way to compress glTF files!",
+    "fork": false,
+    "forks_count": 13,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/gltf-compressor",
+    "language": "TypeScript",
+    "name": "gltf-compressor",
+    "stargazers_count": 340
+  },
+  {
+    "description": "A WebAssembly programming interface for Shopify Functions",
+    "fork": false,
+    "forks_count": 2,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/shopify-function-wasm-api",
+    "language": "Rust",
+    "name": "shopify-function-wasm-api",
+    "stargazers_count": 10
+  },
+  {
+    "description": "Structured AI workflows made easy",
+    "fork": false,
+    "forks_count": 66,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/roast",
+    "language": "Ruby",
+    "name": "roast",
+    "stargazers_count": 1151
+  },
+  {
+    "description": "A template for building Shopify Apps using React Router version 7 and above",
+    "fork": false,
+    "forks_count": 48,
+    "homepage": "",
+    "html_url": "https://github.com/Shopify/shopify-app-template-react-router",
+    "language": "TypeScript",
+    "name": "shopify-app-template-react-router",
+    "stargazers_count": 165
+  },
+  {
+    "description": "A sizes=auto polyfill",
+    "fork": false,
+    "forks_count": 4,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/autosizes",
+    "language": "HTML",
+    "name": "autosizes",
+    "stargazers_count": 53
+  },
+  {
+    "description": "UCP proxy",
+    "fork": false,
+    "forks_count": 7,
+    "homepage": null,
+    "html_url": "https://github.com/Shopify/ucp-proxy",
+    "language": "Go",
+    "name": "ucp-proxy",
+    "stargazers_count": 49
+  },
+  {
+    "description": "Boot large Ruby/Rails apps faster",
+    "fork": false,
+    "forks_count": 200,
+    "homepage": "",
+    "html_url": "https://github.com/rails/bootsnap",
+    "language": "Ruby",
+    "name": "bootsnap",
+    "stargazers_count": 2720
+  },
+  {
+    "description": "JS to WebAssembly toolchain",
+    "fork": false,
+    "forks_count": 131,
+    "homepage": null,
+    "html_url": "https://github.com/bytecodealliance/javy",
+    "language": "Rust",
+    "name": "javy",
+    "stargazers_count": 2671
+  }
+]
