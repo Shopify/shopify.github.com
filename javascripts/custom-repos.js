@@ -97,6 +97,7 @@ var customRepos = [
   'remix-run/react-router',
   'remix-run/remix',
   'TangleML/tangle',
+  'davebcn87/pi-autoresearch'
 ];
 
 // Custom repo language, different than that defined by GitHub
