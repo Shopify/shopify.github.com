@@ -19,23 +19,45 @@ jQuery(function($){
 
         $('html').removeClass('no-js').addClass('js');
 
-        // Make sure repos is set (originally in index.html)
         repos = repos ? repos : [];
 
-        if (customRepos.length > 0) {
-          this.getCustomRepos();
-        } else {
-          this.addRepos(repos);
-        }
-
+        this.getShopifyRepos();
 
         $('a[href="#"]').on('click',function(e){e.preventDefault()});
 
       },
 
+      getShopifyRepos: function(page) {
+        var o = this;
+        page = page || 1;
+
+        var uri = 'https://api.github.com/orgs/Shopify/repos?callback=?'
+                + '&type=public&per_page=100&page=' + page;
+
+        $.getJSON(uri, function(result) {
+          if (result.meta.status == 403) {
+            o.getCustomRepos();
+            return;
+          }
+
+          repos = repos.concat(result.data);
+
+          if (result.data && result.data.length == 100) {
+            o.getShopifyRepos(page + 1);
+          } else {
+            o.getCustomRepos();
+          }
+        });
+      },
+
       getCustomRepos: function() {
         var o = this,
             customApiCalls = 0;
+
+        if (customRepos.length == 0) {
+          o.addRepos(repos);
+          return;
+        }
 
         for (var i = customRepos.length - 1; i >= 0; i--) {
           repo = customRepos[i];
