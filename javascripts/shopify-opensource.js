@@ -25,7 +25,7 @@ jQuery(function($){
     var timber = {
 
       browserProperties: {
-        touch: Modernizr.touch
+        touch: 'ontouchstart' in window
       },
       $body: $('body'),
       $repoContainer: $('#repos'),
@@ -45,40 +45,9 @@ jQuery(function($){
           this.addRepos(repos);
         }
 
-        this.addMembers();
-        this.tracking();
 
         $('a[href="#"]').on('click',function(e){e.preventDefault()});
 
-      },
-
-      addMembers: function(members, page) {
-        var o = this,
-            members = members || [],
-            page = page || 1,
-            perPage = 100;
-
-        if (this.$preventApiCalls) return false;
-
-        var uri = 'https://api.github.com/orgs/Shopify/members?callback=?'
-                + '&per_page='+perPage
-                + '&page='+page;
-
-        $.getJSON(uri, function(result) {
-          if (result.meta.status == 403) {
-            return;
-          }
-
-          // Add new members to local object
-          members = members.concat(result.data);
-
-          if (result.data && result.data.length == perPage) {
-            // Pagination wall. Do another call on the next page
-            o.addMembers(members, page+1);
-          } else {
-            $("#countMembers").removeClass('is-loading').text(members.length);
-          }
-        });
       },
 
       getCustomRepos: function() {
@@ -175,9 +144,6 @@ jQuery(function($){
         // Append handlebars templates
         o.$repoContainer.addClass('is-loaded').append(template(data));
 
-        // Display public repo count of opt-in repos (minus forks)
-        $('#countRepos').removeClass('is-loading').text(repoCount);
-
         // Setup isotope
         o.flowyGrid();
       },
@@ -186,24 +152,13 @@ jQuery(function($){
         var o = this;
 
         // bind filter button click
-        var filterButtons = $('#filters button');
+        var filterButtons = $('.filter-bar--right button');
         filterButtons.on( 'click', function() {
           filterButtons.removeClass('is-active');
           $(this).addClass('is-active');
 
           var filterValue = $(this).attr('data-filter');
           o.$repoContainer.isotope({ filter: filterValue });
-        });
-      },
-
-      tracking: function() {
-        $('a[data-track]').on('click', function(e) {
-          var data = $(this).data('track');
-          // switch(data) {
-          //  case 'Demo Empty':
-          //    _gaq.push(['_trackEvent', 'Open Source', 'Click', 'Demo Store Empty']);
-          //    break;
-          // }
         });
       }
 

@@ -16,14 +16,6 @@ description: As a team that greatly benefits from open-source software, these ar
           class="logo"
         />
       </div>
-      <!-- removing due to CORB errors
-      <ul class="inline-list git-stats">
-        <li><span id="countRepos" class="git-stat is-loading"></span> Repos</li>
-        <li>
-          <span id="countMembers" class="git-stat is-loading"></span> Members
-        </li>
-      </ul>
-      -->
     </div>
   </header>
 
@@ -42,25 +34,23 @@ description: As a team that greatly benefits from open-source software, these ar
 
 <div class="pagewidth">
   <div class="filter-bar">
-    <div class="button-group js-radio-button-group" id="filters">
-      <div class="filter-bar--left">
-        A sampling of projects
-      </div>
-      <div class="filter-bar--right">
-        <button class="btn is-active" data-filter="*">All</button>
-        <button class="btn" data-filter=".ruby">Ruby</button>
-        <button class="btn" data-filter=".go">Go</button>
-        <button class="btn" data-filter=".javascript">JavaScript</button>
-        <button class="btn" data-filter=".typescript">TypeScript</button>
-        <button class="btn" data-filter=".liquid">Liquid</button>
-        <button class="btn" data-filter=".python">Python</button>
-        <button
-          class="btn"
-          data-filter=":not(.go, .javascript, .typescript, .liquid, .ruby, .python)"
-        >
-          Other
-        </button>
-      </div>
+    <div class="filter-bar--left">
+      A sampling of projects
+    </div>
+    <div class="filter-bar--right">
+      <button class="btn is-active" data-filter="*">All</button>
+      <button class="btn" data-filter=".ruby">Ruby</button>
+      <button class="btn" data-filter=".go">Go</button>
+      <button class="btn" data-filter=".javascript">JavaScript</button>
+      <button class="btn" data-filter=".typescript">TypeScript</button>
+      <button class="btn" data-filter=".liquid">Liquid</button>
+      <button class="btn" data-filter=".python">Python</button>
+      <button
+        class="btn"
+        data-filter=":not(.go, .javascript, .typescript, .liquid, .ruby, .python)"
+      >
+        Other
+      </button>
     </div>
   </div>
 </div>
@@ -144,7 +134,7 @@ description: As a team that greatly benefits from open-source software, these ar
   ];
 </script>
 
-<div class="pagewidth">
+<div class="pagewidth bottom-links">
   <div class="hero-inner">
     <h1 class="hero-text">
       Find many more public github repos in the <a href="https://github.com/Shopify">Shopify Organization</a>.
