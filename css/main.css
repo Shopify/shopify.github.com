@@ -188,7 +188,7 @@ img {
 #repos {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 #repos.is-loaded {
@@ -390,7 +390,6 @@ img {
 
 /* ── Join / CTA section ── */
 .hero-header:last-of-type {
-  border-top: 1px solid var(--border);
 }
 
 .hero-header .grid {
