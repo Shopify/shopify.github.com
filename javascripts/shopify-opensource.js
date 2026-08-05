@@ -33,35 +33,42 @@ jQuery(function($){
 
       getCustomRepos: function() {
         var o = this,
-            customApiCalls = 0;
+            remaining = customRepos.length,
+            rendered = false;
 
-        if (customRepos.length == 0) {
+        if (remaining === 0) {
           o.addRepos(repos);
           return;
         }
 
-        for (var i = customRepos.length - 1; i >= 0; i--) {
-          repo = customRepos[i];
-
-          var uri = 'https://api.github.com/repos/'+ repo +'?callback=?';
-
-          $.getJSON(uri, function(result) {
-            if (result.meta.status == 403) {
-              // If we hit the limit, just pass on the current repos we have
-              o.addRepos(repos);
-              return;
-            }
-
-            // Add api data to repos array
-            repos = repos.concat(result.data);
-
-            customApiCalls++;
-            if (customApiCalls == customRepos.length) {
-              // If the custom repo ajax calls are done, move one
-              o.addRepos(repos);
-            }
-          });
+        var renderOnce = function() {
+          if (!rendered) {
+            rendered = true;
+            o.addRepos(repos);
+          }
         };
+
+        // Safety net: never leave the page spinning, even if a request hangs
+        var fallbackTimer = setTimeout(renderOnce, 5000);
+
+        $.each(customRepos, function(i, repo) {
+          // CORS request (GitHub API supports it); JSONP is unreliable —
+          // rate-limited 403 responses are not callback-wrapped, which used
+          // to leave the page spinning forever.
+          $.getJSON('https://api.github.com/repos/' + repo)
+            .done(function(result) {
+              // Add api data to repos array
+              repos = repos.concat(result);
+            })
+            .always(function() {
+              // Count failures too (rate limit, 404, network) so we always render
+              remaining--;
+              if (remaining === 0) {
+                clearTimeout(fallbackTimer);
+                renderOnce();
+              }
+            });
+        });
 
       },
 
