@@ -838,5 +838,85 @@
     "language": "Rust",
     "name": "javy",
     "stargazers_count": 2671
+  },
+  {
+    "description": "Declarative routing for React",
+    "fork": false,
+    "forks_count": 10914,
+    "homepage": "https://reactrouter.com",
+    "html_url": "https://github.com/remix-run/react-router",
+    "language": "TypeScript",
+    "name": "react-router",
+    "stargazers_count": 56577
+  },
+  {
+    "description": "The fully-stacked web framework",
+    "fork": false,
+    "forks_count": 2795,
+    "homepage": "https://remix.run",
+    "html_url": "https://github.com/remix-run/remix",
+    "language": "TypeScript",
+    "name": "remix",
+    "stargazers_count": 33355
+  },
+  {
+    "description": "A utility-first CSS framework for rapid UI development.",
+    "fork": false,
+    "forks_count": 5596,
+    "homepage": "https://tailwindcss.com/",
+    "html_url": "https://github.com/tailwindlabs/tailwindcss",
+    "language": "TypeScript",
+    "name": "tailwindcss",
+    "stargazers_count": 97475
+  },
+  {
+    "description": "Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.",
+    "fork": false,
+    "forks_count": 1201,
+    "homepage": "https://headlessui.com",
+    "html_url": "https://github.com/tailwindlabs/headlessui",
+    "language": "TypeScript",
+    "name": "headlessui",
+    "stargazers_count": 28741
+  },
+  {
+    "description": "A set of free MIT-licensed high-quality SVG icons for UI development.",
+    "fork": false,
+    "forks_count": 1312,
+    "homepage": "https://heroicons.com",
+    "html_url": "https://github.com/tailwindlabs/heroicons",
+    "language": "JavaScript",
+    "name": "heroicons",
+    "stargazers_count": 23789
+  },
+  {
+    "description": "Tangle is a web app that allows the users to build and run Machine Learning pipelines without having to set up development environment.",
+    "fork": false,
+    "forks_count": 35,
+    "homepage": "https://tangleml.com/",
+    "html_url": "https://github.com/TangleML/tangle",
+    "language": "Python",
+    "name": "tangle",
+    "stargazers_count": 499
+  },
+  {
+    "description": "Tangle is a web app that allows the users to build and run Machine Learning pipelines without having to set up development environment.",
+    "fork": true,
+    "forks_count": 16,
+    "homepage": "http://tangleml.com",
+    "html_url": "https://github.com/TangleML/tangle-ui",
+    "language": "TypeScript",
+    "name": "tangle-ui",
+    "stargazers_count": 101
+  },
+  {
+    "description": "A secure, multi-agent orchestration platform designed to autonomously execute and manage diverse custom workflows, leveraging parallelized sub-agents and deployable Agent Bundles for highly specialized task execution.",
+    "fork": false,
+    "forks_count": 1,
+    "homepage": null,
+    "html_url": "https://github.com/TangleML/tangent-shell",
+    "language": "TypeScript",
+    "name": "tangent-shell",
+    "stargazers_count": 2
   }
 ]
