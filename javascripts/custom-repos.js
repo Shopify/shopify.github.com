@@ -96,8 +96,21 @@ var customRepos = [
   'Universal-Commerce-Protocol/ucp',
   'remix-run/react-router',
   'remix-run/remix',
+  'tailwindlabs/tailwindcss',
+  'tailwindlabs/headlessui',
+  'tailwindlabs/heroicons',
   'TangleML/tangle',
+  'TangleML/tangle-ui',
+  'TangleML/tangent-shell',
   'davebcn87/pi-autoresearch'
+];
+
+// Forks we still want listed, by full_name.
+// Forked repos are normally hidden, but a few of our own projects are permanently
+// flagged as forks by GitHub because they were split out of a predecessor repo.
+// - e.g. TangleML/tangle-ui was forked from its predecessor and will stay flagged
+var allowedForks = [
+  'TangleML/tangle-ui'
 ];
 
 // Custom repo language, different than that defined by GitHub
