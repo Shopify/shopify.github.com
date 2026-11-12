@@ -19,6 +19,10 @@ If you want to run it locally
 7. In another terminal window, run `compass watch`
 8. Access the page at `http://localhost:4000`
 
+### Dependency security
+- Use Ruby 3.3 or newer for the current bundle. `Gemfile` sets minimum patched versions for ActiveSupport, Nokogiri, and rubyzip; keep these floors when updating dependencies.
+- WEBrick 1.9.2 remains affected by [CVE-2026-38969](https://github.com/advisories/GHSA-h4w6-wx8r-p68v), with no patched release available as of November 12, 2026. It is used by the local Jekyll preview server, not served to visitors of the static site. Until a fix is available, keep previews bound to loopback (`bundle exec jekyll serve --host 127.0.0.1`); do not expose them to untrusted traffic or place them behind a public reverse proxy. Use `bundle exec jekyll build` when no preview server is needed.
+
 ### Notes about local build
 - `bundle exec jekyll serve` will compile the Jekyll and Sass files into static assets in the **_site** folder each time a file is saved. That folder is excluded from the repo.
 - `compass watch` will update ie.css and main.css.
@@ -33,11 +37,3 @@ This can be from a `gh-pages` branch, or from the `/docs` directory, based on th
 Using the `/docs` directory is preferred as it's less confusing for contributors.
 
 [GitHub Pages settings]: https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-
-Dependencies (all included)
---
-- **[jQuery 1.9](https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js)**
-- **[Modernizr](http://modernizr.com/)**
-- **[Bourbon](http://bourbon.io/)**
-- **[Handlebars.js](http://handlebarsjs.com/)**
-- **[Isotope](http://isotope.metafizzy.co/)**
