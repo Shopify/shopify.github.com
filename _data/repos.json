@@ -70,26 +70,6 @@
     "stargazers_count": 95
   },
   {
-    "description": "ShopifyAPI library allows Python developers to programmatically access the admin section of stores",
-    "fork": false,
-    "forks_count": 388,
-    "homepage": "http://shopify.github.io/shopify_python_api",
-    "html_url": "https://github.com/Shopify/shopify_python_api",
-    "language": "Python",
-    "name": "shopify_python_api",
-    "stargazers_count": 1419
-  },
-  {
-    "description": "Get a Shopify app up and running with Django and Python Shopify API",
-    "fork": false,
-    "forks_count": 165,
-    "homepage": "",
-    "html_url": "https://github.com/Shopify/shopify_django_app",
-    "language": "Python",
-    "name": "shopify_django_app",
-    "stargazers_count": 505
-  },
-  {
     "description": "Shopify OAuth2 Strategy for OmniAuth 1.0",
     "fork": false,
     "forks_count": 69,
@@ -370,26 +350,6 @@
     "stargazers_count": 87
   },
   {
-    "description": "Declarative UITableViewDataSource implementation",
-    "fork": false,
-    "forks_count": 28,
-    "homepage": "",
-    "html_url": "https://github.com/Shopify/FunctionalTableData",
-    "language": "Swift",
-    "name": "FunctionalTableData",
-    "stargazers_count": 371
-  },
-  {
-    "description": "The JavaScript Drag & Drop library your grandparents warned you about.",
-    "fork": false,
-    "forks_count": 1108,
-    "homepage": "https://shopify.github.io/draggable",
-    "html_url": "https://github.com/Shopify/draggable",
-    "language": "JavaScript",
-    "name": "draggable",
-    "stargazers_count": 18448
-  },
-  {
     "description": "⚒Eliminate deprecations from your codebase ⚒",
     "fork": false,
     "forks_count": 37,
@@ -438,16 +398,6 @@
     "language": "Go",
     "name": "ejson2env",
     "stargazers_count": 91
-  },
-  {
-    "description": null,
-    "fork": false,
-    "forks_count": 430,
-    "homepage": "",
-    "html_url": "https://github.com/Shopify/shopify-app-template-node",
-    "language": "JavaScript",
-    "name": "shopify-app-template-node",
-    "stargazers_count": 1005
   },
   {
     "description": "reversible directory-local environment variable manipulations",
@@ -570,16 +520,6 @@
     "stargazers_count": 38
   },
   {
-    "description": null,
-    "fork": false,
-    "forks_count": 190,
-    "homepage": null,
-    "html_url": "https://github.com/Shopify/shopify-api-php",
-    "language": "PHP",
-    "name": "shopify-api-php",
-    "stargazers_count": 465
-  },
-  {
     "description": "High-performance React Native Graphics using Skia",
     "fork": false,
     "forks_count": 589,
@@ -658,16 +598,6 @@
     "language": "TypeScript",
     "name": "hydrogen",
     "stargazers_count": 1926
-  },
-  {
-    "description": "The easiest way to mocap your hands!",
-    "fork": false,
-    "forks_count": 16,
-    "homepage": "",
-    "html_url": "https://github.com/Shopify/handy",
-    "language": "C#",
-    "name": "handy",
-    "stargazers_count": 152
   },
   {
     "description": "The easiest way to do motion tracking! ",
