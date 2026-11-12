@@ -1,7 +1,6 @@
 // Opt-in repos (case sensitive)
 // - These are all children of Shopify and visible at https://github.com/Shopify
 var optInRepos = [
-  'FunctionalTableData',
   'active_merchant',
   'active_utils',
   'app_profiler',
@@ -36,8 +35,6 @@ var optInRepos = [
   'shipit-engine',
   'shopify_api',
   'shopify_app',
-  'shopify_django_app',
-  'shopify_python_api',
   'shopify-function-wasm-api',
   'spoom',
   'statsd-instrument',
@@ -50,7 +47,6 @@ var optInRepos = [
   'vscode-shopify-ruby',
   'promise-kotlin',
   'krane',
-  'handy',
   'tracky',
   'bootsnap',
   'graphql-batch',
@@ -64,7 +60,6 @@ var optInRepos = [
   'maintenance_tasks',
   'cli-ui',
   'shopify-api-ruby',
-  'shopify-app-template-node',
   'ghostferry',
   'erb_lint',
   'ruby-lsp-rails',
@@ -72,7 +67,6 @@ var optInRepos = [
   'ruby-style-guide',
   'deprecation_toolkit',
   'shopify-app-js',
-  'shopify-api-php',
   'shadowenv',
   'measured',
   'gltf-compressor',
@@ -84,8 +78,7 @@ var optInRepos = [
   'graphql-metrics',
   'smart_todo',
   'shopify-app-template-react-router',
-  'cli-kit',
-  'draggable'
+  'cli-kit'
 ];
 
 // Add custom repos by full_name. Take the org/user and repo name
@@ -96,8 +89,21 @@ var customRepos = [
   'Universal-Commerce-Protocol/ucp',
   'remix-run/react-router',
   'remix-run/remix',
+  'tailwindlabs/tailwindcss',
+  'tailwindlabs/headlessui',
+  'tailwindlabs/heroicons',
   'TangleML/tangle',
+  'TangleML/tangle-ui',
+  'TangleML/tangent-shell',
   'davebcn87/pi-autoresearch'
+];
+
+// Forks we still want listed, by full_name.
+// Forked repos are normally hidden, but a few of our own projects are permanently
+// flagged as forks by GitHub because they were split out of a predecessor repo.
+// - e.g. TangleML/tangle-ui was forked from its predecessor and will stay flagged
+var allowedForks = [
+  'TangleML/tangle-ui'
 ];
 
 // Custom repo language, different than that defined by GitHub
@@ -105,14 +111,12 @@ var customRepoLanguage = {
   liquid: 'Liquid',
   'offsite-gateway-sim': 'Ruby',
   'shopify.github.com': 'JavaScript',
-  rotoscope: 'C',
-  handy: 'Unity'
+  rotoscope: 'C'
 };
 
 // Custom repo avatars. Dimensions should be 40x40
 // - Be sure a custom repo doesn't have the same name as a Shopify one, or a one will be overridden
 var customRepoAvatar = {
   slate: '/images/repo-avatars/slate.svg',
-  draggable: '/images/repo-avatars/draggable.png',
   superdb: '/images/repo-avatars/super-debugger.gif'
 };
